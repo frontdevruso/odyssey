@@ -1,0 +1,40 @@
+/* Main Colors */
+
+$color-base: #2E0D6F;
+$color-bg: #fff;
+$color-text: $color-base;
+$color-overlay: $color-base;
+$link-color: $color-base;
+$transition: .4s;
+// project color
+$dark-blue: #2E0D6F;
+$blue: #4617A4;
+$dark-purple: #9062C3;
+$purple: #DBBCFF;
+$light-purple: #EBDAFF;
+$light-purple-2: #F5EFFD;
+$pink: #E85078;
+$orange: #F1780D;
+$yellow: #FFCC55;
+$light-yellow: #FFDB86;
+$light-yellow-2: #FFF0CB;
+$light-yellow-3: #FFF8E5;
+$green: #38A643;
+$grey: #919191;
+
+/* Fonts */
+
+$font-family: 'PT Sans Caption',
+sans-serif;
+$font-title: $font-family;
+$font-size: 14px;
+$font-weight: normal;
+$letter-spacing: normal;
+$line-height: 150%;
+$placeholder: #BDBDBD;
+
+/*container*/
+
+$container-padding-left: 50px;
+$container-padding-right: 50px;
+$container-width: 1345px+$container-padding-left+$container-padding-right;

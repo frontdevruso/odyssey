@@ -1,0 +1,18 @@
+mixin svgsprite(name)
+  svg(class="svgsprite _" + name)&attributes(attributes)
+    use(xlink:href="assets/img/sprites/svgsprites.svg#" + name)
+
+mixin link-big(text, link)
+  a.btn.--texture.--big(href=link)=text
+
+mixin btn-big(text)
+  button.btn.--texture.--big=text
+
+mixin header(title)
+  header.header(fade-in-preloader)
+    .container.--flex.--jcsb
+      a.header__logo(href="index.html") 
+        img(src="./assets/img/header/logo.svg", alt="")
+      .header__title
+        h1.h1=title 
+      .header__right 

@@ -1,0 +1,58 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = ''
+  - var bodyClass = ''
+block content
+  .page__border
+    include _includes/blocks/preloader
+    .page.page-main-bg
+      +header('Про игру')
+      section.about
+        .about__astronaut(fade-in-preloader)
+          img(src="./assets/img/about/astronaut.png", alt="")
+        .about__messages(fade-in-preloader)
+          .about__message.message-1.is-active
+            .message(style="background-image: url(./assets/img/message/message-1.svg)") 
+              p.message__text Привет! Поздравляю, ты в составе команды Космической Одиссеи ПСБ. Будем бороздить космические просторы вместе!
+            .message__next(data-message="message-2")
+              .btn.--link Круто! А зачем?
+          .about__message.message-2
+            .message(style="background-image: url(./assets/img/message/message-2.svg)") 
+              p.message__text Центр управления ПСБ запускает межгалактическую ракету, чтобы осваивать новые галактики и внедрять там банковскую систему. Для запуска ракеты тебе нужно собрать артефакты, которые хранятся в разных уголках космоса.
+            .message__next(data-message="message-3")
+              .btn.--link И как же я их соберу?
+          .about__message.message-3
+            .message(style="background-image: url(./assets/img/message/message-3.svg)") 
+              p.message__text Ты должен посетить 6 планет и выполнить 2 задания на каждой из них. В награду ты получишь артефакты.
+                .message__icons 
+                  img(src="./assets/img/message/i1.png", alt="")
+                  img(src="./assets/img/message/i2.png", alt="")
+                  img(src="./assets/img/message/i3.png", alt="")
+                  img(src="./assets/img/message/i4.png", alt="")
+                  img(src="./assets/img/message/i5.png", alt="")
+                  img(src="./assets/img/message/i6.png", alt="")
+            .message__next(data-message="message-4")
+              .btn.--link Звучит захватывающе!
+          .about__message.message-4
+            .message(style="background-image: url(./assets/img/message/message-4.svg)") 
+              p.message__text Это ты еще про призы не знаешь!
+            .message__next(data-message="message-5")
+              .btn.--link Какие призы?
+          .about__message.message-5
+            .message(style="background-image: url(./assets/img/message/message-5.svg)") 
+              p.message__text 
+                span За каждую игру тебе начисляются баллы. Чем больше баллов наберешь, тем больше шансов получить призы.
+                span 
+                  | Узнать подробнее о призах можно 
+                  a.btn.--link(href="#") здесь.
+                span Количество баллов ты можешь отслеживать в Профиле игрока, а свое место в рейтинге — в Центре управления.
+            .message__next.message__next--autoheight(data-message="message-6" button-fadein="bottom-btn")
+              .btns-block 
+                .btn.--link Что ж ты молчал? <br>
+                .btn.--link Не терпится начать!
+          .about__message.message-6
+            .message(style="background-image: url(./assets/img/message/message-6.svg)") 
+              p.message__text Ты почти готов к приключению. Но прежде чем отправиться на первую планету за артефактом, заполни свой Профиль и загляни в Центр управления.
+    .bottom-btn.hidden
+      +link-big('Перейти к Профилю', 'profile.html')

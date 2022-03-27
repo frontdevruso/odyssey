@@ -1,0 +1,551 @@
+.page-profile-bg {
+    background: url(../img/profile/profile-bg.png) no-repeat center / cover;
+}
+
+.header--profile {
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    height: 0;
+    padding-top: 30px;
+
+    .header__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            z-index: 20;
+    
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+    
+            font-size: 16px;
+    
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .header__right {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        a {
+            width: 100%;
+            max-width: 238px;
+
+            color: white;
+            font-size: 16px;
+            padding: 10px 16px;
+
+            display: grid;
+            grid-template-columns: 34px auto;
+            grid-gap: 10px;
+            align-items: center;
+            
+            background: radial-gradient(115% 115% at 45.76% -15%, rgba(232, 80, 120, 0) 0%, rgba(232, 80, 120, 0.96) 100%);
+            border: 2px solid #E85078;
+            box-sizing: border-box;
+            box-shadow: 0px 8px 24px #CA375E;
+    
+            border-radius: 100px;
+    
+            picture {
+                position: relative;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 34px;
+                height: 34px;
+
+                margin-right: 14px;
+                
+                border: 2px solid rgba(255, 255, 255, 0.48);
+                border-radius: 100%;
+
+                &::after, &::before {
+                    content: "";
+                    display: block;
+
+                    position: absolute;
+                    background-color: rgba(255, 255, 255, 0.48);
+                }
+
+                &::after {
+                    width: 2px;
+                    height: 12px;
+
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &::before {
+                    width: 12px;
+                    height: 2px;
+
+                    right: 50%;
+                    transform: translateX(50%);
+                }
+            }
+
+            h3 {
+                font-weight: 700;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 160px;
+            }
+
+            span { font-size: 12px }
+        }
+    }
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    position: relative;
+
+    color: white;
+    font-size: 16px;
+
+    padding: 107px 0 55px;
+
+    &__container {
+        padding: 0 48px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+
+        text-align: center;
+        color: white;
+        line-height: 120%;
+
+        position: relative;
+    }
+
+    &__tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 28px;
+
+        width: 100%;
+        margin-top: 46px;
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4 {
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            
+            main {
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+
+                width: 100%;
+                height: 253px;
+                border-radius: 20px;
+
+                padding: 40px;
+                color: $dark-blue;
+
+                display: flex;
+            }
+
+            &-info {
+                margin-left: 20px;
+                margin-top: 14px;
+
+                h3 {
+                    max-width: 122px;
+                    line-height: 120%;
+
+                    font-weight: 600;
+                    font-size: 24px;
+                    margin-bottom: 17px;
+                }
+
+                a { border-bottom: 1px dashed $dark-blue }
+            }
+
+            &-bg {
+                position: absolute;
+                top: 0;right: 0;bottom: 0;left: 0;
+                filter: drop-shadow(0px 12px 80px #E85078);
+
+                &--planet {
+                    width: 100%;
+                    height: 585px;
+                    fill: transparent;
+
+                    position: absolute;
+                    top: 0;bottom: 0;right: 0;left: 0;
+                    filter: drop-shadow(0px 8px 24px #9062C3);
+                }
+            }
+                
+            &--first {
+                main {
+                    .profile__tabs-item-bg {
+                        width: 429px;
+                        height: 253px;
+                    }
+
+                    button {
+                        width: 95px;
+                        height: 95px;
+                        border-radius: 100%;
+                        box-shadow: 0px 10px 40px rgba(70, 23, 164, 0.7);
+
+                        position: relative;
+                        transition: .4s;
+                        
+                        background-image: url(../img/profile/new-account-icon.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto auto;
+
+                        &:hover {
+                            box-shadow: 0px 10px 40px rgba(70, 23, 164, 0.9);
+                        }
+                    }
+                }
+            }
+
+            &--second {
+                main {
+                    height: 247px;
+                    padding: 30px;
+
+                    .profile__tabs-item-bg {
+                        width: 430px;
+                        height: 247px;
+                    }
+                }
+
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 11px 24px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+
+                        picture {
+                            width: 100%;
+                            height: 100%;
+
+                            max-width: 49px;
+                            max-height: 49px;
+
+                            display: flex;
+                            margin-right: 15px;
+                            
+                            background: rgba(213, 193, 255, 0.48);
+                            border: 2px solid rgba(213, 193, 255, 0.48);
+
+                            border-radius: 100%;
+                            box-sizing: border-box;
+                            box-shadow: 0px 4px 24px #D5C1FF;
+                            backdrop-filter: blur(8px);
+                        }
+
+                        span {
+                            width: fit-content;
+                            height: fit-content;
+
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 140%;
+                            color: $purple;
+                        }
+                    }
+                }
+            }
+
+            &--third {
+                main {
+                    padding: 42px 29px;
+                    text-align: center;
+
+                    .profile__tabs-item-info {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 0;
+
+                        strong {
+                            margin-bottom: 8px;
+                        }
+
+                        &-prizes {
+                            display: block;
+                            margin-top: auto;
+
+                            width: 100%;
+                            position: relative;
+                            height: 54px;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            
+                            border: none;
+
+                            span {
+                                border-bottom: 1px dashed $dark-blue
+                            }
+
+                            &::after {
+                                content: "";
+                                display: block;
+
+                                position: absolute;
+                                right: 0;left: 0;bottom: 0;top: 0;
+
+                                width: 100%;
+                                height: 54px;
+                                
+                                box-sizing: border-box;
+                                box-shadow: 0px 1px 10px $yellow;
+                                border-radius: 8px;
+                                transform: skewX(4deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--planet {
+                color: white;
+                font-size: 16px;
+                height: 400px;
+
+                main { padding: 30px }
+
+                .profile__tabs-planet-info {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    color: white;
+                    font-size: 16px;
+
+                    width: 100%;
+
+                    &-mission {
+                        display: flex;
+                        padding: 23px 26px;
+
+                        & > * { user-select: none }
+
+                        picture {
+                            display: flex;
+
+                            width: 100%;
+                            height: 100%;
+
+                            max-width: 126px;
+                            max-height: 126px;
+
+                            img {
+                                width: auto;
+                                height: auto;
+
+                                filter: drop-shadow(0px 16px 25px #B38EFF);
+                            }
+                        }
+
+                        &-text {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            width: 100%;
+
+                            h3 {
+                                line-height: 120%;
+                                margin-bottom: 4px;
+                            }
+
+                            a {
+                                color: $yellow;
+                                border-bottom: 1px dashed $yellow;
+
+                                width: fit-content;
+                            }
+
+                            span {
+                                opacity: .5;
+                            }
+                        }
+                    }
+
+                    &-score {
+                        display: block;
+                        margin-top: auto;
+
+                        width: 100%;
+                        position: relative;
+
+                        padding: 11px 0 11px 25px;
+                        height: 43px;
+
+                        display: flex;
+                        align-items: center;
+                        
+                        border: none;
+
+                        &::after {
+                            content: "";
+                            display: block;
+
+                            position: absolute;
+                            right: 0;left: 0;bottom: 0;top: 0;
+
+                            width: calc(100% - 20px);
+                            height: 43px;
+                            
+                            box-sizing: border-box;
+                            border: 1px solid $dark-purple;
+                            border-radius: 8px;
+                            transform: skewX(15deg);
+                        }
+
+                        &-number {
+                            border-radius: 100%;
+                            background-color: #9062C3;
+
+                            width: 43px;
+                            height: 43px;
+
+                            box-shadow: none;
+                            background-size: 170% 200%;
+
+                            position: absolute;
+                            right: 5px;
+                        }
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+
+                        padding: 24px 15px 0;
+
+                        li {
+                            line-height: 120%;
+                            font-weight: 700;
+
+                            &:not(:last-child) {
+                                padding-bottom: 17px;
+                                margin-bottom: 12px;
+                                border-bottom: 1px solid #9062C3;
+                            }
+                        }
+                    }
+                }
+
+                &--second {
+                    main {
+                        padding: 25px 30px;
+                    }
+
+                    .profile__tabs-item-bg--planet {
+                        margin-top: 5px;
+                        height: 575px;
+                    }
+
+                    .profile__tabs-planet-info {
+                        &-mission {
+                            padding: 5px 10px 20px;
+
+                            picture {
+                                margin-right: 15px;
+                            }
+                        }
+
+                        &-score {
+                            &::after {
+                                transform: skewX(-15deg);
+                                border-radius: 8px 8px 8px 18px;
+                            }
+                        }
+                    }
+                }
+
+                &--third {
+                    .profile__tabs-item-bg--planet {
+                        margin-top: 18px;
+                    }
+
+                    main {
+                        padding: 30px 30px 25px;
+                    }
+
+                    .profile__tabs-planet-info {
+                        &-mission {
+                            padding: 23px 26px 23px 5px;
+                        }
+
+                        
+                        &-score {
+                            padding-left: 12px;
+                            &::after {
+                                transform: skewX(-4deg);
+                                border-radius: 8px 8px 8px 8px;
+                            }
+                        }
+                    }
+                }
+
+                &--fourth {
+                    .profile__tabs-planet-info {
+                        &-mission {
+                            padding: 10px 26px 23px 0;
+
+                            picture {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+                &--fiveth {
+                    .profile__tabs-planet-info {
+                        &-mission {
+                            padding: 10px 26px 23px 0;
+
+                            picture {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .focus-priority {
+            transition: .4s;
+            position: relative;
+            z-index: 150;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.header {
+    padding-top: 49px;
+    position: relative;
+    z-index: 100;
+    &:after {
+        position: absolute;
+        content: "";
+        width: 226px;
+        height: 226px;
+        left: -43px;
+        top: -113px;
+        background: #4617A4;
+        filter: blur(105px);
+    }
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo,
+.header__title,
+.header__right {
+    width: 33.3%;
+}
+
+.header__title {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    h1 {
+        z-index: 50;
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        width: 265px;
+        height: 265px;
+        left: 0;
+        top: -150px;
+        background: #E85078;
+        filter: blur(105px);
+    }
+}

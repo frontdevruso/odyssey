@@ -1,0 +1,13 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = ''
+  - var bodyClass = ''
+block content
+  .page__border
+    include _includes/blocks/preloader
+    .page.page-main-bg.page-main-dark
+      .main-logo 
+        img(src="./assets/img/main/main-pic.png", alt="")
+      .bottom-btn(fade-in-preloader)
+        +link-big('Начать', 'about.html')

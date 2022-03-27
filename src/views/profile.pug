@@ -1,0 +1,447 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = 'Профиль'
+  - var bodyClass = ''
+block content
+  .page__border.page__border--hidden
+    include _includes/blocks/preloader
+    .page.page-profile-bg
+    .page-focus.page-focus--left(fade-in-preloader)
+    .hints(fade-in-preloader)
+        .hints__container
+            .hints__messages 
+                .hints__message.hints__message--1.is-active
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-7.svg)") 
+                        p Это твой Профиль. <br>Здесь ты найдешь всю <br> информацию о прогрессе <br> игры и своих достижениях.
+                    .message__next(data-message="hints__message--2")
+                        span.btn.--link Спасибо, Ньютон!
+                .hints__message.hints__message--2
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-8.svg)") 
+                        p Давай создадим тебе крутой <br> аватар. Для этого нажми на <br> «+» в кружке слева от твоего <br> имени.
+            .hints__circles 
+                main 
+                a(href="#").hints__circles-faq FAQ 
+                a(href="#").hints__circles-info I 
+    header.header(fade-in-preloader).header--profile
+        .container.--flex.--jcsb
+            a.header__logo(href="index.html") 
+                img(src="./assets/img/header/logo.svg", alt="")
+            .header__title
+                a(href="#")
+                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                    span Вернуться к карте планет 
+            .header__right 
+                a(href="#") 
+                    picture
+                    main 
+                        h3 Тимофеев Игорь
+                        span 0 баллов
+    .page__container(fade-in-preloader)
+        section.profile.profile--hidden
+            .profile__container
+                h1.profile__title Профиль
+                .profile__tabs
+                    .profile__tabs-item.profile__tabs-item--first.create-profile.focus-priority
+                        h4 Участник Одиссеи
+                        main 
+                            <svg class="profile__tabs-item-bg" viewBox="0 0 429 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_i_52_551)">
+                                    <path d="M12.0484 22.4668C24.5293 -3.02031 402.482 -6.74706 417.881 10.9026C433.28 28.5521 432.121 214.417 417.881 230.008C394.534 255.57 27.4474 268.96 12.0484 220.27C-6.4673 161.726 -1.36351 49.8549 12.0484 22.4668Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_i_52_551" x="0" y="-4" width="429" height="257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                        <feOffset dy="-4"/>
+                                        <feGaussianBlur stdDeviation="4"/>
+                                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                        <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_52_551"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            button.new-profile-btn.new-profile-btn--animation
+                            .profile__tabs-item-info 
+                                h3 Тимофеев Игорь
+                                a(href="#") Центр управления
+                    .profile__tabs-item.profile__tabs-item--second.prizes-achievement
+                        h4 Достижения
+                        main 
+                            <svg class="profile__tabs-item-bg" viewBox="0 0 430 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_i_52_552)">
+                                    <path d="M12.0764 229.936C24.5865 255.357 403.42 249.321 418.855 231.717C434.29 214.114 433.128 38.4833 418.855 22.9325C395.454 -2.56317 27.5113 -15.9183 12.0764 32.6452C-6.48238 91.0377 -1.36668 202.619 12.0764 229.936Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_i_52_552" x="0" y="-4" width="430" height="251" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="-4"/>
+                                    <feGaussianBlur stdDeviation="4"/>
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_52_552"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            ul 
+                                li 
+                                    picture
+                                    span Истинный Корпорулиец
+                                li 
+                                    picture
+                                    span Мастер Маджипура
+                                li 
+                                    picture
+                                    span Великий Саркашиец
+                                li 
+                                    picture
+                                    span Гость Трантоора
+                                li 
+                                    picture
+                                    span Властелин Пандоры
+                                li 
+                                    picture 
+                                    span Друг Ягийцев
+                    .profile__tabs-item.profile__tabs-item--third.prizes-achievement
+                        h4 Призы
+                        main 
+                            <svg class="profile__tabs-item-bg" viewBox="0 0 429 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_i_52_553)">
+                                    <path d="M416.952 230.533C404.471 256.02 26.5183 259.747 11.119 242.097C-4.28017 224.448 -3.12116 38.5833 11.119 22.9921C34.4659 -2.56981 401.553 -15.9596 416.952 32.7301C435.467 91.2743 430.364 203.145 416.952 230.533Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <filter id="filter0_i_52_553" x="0" y="-4" width="429" height="257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="-4"/>
+                                    <feGaussianBlur stdDeviation="4"/>
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_52_553"/>
+                                    </filter>
+                                </defs>
+                            </svg>
+                                .profile__tabs-item-info 
+                                    strong У тебя еще нет призов
+                                    p Зарабатывай как можно больше баллов, чтобы получать призы
+                                    a(href="").profile__tabs-item-info-prizes 
+                                        span Посмотреть, все призы 
+
+                .profile__tabs
+                    .profile__tabs-item.profile__tabs-item--planet
+                        h4   
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 443 595" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_87_269" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="437" height="593">
+                                <rect width="437" height="593" fill="url(#paint0_linear_87_269)"/>
+                                </mask>
+                                <g mask="url(#mask0_87_269)">
+                                <g filter="url(#filter0_b_87_269)">
+                                <path d="M17.936 34.2118C30.3006 -0.0615081 404.729 -5.07297 419.985 18.6611C435.24 42.3949 434.092 537.116 419.985 558.082C396.855 592.456 33.1914 610.461 17.936 544.987C-0.407001 466.261 4.64921 71.0413 17.936 34.2118Z" fill="url(#paint1_radial_87_269)" fill-opacity="0.6"/>
+                                <path d="M18.8767 34.5511C19.5227 32.7603 21.4387 30.8842 24.8089 29.0013C28.142 27.1393 32.7259 25.3648 38.4182 23.6892C49.7965 20.34 65.4375 17.4335 83.9586 14.9766C120.99 10.0644 169.391 6.96797 217.903 5.68333C266.412 4.39874 315.001 4.92654 352.405 7.25647C371.111 8.42168 386.994 10.0361 398.663 12.0941C404.5 13.1236 409.25 14.2587 412.76 15.4915C414.515 16.1079 415.934 16.7399 417.014 17.3805C418.105 18.0274 418.785 18.6446 419.143 19.2018C419.534 19.8099 419.963 20.8892 420.402 22.5C420.835 24.0886 421.257 26.1168 421.667 28.5651C422.487 33.4605 423.248 39.9727 423.947 47.8817C425.346 63.6962 426.497 85.0301 427.405 110.046C429.222 160.075 430.068 224.782 429.996 289.408C429.924 354.035 428.935 418.569 427.082 468.253C426.156 493.096 425.014 514.215 423.664 529.771C422.99 537.551 422.264 543.924 421.49 548.669C421.103 551.042 420.707 552.991 420.303 554.498C419.892 556.034 419.498 557.014 419.155 557.523C417.853 559.458 415.262 561.448 411.372 563.427C407.507 565.394 402.469 567.298 396.407 569.116C384.285 572.75 368.176 576.009 349.407 578.755C311.877 584.246 263.821 587.671 216.001 587.977C168.175 588.284 120.637 585.472 84.1268 578.507C65.8664 575.023 50.4205 570.511 39.089 564.863C27.7218 559.197 20.7133 552.5 18.9099 544.76C14.3494 525.187 11.2268 485.821 9.32834 437.106C7.43122 388.427 6.75886 330.508 7.07482 273.894C7.39078 217.279 8.695 161.978 10.75 118.534C11.7776 96.8113 12.9925 78.0618 14.3644 63.5987C15.7413 49.0834 17.2668 39.0135 18.8767 34.5511Z" stroke="#9062C3" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_87_269" x="-10" y="-12" width="457" height="617" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_87_269"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_87_269" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_87_269" x1="218.5" y1="0" x2="218.5" y2="556.921" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_87_269" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(218.5 113.671) rotate(90) scale(365.841 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-1.png", alt="planet-1")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Корпорулия
+                                        a(href="#") Начать задания
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Корпорулийца
+                                    li Части артефакта
+                    .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--second
+                        h4 Прогресс на планетах
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 431 579" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_262" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="431" height="579">
+                                <rect width="431" height="579" fill="url(#paint0_linear_86_262)"/>
+                                </mask>
+                                <g mask="url(#mask0_86_262)">
+                                <g filter="url(#filter0_b_86_262)">
+                                <path d="M417.064 27.2952C404.699 -6.35512 30.2711 -1.87676 15.0153 21.426C-0.240268 44.7283 0.907935 521.059 15.0153 541.644C38.1445 575.393 401.809 593.071 417.064 528.787C435.407 451.492 430.351 63.4554 417.064 27.2952Z" fill="url(#paint1_radial_86_262)" fill-opacity="0.6"/>
+                                <path d="M416.125 27.6401C415.485 25.8974 413.582 24.0928 410.212 22.312C406.881 20.5521 402.299 18.9095 396.607 17.3922C385.229 14.3594 369.588 11.8714 351.067 9.89934C314.035 5.95633 265.634 4.09009 217.122 4.00319C168.612 3.91629 120.022 5.6086 82.6171 8.77655C63.9109 10.3608 48.026 12.3122 36.3552 14.589C30.5168 15.728 25.7639 16.9426 22.2508 18.2217C20.4942 18.8612 19.0723 19.5081 17.9887 20.1555C16.8936 20.8098 16.2108 21.4256 15.852 21.9737C15.4619 22.5694 15.034 23.6186 14.5959 25.1802C14.1637 26.7206 13.7415 28.6842 13.3316 31.0527C12.512 35.7886 11.752 42.0802 11.0525 49.7163C9.65384 64.985 8.50317 85.5631 7.59479 109.684C5.7782 157.921 4.93243 220.276 5.00421 282.553C5.07596 344.829 6.06522 407.015 7.91769 454.914C8.84399 478.865 9.98575 499.231 11.3352 514.247C12.0101 521.756 12.7356 527.911 13.509 532.499C13.8958 534.794 14.2919 536.68 14.6948 538.14C15.1052 539.628 15.4986 540.58 15.8402 541.078C17.1399 542.975 19.7298 544.928 23.6215 546.873C27.4869 548.804 32.5255 550.674 38.5881 552.458C50.7108 556.027 66.8209 559.227 85.5899 561.923C123.122 567.314 171.178 570.677 218.999 570.978C266.825 571.279 314.365 568.517 350.876 561.679C369.138 558.258 384.585 553.828 395.918 548.282C407.289 542.717 414.291 536.143 416.091 528.556C420.651 509.342 423.773 470.695 425.672 422.865C427.569 375.072 428.241 318.206 427.925 262.621C427.609 207.036 426.305 152.74 424.25 110.087C423.222 88.759 422.008 70.3509 420.636 56.1515C419.259 41.8991 417.734 32.0168 416.125 27.6401Z" stroke="#9062C3" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_86_262" x="-12" y="-13" width="457" height="601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_86_262"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_86_262" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_86_262" x1="215.5" y1="0" x2="215.5" y2="543.773" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_86_262" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(216.5 105.31) rotate(90) scale(359.192 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-2.png", alt="planet-2")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Футурия
+                                        span Задания недоступна
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Маджипурца
+                                    li Части артефакта
+                    .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--third
+                        h4   
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 432 582" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_265" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="432" height="582">
+                                <rect width="432" height="582" fill="url(#paint0_linear_86_265)"/>
+                                </mask>
+                                <g mask="url(#mask0_86_265)">
+                                <g filter="url(#filter0_b_86_265)">
+                                <path d="M14.936 33.6953C27.3006 0.00791917 401.729 -4.91788 416.985 18.4105C432.24 41.7386 431.092 528.003 416.985 548.61C393.855 582.397 30.1914 600.095 14.936 535.739C-3.407 458.359 1.64921 69.8953 14.936 33.6953Z" fill="url(#paint1_radial_86_265)" fill-opacity="0.5"/>
+                                <path d="M15.8748 34.0399C16.5179 32.2877 18.4295 30.4446 21.8026 28.5924C25.1362 26.7619 29.7209 25.0174 35.4137 23.3704C46.7931 20.0781 62.4349 17.2211 80.9564 14.8062C117.989 9.97786 166.39 6.93435 214.902 5.67165C263.412 4.40901 312.002 4.92779 349.406 7.21793C368.112 8.36324 383.996 9.95015 395.665 11.9731C401.503 12.9851 406.254 14.1009 409.765 15.3129C411.52 15.919 412.94 16.5404 414.021 17.1702C415.113 17.8067 415.791 18.413 416.148 18.9578C416.537 19.5525 416.965 20.6103 417.403 22.1925C417.836 23.7526 418.258 25.745 418.668 28.1508C419.488 32.9613 420.248 39.3612 420.947 47.1346C422.346 62.6779 423.497 83.6465 424.405 108.235C426.222 157.408 427.068 221.008 426.996 284.529C426.924 348.051 425.935 411.482 424.082 460.315C423.156 484.734 422.014 505.491 420.665 520.781C419.99 528.427 419.264 534.69 418.491 539.353C418.104 541.685 417.707 543.6 417.304 545.08C416.893 546.588 416.5 547.548 416.16 548.045C414.86 549.944 412.27 551.9 408.378 553.846C404.513 555.78 399.474 557.651 393.412 559.438C381.289 563.011 365.179 566.214 346.41 568.913C308.878 574.31 260.822 577.676 213.001 577.978C165.175 578.279 117.635 575.515 81.1238 568.669C62.8625 565.244 47.4154 560.809 36.0828 555.257C24.7114 549.686 17.7097 543.104 15.9091 535.509C11.3494 516.273 8.22684 477.583 6.32832 429.701C4.43122 381.855 3.75886 324.927 4.07482 269.28C4.39077 213.634 5.69499 159.279 7.75 116.578C8.77757 95.2267 9.99243 76.7983 11.3643 62.5831C12.7412 48.3151 14.2665 38.4217 15.8748 34.0399Z" stroke="#9062C3" stroke-opacity="0.6" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_86_265" x="-13" y="-12" width="457" height="607" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_86_265"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_86_265" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_86_265" x1="216" y1="0" x2="216" y2="546.591" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_86_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(215.5 111.796) rotate(90) scale(359.588 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-3.png", alt="planet-3")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Физиляндия
+                                        span Задания недоступна
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Физиляндийца
+                                    li Части артефакта
+    
+                .profile__tabs
+                    .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--fourth
+                        h4   
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 443 595" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_87_269" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="437" height="593">
+                                <rect width="437" height="593" fill="url(#paint0_linear_87_269)"/>
+                                </mask>
+                                <g mask="url(#mask0_87_269)">
+                                <g filter="url(#filter0_b_87_269)">
+                                <path d="M17.936 34.2118C30.3006 -0.0615081 404.729 -5.07297 419.985 18.6611C435.24 42.3949 434.092 537.116 419.985 558.082C396.855 592.456 33.1914 610.461 17.936 544.987C-0.407001 466.261 4.64921 71.0413 17.936 34.2118Z" fill="url(#paint1_radial_87_269)" fill-opacity="0.6"/>
+                                <path d="M18.8767 34.5511C19.5227 32.7603 21.4387 30.8842 24.8089 29.0013C28.142 27.1393 32.7259 25.3648 38.4182 23.6892C49.7965 20.34 65.4375 17.4335 83.9586 14.9766C120.99 10.0644 169.391 6.96797 217.903 5.68333C266.412 4.39874 315.001 4.92654 352.405 7.25647C371.111 8.42168 386.994 10.0361 398.663 12.0941C404.5 13.1236 409.25 14.2587 412.76 15.4915C414.515 16.1079 415.934 16.7399 417.014 17.3805C418.105 18.0274 418.785 18.6446 419.143 19.2018C419.534 19.8099 419.963 20.8892 420.402 22.5C420.835 24.0886 421.257 26.1168 421.667 28.5651C422.487 33.4605 423.248 39.9727 423.947 47.8817C425.346 63.6962 426.497 85.0301 427.405 110.046C429.222 160.075 430.068 224.782 429.996 289.408C429.924 354.035 428.935 418.569 427.082 468.253C426.156 493.096 425.014 514.215 423.664 529.771C422.99 537.551 422.264 543.924 421.49 548.669C421.103 551.042 420.707 552.991 420.303 554.498C419.892 556.034 419.498 557.014 419.155 557.523C417.853 559.458 415.262 561.448 411.372 563.427C407.507 565.394 402.469 567.298 396.407 569.116C384.285 572.75 368.176 576.009 349.407 578.755C311.877 584.246 263.821 587.671 216.001 587.977C168.175 588.284 120.637 585.472 84.1268 578.507C65.8664 575.023 50.4205 570.511 39.089 564.863C27.7218 559.197 20.7133 552.5 18.9099 544.76C14.3494 525.187 11.2268 485.821 9.32834 437.106C7.43122 388.427 6.75886 330.508 7.07482 273.894C7.39078 217.279 8.695 161.978 10.75 118.534C11.7776 96.8113 12.9925 78.0618 14.3644 63.5987C15.7413 49.0834 17.2668 39.0135 18.8767 34.5511Z" stroke="#9062C3" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_87_269" x="-10" y="-12" width="457" height="617" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_87_269"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_87_269" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_87_269" x1="218.5" y1="0" x2="218.5" y2="556.921" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_87_269" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(218.5 113.671) rotate(90) scale(365.841 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-4.png", alt="planet-4")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Юриляндия
+                                        a(href="#") Начать задания
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Корпорулийца
+                                    li Части артефакта
+                    .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--second
+                        h4   
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 431 579" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_262" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="431" height="579">
+                                <rect width="431" height="579" fill="url(#paint0_linear_86_262)"/>
+                                </mask>
+                                <g mask="url(#mask0_86_262)">
+                                <g filter="url(#filter0_b_86_262)">
+                                <path d="M417.064 27.2952C404.699 -6.35512 30.2711 -1.87676 15.0153 21.426C-0.240268 44.7283 0.907935 521.059 15.0153 541.644C38.1445 575.393 401.809 593.071 417.064 528.787C435.407 451.492 430.351 63.4554 417.064 27.2952Z" fill="url(#paint1_radial_86_262)" fill-opacity="0.6"/>
+                                <path d="M416.125 27.6401C415.485 25.8974 413.582 24.0928 410.212 22.312C406.881 20.5521 402.299 18.9095 396.607 17.3922C385.229 14.3594 369.588 11.8714 351.067 9.89934C314.035 5.95633 265.634 4.09009 217.122 4.00319C168.612 3.91629 120.022 5.6086 82.6171 8.77655C63.9109 10.3608 48.026 12.3122 36.3552 14.589C30.5168 15.728 25.7639 16.9426 22.2508 18.2217C20.4942 18.8612 19.0723 19.5081 17.9887 20.1555C16.8936 20.8098 16.2108 21.4256 15.852 21.9737C15.4619 22.5694 15.034 23.6186 14.5959 25.1802C14.1637 26.7206 13.7415 28.6842 13.3316 31.0527C12.512 35.7886 11.752 42.0802 11.0525 49.7163C9.65384 64.985 8.50317 85.5631 7.59479 109.684C5.7782 157.921 4.93243 220.276 5.00421 282.553C5.07596 344.829 6.06522 407.015 7.91769 454.914C8.84399 478.865 9.98575 499.231 11.3352 514.247C12.0101 521.756 12.7356 527.911 13.509 532.499C13.8958 534.794 14.2919 536.68 14.6948 538.14C15.1052 539.628 15.4986 540.58 15.8402 541.078C17.1399 542.975 19.7298 544.928 23.6215 546.873C27.4869 548.804 32.5255 550.674 38.5881 552.458C50.7108 556.027 66.8209 559.227 85.5899 561.923C123.122 567.314 171.178 570.677 218.999 570.978C266.825 571.279 314.365 568.517 350.876 561.679C369.138 558.258 384.585 553.828 395.918 548.282C407.289 542.717 414.291 536.143 416.091 528.556C420.651 509.342 423.773 470.695 425.672 422.865C427.569 375.072 428.241 318.206 427.925 262.621C427.609 207.036 426.305 152.74 424.25 110.087C423.222 88.759 422.008 70.3509 420.636 56.1515C419.259 41.8991 417.734 32.0168 416.125 27.6401Z" stroke="#9062C3" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_86_262" x="-12" y="-13" width="457" height="601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_86_262"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_86_262" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_86_262" x1="215.5" y1="0" x2="215.5" y2="543.773" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_86_262" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(216.5 105.31) rotate(90) scale(359.192 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-5.png", alt="planet-5")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Военная
+                                        span Задания недоступна
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Военных
+                                    li Части артефакта
+                    .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--fiveth
+                        h4   
+                        main 
+                            <svg class="profile__tabs-item-bg--planet" viewBox="0 0 432 582" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_86_265" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="432" height="582">
+                                <rect width="432" height="582" fill="url(#paint0_linear_86_265)"/>
+                                </mask>
+                                <g mask="url(#mask0_86_265)">
+                                <g filter="url(#filter0_b_86_265)">
+                                <path d="M14.936 33.6953C27.3006 0.00791917 401.729 -4.91788 416.985 18.4105C432.24 41.7386 431.092 528.003 416.985 548.61C393.855 582.397 30.1914 600.095 14.936 535.739C-3.407 458.359 1.64921 69.8953 14.936 33.6953Z" fill="url(#paint1_radial_86_265)" fill-opacity="0.5"/>
+                                <path d="M15.8748 34.0399C16.5179 32.2877 18.4295 30.4446 21.8026 28.5924C25.1362 26.7619 29.7209 25.0174 35.4137 23.3704C46.7931 20.0781 62.4349 17.2211 80.9564 14.8062C117.989 9.97786 166.39 6.93435 214.902 5.67165C263.412 4.40901 312.002 4.92779 349.406 7.21793C368.112 8.36324 383.996 9.95015 395.665 11.9731C401.503 12.9851 406.254 14.1009 409.765 15.3129C411.52 15.919 412.94 16.5404 414.021 17.1702C415.113 17.8067 415.791 18.413 416.148 18.9578C416.537 19.5525 416.965 20.6103 417.403 22.1925C417.836 23.7526 418.258 25.745 418.668 28.1508C419.488 32.9613 420.248 39.3612 420.947 47.1346C422.346 62.6779 423.497 83.6465 424.405 108.235C426.222 157.408 427.068 221.008 426.996 284.529C426.924 348.051 425.935 411.482 424.082 460.315C423.156 484.734 422.014 505.491 420.665 520.781C419.99 528.427 419.264 534.69 418.491 539.353C418.104 541.685 417.707 543.6 417.304 545.08C416.893 546.588 416.5 547.548 416.16 548.045C414.86 549.944 412.27 551.9 408.378 553.846C404.513 555.78 399.474 557.651 393.412 559.438C381.289 563.011 365.179 566.214 346.41 568.913C308.878 574.31 260.822 577.676 213.001 577.978C165.175 578.279 117.635 575.515 81.1238 568.669C62.8625 565.244 47.4154 560.809 36.0828 555.257C24.7114 549.686 17.7097 543.104 15.9091 535.509C11.3494 516.273 8.22684 477.583 6.32832 429.701C4.43122 381.855 3.75886 324.927 4.07482 269.28C4.39077 213.634 5.69499 159.279 7.75 116.578C8.77757 95.2267 9.99243 76.7983 11.3643 62.5831C12.7412 48.3151 14.2665 38.4217 15.8748 34.0399Z" stroke="#9062C3" stroke-opacity="0.6" stroke-width="2"/>
+                                </g>
+                                </g>
+                                <defs>
+                                <filter id="filter0_b_86_265" x="-13" y="-12" width="457" height="607" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_86_265"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_86_265" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_86_265" x1="216" y1="0" x2="216" y2="546.591" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C4C4C4"/>
+                                <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+                                </linearGradient>
+                                <radialGradient id="paint1_radial_86_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(215.5 111.796) rotate(90) scale(359.588 457.011)">
+                                <stop stop-color="#9062C3"/>
+                                <stop offset="1" stop-color="#9062C3" stop-opacity="0"/>
+                                </radialGradient>
+                                </defs>
+                            </svg>
+
+                            .profile__tabs-planet-info 
+                                .profile__tabs-planet-info-mission
+                                    picture 
+                                        img(src="./assets/img/profile/planet-6.png", alt="planet-6")
+                                    .profile__tabs-planet-info-mission-text 
+                                        h3 Планета Порталия
+                                        span Задания недоступна
+                                .profile__tabs-planet-info-score 
+                                    span Баллов за планету
+                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                ul 
+                                    li Кодекс Порталийца
+                                    li Части артефакта
+    .modal#modalAvatar
+        .modal__container 
+            .modal__content 
+                header 
+                    h1 Твой аватар
+                    picture 
+                        img(src="./assets/img/modal/main-avatar.png", alt="avatar")
+                    button.modal-close 
+                        img(src="./assets/img/modal/close-modal.svg", alt="close-modal")
+                main 
+                    .modal__content-panel 
+                        h2 Выбери аватар
+                        ul 
+                            button 
+                                img(src="./assets/img/modal/avatar-1.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-2.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-3.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-4.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-5.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-6.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-7.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-2.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-9.png", alt="avatar")
+                            button 
+                                img(src="./assets/img/modal/avatar-6.png", alt="avatar")
+                    .modal__content-panel.modal__content-panel--colors
+                        h2 Выбери фон для аватара
+                        ul 
+                            button(style="background-color: white")
+                            button(style="background-color: #CBB1FF") 
+                            button(style="background-color: #B7BEFF")  
+                            button(style="background-color: #FF8AA9")   
+                            button(style="background-color: #FFDD8E") 
+                            button(style="background-color: #9FE9A7")  
+                            button(style="background-color: #96D9FF")   
+                            button(style="background-color: #FF8A7F")   
+                            button(style="background-color: #FF96F7")   
+                            button(style="background-color: #DFDFDF")   
+                button.modal__content-create-btn.btn.--texture Создать аватар
