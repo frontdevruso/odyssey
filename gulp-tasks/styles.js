@@ -36,6 +36,7 @@ gulp.task('styles', () => {
                 }
             }
         })))
+        .pipe(autoprefixer('last 99 versions'))
         .pipe(plumber.stop())
         .pipe(gulpif(!production, sourcemaps.write('./maps/')))
         .pipe(gulp.dest(paths.build.styles))

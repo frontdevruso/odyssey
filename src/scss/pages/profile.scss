@@ -183,7 +183,35 @@
                     margin-bottom: 17px;
                 }
 
-                a { border-bottom: 1px dashed $dark-blue }
+                a {
+                    border-bottom: 1px dashed $dark-blue;
+                    transition: .4s;
+                    &.pulse-anim {
+                        animation: blinking 1s infinite linear;
+                        @keyframes blinking {
+                            0% {
+                                border-color: $dark-blue;
+                                color: $dark-blue;
+                            }
+                            25% {
+                                border-color: #E85078;
+                                color: #E85078;
+                            }
+                            50% {
+                                border-color: #E85078;
+                                color: #E85078;
+                            }
+                            75% {
+                                border-color: #E85078;
+                                color: #E85078;
+                            }
+                            100% {
+                                border-color: $dark-blue;
+                                color: $dark-blue;
+                            }
+                        }
+                    }
+                }
             }
 
             &-bg {

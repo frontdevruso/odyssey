@@ -1,0 +1,58 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = 'Панель Управление'
+  - var bodyClass = ''
+block content
+  .page__border
+    include _includes/blocks/preloader
+    .page.page-profile-bg
+    .page-focus.hidden(fade-in-preloader)
+    .hints(fade-in-preloader)
+        .hints__container
+            .hints__messages 
+                .hints__message.hints__message--1.is-active
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-7.svg)") 
+                        p Это твой Профиль. <br>Здесь ты найдешь всю <br> информацию о прогрессе <br> игры и своих достижениях.
+                    .message__next(data-message="hints__message--2")
+                        span.btn.--link Спасибо, Ньютон!
+                .hints__message.hints__message--2
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-8.svg)") 
+                        p Давай создадим тебе крутой <br> аватар. Для этого нажми на <br> «+» в кружке слева от твоего <br> имени.
+                .hints__message.hints__message--3
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
+                        p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
+                    .message__next(data-message="hints__message--4")
+                        span.btn.--link Я понял, спасибо.
+                .hints__message.hints__message--4
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-10.svg)") 
+                        p Отслеживай свой игровой <br> прогресс. Здесь будет видно, <br> сколько планет ты посетил и <br> какие задания уже выполнил, <br> а какие еще предстоит пройти.
+                    .message__next(data-message="hints__message--5")
+                        span.btn.--link Отлично!
+                .hints__message.hints__message--5
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-11.svg)") 
+                        p А теперь погнали в Центр <br> управления! Покажу тебе святая <br> святых нашей экспедиции.
+                    .hints__message-cloud.hints__message-cloud--second(style="background-image: url(./assets/img/message/message-12.svg)") 
+                        p Скорее жми на ссылку <br> «Центр управления» около <br> своего аватара!
+            .hints__circles 
+                main 
+                a(href="#").hints__circles-faq FAQ 
+                a(href="#").hints__circles-info I 
+    header.header(fade-in-preloader).header--profile
+        .container.--flex.--jcsb
+            a.header__logo(href="index.html") 
+                img(src="./assets/img/header/logo.svg", alt="")
+            .header__title
+                a(href="#")
+                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                    span Вернуться к карте планет 
+            .header__right 
+                a(href="#") 
+                    picture
+                    main 
+                        h3 Тимофеев Игорь
+                        span 0 баллов
+    .page__container(fade-in-preloader)
+        section.control
+            .control__container
+                h1.g-title Центр управления

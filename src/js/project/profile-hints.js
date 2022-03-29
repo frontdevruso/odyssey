@@ -1,55 +1,111 @@
 const profileHints = () => {
     const hintSection = document.querySelector('.hints');
     const createProfile = document.querySelector('.create-profile');
-    const hintMessages = document.querySelectorAll('.hints__message');
 
     const modalAvatar = document.getElementById('modalAvatar');
+    const modalReturnAvatar = document.getElementById('modalReturnAvatar');
     const pageFocus = document.querySelector('.page-focus');
 
     const prizesAchivments = document.querySelectorAll('.prizes-achievement');
 
-    const modalOpen = () => {
-        const content = modalAvatar.querySelector('.modal__content');
-        modalAvatar.classList.add('modal--open');
+    const modalOpen = (modal) => {
+        const content = modal.querySelector('.modal__content');
+        modal.classList.remove('modal--close');
+        modal.classList.add('modal--open');
         setTimeout(function() {
             content.classList.add('modal__content--open');
         }, 1000);
     }
 
-    const modalClose = () => {
-        const content = modalAvatar.querySelector('.modal__content');
+    const modalClose = (modal) => {
+        const content = modal.querySelector('.modal__content');
         content.classList.remove('modal__content--open');
         setTimeout(function() {
-            modalAvatar.classList.add('modal--close');
+            modal.classList.add('modal--close');
         }, 400);
         setTimeout(function() {
-            modalAvatar.classList.remove('modal--open');
+            modal.classList.remove('modal--open');
         }, 1000);
     }
 
+    const thirdHintSwitch = () => {
+        document.querySelectorAll('.hints__message').forEach(function(message, index) {
+            if (index <= 1) {
+                message.classList.remove('is-active');
+                message.classList.add('d-none');
+            }
+            if (index === 2) { message.classList.add('is-active') }
+        });
+
+    }
+
     modalAvatar.querySelector('.modal-close').addEventListener('click', function() {
-        modalClose();
+        modalClose(modalAvatar);
         setTimeout(function() {
-            pageFocus.classList.add('page-focus--leftCenter');
-            prizesAchivments.forEach(function(item) {
-                item.classList.add('focus-priority');
-            });
-            hintSection.classList.remove('hints--hidden');
+            // pageFocus.classList.add('page-focus--leftCenter');
+            // prizesAchivments.forEach(function(item) {
+            //     item.classList.add('focus-priority');
+            // });
+            // hintSection.classList.remove('hints--hidden');
+
+            modalOpen(modalReturnAvatar);
         }, 1000);
     });
 
+    modalReturnAvatar.querySelector('.modal__content-offer-btn').addEventListener('click', function() {
+        modalClose(modalReturnAvatar);
+        thirdHintSwitch();
+        setTimeout(function() {
+            pageFocus.classList.add('page-focus--rightCenter');
+            hintSection.classList.remove('hints--hidden');
+            prizesAchivments.forEach(function(item) {
+                item.classList.add('focus-priority');
+            });
+        }, 1000);
+    });
+
+    modalReturnAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
+        modalClose(modalReturnAvatar);
+        setTimeout(function() {
+            modalOpen(modalAvatar);
+        }, 1000);
+    });
+
+    modalAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
+        modalClose(modalAvatar);
+        thirdHintSwitch();
+        setTimeout(function() {
+            pageFocus.classList.add('page-focus--rightCenter');
+            hintSection.classList.remove('hints--hidden');
+            prizesAchivments.forEach(function(item) {
+                item.classList.add('focus-priority');
+            });
+
+        }, 1000);
+    });
+
+    $('.hints__message--4 .message__next').on('click', function() {
+        pageFocus.classList.remove('page-focus--rightCenter');
+        pageFocus.classList.add('hidden');
+        prizesAchivments.forEach(function(item) {
+            item.classList.remove('focus-priority');
+        });
+
+        $('.page__border').removeClass('page__border--hidden');
+        $('.profile__tabs-item-info a').addClass('pulse-anim');
+    });
+
     if (hintSection) {
-        hintMessages.forEach(function(btn, index) {
-            const hintBtn = document.querySelector('[data-message]');
-            hintBtn.addEventListener('click', function() {
-                let nextClass = hintBtn.getAttribute('data-message');
-                btn.classList.remove('is-active');
-                const nextMessage = document.querySelector(`.${nextClass}`);
-                setTimeout(function() {
-                    hintMessages[index - 1].style.display = "none";
-                    nextMessage.classList.add('is-active');
-                }, 600);
-            })
+        $('.hints__message').find('.message__next').on('click', function() {
+            let currentMessage = this.closest('.hints__message');
+            let nextClass = this.getAttribute('data-message');
+            let nextMessage = $(this).parent().siblings(`.${nextClass}`)
+            currentMessage.classList.remove('is-active');
+
+            setTimeout(function() {
+                currentMessage.classList.add('d-none');
+                nextMessage.addClass('is-active');
+            }, 600);
         });
     }
 
@@ -61,7 +117,7 @@ const profileHints = () => {
 
             pageFocus.classList.remove('page-focus--left');
             hintSection.classList.add('hints--hidden');
-            modalOpen();
+            modalOpen(modalAvatar);
         });
     }
 }

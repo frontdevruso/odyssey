@@ -28,7 +28,6 @@ const preloader = () => {
 
         preloaderRocket.addEventListener("webkitAnimationEnd", animationEnd);
         preloaderRocket.addEventListener("animationend", animationEnd);
-
     });
 }
 

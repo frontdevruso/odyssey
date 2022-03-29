@@ -19,6 +19,21 @@ block content
                 .hints__message.hints__message--2
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-8.svg)") 
                         p Давай создадим тебе крутой <br> аватар. Для этого нажми на <br> «+» в кружке слева от твоего <br> имени.
+                .hints__message.hints__message--3
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
+                        p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
+                    .message__next(data-message="hints__message--4")
+                        span.btn.--link Я понял, спасибо.
+                .hints__message.hints__message--4
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-10.svg)") 
+                        p Отслеживай свой игровой <br> прогресс. Здесь будет видно, <br> сколько планет ты посетил и <br> какие задания уже выполнил, <br> а какие еще предстоит пройти.
+                    .message__next(data-message="hints__message--5")
+                        span.btn.--link Отлично!
+                .hints__message.hints__message--5
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-11.svg)") 
+                        p А теперь погнали в Центр <br> управления! Покажу тебе святая <br> святых нашей экспедиции.
+                    .hints__message-cloud.hints__message-cloud--second(style="background-image: url(./assets/img/message/message-12.svg)") 
+                        p Скорее жми на ссылку <br> «Центр управления» около <br> своего аватара!
             .hints__circles 
                 main 
                 a(href="#").hints__circles-faq FAQ 
@@ -40,7 +55,7 @@ block content
     .page__container(fade-in-preloader)
         section.profile.profile--hidden
             .profile__container
-                h1.profile__title Профиль
+                h1.g-title Профиль
                 .profile__tabs
                     .profile__tabs-item.profile__tabs-item--first.create-profile.focus-priority
                         h4 Участник Одиссеи
@@ -399,7 +414,7 @@ block content
                                     li Кодекс Порталийца
                                     li Части артефакта
     .modal#modalAvatar
-        .modal__container 
+        .modal__container(style="background-image: url('./assets/img/modal/big-modal.svg')")
             .modal__content 
                 header 
                     h1 Твой аватар
@@ -445,3 +460,12 @@ block content
                             button(style="background-color: #FF96F7")   
                             button(style="background-color: #DFDFDF")   
                 button.modal__content-create-btn.btn.--texture Создать аватар
+    .modal.modal-return-avatar#modalReturnAvatar
+        .modal__container(style="background-image: url('./assets/img/modal/small-modal.svg')")
+            .modal__content 
+                header
+                    p Ты не выбрал аватар, поэтому мы сделали это за тебя. Можешь продолжить игру с ним или выбрать другой аватар. 
+                    picture 
+                        img(src="./assets/img/modal/main-avatar.png", alt="avatar")
+                button.modal__content-create-btn.btn.--texture Вернуться к выбору аватара
+                button.modal__content-offer-btn Оставить предложенный аватар
