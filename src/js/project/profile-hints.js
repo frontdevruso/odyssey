@@ -93,7 +93,7 @@ const profileHints = () => {
             });
     
             $('.page__border').removeClass('page__border--hidden');
-            $('.profile__tabs-item-info a').addClass('pulse-anim');
+            $('.profile__tabs-item--first main profile__tabs-item-info a').addClass('pulse-anim');
         });
     
         if (hintSection) {

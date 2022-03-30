@@ -29,6 +29,12 @@
         margin-left: auto;
         margin-right: auto;
 
+        @media (max-width: 1440px) {
+            width: 92%;
+
+            margin: 20px 46px 0;
+        }
+
         &-bg {
             position: absolute;
             top: 0;right: 0;bottom: 0;left: 0;
@@ -92,6 +98,14 @@
             width: 1184px;
             height: 16px;
 
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 1440px) {
+                width: 100%;
+                height: 100%;
+            }
+
             svg {
                 position: absolute;
                 width: 100%;
@@ -111,6 +125,11 @@
                 background-image: url('./../img/control/texture-dirt.png');
                 background-position: center;
                 background-size: auto auto;
+
+                @media (max-width: 1440px) {
+                    width: 17%;
+                    height: 54%;
+                }
             }
         }
     }
@@ -134,6 +153,10 @@
 
                 padding: 80px 140px 0;
                 width: 100%;
+
+                @media (max-width: 1440px) {
+                    padding: 80px 100px 0;
+                }
                 
                 &-item {
                     background-position: center;
@@ -163,6 +186,13 @@
                     &--1,&--2,&--4,&--5,&--6 {
                         width: 161px;
                         height: 118px;
+
+                        @media (max-width: 1440px) {
+                            width: 134px;
+                            height: 98px;
+
+                            border-radius: 7px 10px 0px 0px;
+                        }
                     }
 
                     &--3 {
@@ -196,6 +226,13 @@
             justify-content: center;
             margin-top: 16px;
 
+            img {
+                @media (max-width: 1440px) {
+                    width: 74.7vw;
+                    height: 16.25VW;
+                }
+            }
+
             button {
                 display: flex;
                 flex-direction: column;
@@ -219,6 +256,16 @@
                     svg {
                         margin: auto;
                         padding-left: 1.5px;
+                    }
+
+                    @media (max-width: 1440px) {
+                        width: 40px;
+                        height: 40px;
+            
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                        }
                     }
                 }
 
@@ -291,6 +338,7 @@
                 input {
                     color: white;
                     padding-left: 4px;
+                    margin-right: 20px;
                     width: 100%;
                 }
             }
@@ -376,6 +424,10 @@
                         font-size: 16px;
                         font-weight: 700;
                         color: #2E0D6F;
+
+                        padding-top: 8px;
+                        padding-left: 4px;
+                        
                     }
 
                     .control__raiting-table-profile {

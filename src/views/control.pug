@@ -8,6 +8,20 @@ block content
     include _includes/blocks/preloader
     .page.page-profile-bg
     .page-focus.page-focus--center(fade-in-preloader)
+    header.header(fade-in-preloader).header--profile
+        .container.--flex.--jcsb
+            a.header__logo(href="index.html") 
+                img(src="./assets/img/header/logo.svg", alt="")
+            .header__title
+                a(href="#")
+                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                    span Вернуться к карте планет 
+            .header__right 
+                a(href="#") 
+                    picture
+                    main 
+                        h3 Тимофеев Игорь
+                        span 0 баллов
     .hints.hints--control(fade-in-preloader)
         .hints__container
             .hints__messages 
@@ -39,20 +53,6 @@ block content
                 main 
                 a(href="#").hints__circles-faq FAQ 
                 a(href="#").hints__circles-info I 
-    header.header(fade-in-preloader).header--profile
-        .container.--flex.--jcsb
-            a.header__logo(href="index.html") 
-                img(src="./assets/img/header/logo.svg", alt="")
-            .header__title
-                a(href="#")
-                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
-                    span Вернуться к карте планет 
-            .header__right 
-                a(href="#") 
-                    picture
-                    main 
-                        h3 Тимофеев Игорь
-                        span 0 баллов
     .page__container(fade-in-preloader)
         section.control
             .control__container

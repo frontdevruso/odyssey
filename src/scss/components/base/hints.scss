@@ -4,9 +4,11 @@
     opacity: 1;
 
     transition: .4s;
+    height: 0;
+    top: 80%;
 
-    bottom: 24px;
-    right: 24px;
+    bottom: 5%;
+    right: 5%;
 
     &--hidden {
         opacity: 0 !important;
@@ -99,6 +101,8 @@
         opacity: 0;
         z-index: -5;
 
+        font-size: 11px;
+
         &.is-active {
             position: relative;
             transform: translateY(0);
@@ -119,7 +123,7 @@
             justify-content: center;
 
             p {
-                font-size: 10px;
+                font-size: 11px;
                 line-height: 140%;
 
                 margin: auto 0;
@@ -136,7 +140,7 @@
             bottom: 20%;
 
             span {
-                font-size: 10px;
+                font-size: 12px;
                 line-height: 120%;
                 transform: translateY(-1px);
             }
@@ -228,7 +232,7 @@
                 p {
                     margin: initial;
                     padding-bottom: 5px;
-                    max-width: 130px;
+                    max-width: 150px;
                     width: 100%;
                     margin: 0 auto 0 65px;
                 }

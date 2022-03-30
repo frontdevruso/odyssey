@@ -48,9 +48,11 @@
 
         transition: .4s;
         opacity: 0;
+        z-index: -10;
 
         &.modal__content--open {
             opacity: 1;
+            z-index: 200;
         }
 
         header {
