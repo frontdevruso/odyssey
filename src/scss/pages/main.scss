@@ -1,5 +1,6 @@
 .body {
     background: #250630 url(../img/main-stars.png) no-repeat center / cover;
+    overflow: auto;
 }
 
 .page {
@@ -54,6 +55,8 @@
     height: calc(100% - 40px);
     width: 100%;
     max-width: 1440px;
+    min-height: 760px;
+    margin: 50px 0;
     overflow: hidden;
 
     &--hidden {
