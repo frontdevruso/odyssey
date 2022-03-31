@@ -10,6 +10,11 @@
     bottom: 5%;
     right: 5%;
 
+    @media (max-height: 840px), (max-width: 1480px){
+        top: 77%;
+        right: 2%;
+    }
+
     &--hidden {
         opacity: 0 !important;
         transform: translateY(100px);

@@ -16,6 +16,10 @@
     z-index: 100;
 
     user-select: none;
+
+    @media (max-height: 840px), (max-width: 1480px) {
+        max-width: 350px;
+    }
 }
 
 .about__messages {
@@ -24,6 +28,12 @@
     transform: translateX(-50%);
     bottom: 567px;
     margin-left: -247px;
+
+    @media (max-height: 840px), (max-width: 1480px) {
+        max-width: 350px;
+        bottom: 452px;
+        margin-left: -233px;
+    }
 }
 
 .message {
@@ -32,6 +42,10 @@
     background-position: center;
     transform: translateX(-240px);
     font-size: 16px;
+
+    @media (max-height: 840px), (max-width: 1480px) {
+        font-size: 16px;
+    }
 }
 
 .about__message {
@@ -60,6 +74,7 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
+
     &.message__next--autoheight {
         flex-wrap: wrap;
         max-width: 216px;
@@ -106,6 +121,7 @@
     width: 440px;
     height: 343px;
     transform: translateX(-250px) translateY(-66px);
+    
 }
 
 .message-2 .message__text {
