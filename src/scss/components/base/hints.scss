@@ -21,6 +21,20 @@
         position: absolute;
         z-index: -5;
     }
+    &--planets {
+        right: 2%;
+        @media (max-height: 840px), (max-width: 1480px) { 
+            top: 74%;
+            .message__next {
+                span { text-decoration: none }
+            }
+            .hints__message-cloud { background-size: 90% 90% }
+        }
+
+        .hints__message--1 {
+            .message__next { height: 48px }
+        }
+    }
     &--d-none {
         display: none !important;
     }
@@ -265,6 +279,30 @@
                     margin-top: 2px;
                 }
                 bottom: 13%;
+            }
+        }
+
+        &--planets {
+            right: 5%;
+            top: -12%;
+
+            .hints__message-cloud {
+                height: 300px;
+
+                p {
+                    font-size: 12px;
+                    @media (max-height: 840px), (max-width: 1480px) { font-size: 11px }
+                }
+            }
+
+            .message__next {
+                bottom: 11%;
+                
+                span {
+                    line-height: 120%;
+                    text-decoration: underline dashed;
+                    border: none;
+                }
             }
         }
     }

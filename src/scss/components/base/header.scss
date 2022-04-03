@@ -29,9 +29,7 @@
     text-align: center;
     color: #fff;
     position: relative;
-    h1 {
-        z-index: 50;
-    }
+    h1 { z-index: 50 }
     &:after {
         position: absolute;
         content: "";
