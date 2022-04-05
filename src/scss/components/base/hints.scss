@@ -28,7 +28,7 @@
             .message__next {
                 span { text-decoration: none }
             }
-            .hints__message-cloud { background-size: 90% 90% }
+            .hints__message-cloud { background-size: 80% 80% }
         }
 
         .hints__message--1 {
@@ -197,9 +197,7 @@
                 p { padding-bottom: 20px }
             }
 
-            .message__next {
-                left: 5%;
-            }
+            .message__next { left: 5% }
         }
 
         &--4 {
@@ -291,7 +289,7 @@
 
                 p {
                     font-size: 12px;
-                    @media (max-height: 840px), (max-width: 1480px) { font-size: 11px }
+                    @media (max-height: 840px), (max-width: 1480px) { font-size: 10px }
                 }
             }
 
@@ -302,6 +300,11 @@
                     line-height: 120%;
                     text-decoration: underline dashed;
                     border: none;
+                }
+
+                @media (max-height: 840px), (max-width: 1480px) {
+                    height: 40px !important;
+                    span { font-size: 10px }
                 }
             }
         }

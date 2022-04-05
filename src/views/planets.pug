@@ -12,13 +12,18 @@ block content
         .container.--flex.--jcsb
             a.header__logo(href="index.html") 
                 img(src="./assets/img/header/logo.svg", alt="")
-            
+            .header__title
+                a(href="#")
+                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                    span Вернуться к карте планет 
             .header__right 
                 a(href="#") 
                     picture
                     main 
-                        h3 Тимофеев Игорь
-                        span 0 баллов
+                        h3 Игорь Тимофеев
+                        span 
+                            em #7 в рейтинге
+                            b 2 536 баллов
     .hints.hints--planets(fade-in-preloader) 
         .hints__container
             .hints__messages 
@@ -37,31 +42,32 @@ block content
                 main 
                 a(href="#").hints__circles-faq FAQ 
                 a(href="#").hints__circles-info I 
-    .planets(fade-in-preloader) 
-        .planets__img 
-            img(src="./assets/img/planets/main-control.png", alt="main-control")
-        .planets__table 
-            .planets__table-item.planets__table-item--1
-                img.planets__table-item-planet(src="./assets/img/planets/planet-1.png", alt="planet")
-                img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress Задания 0/2 
-            .planets__table-item.planets__table-item--2
-                img.planets__table-item-planet(src="./assets/img/planets/planet-2.png", alt="planet")
-                img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
-            .planets__table-item.planets__table-item--3
-                img.planets__table-item-planet(src="./assets/img/planets/planet-3.png", alt="planet")
-                img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
-            .planets__table-item.planets__table-item--4 
-                img.planets__table-item-planet(src="./assets/img/planets/planet-4.png", alt="planet")
-                img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
-            .planets__table-item.planets__table-item--5
-                img.planets__table-item-planet(src="./assets/img/planets/planet-5.png", alt="planet")
-                img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress.planets__table-item-progress--blocked Задания выполнены
-            .planets__table-item.planets__table-item--6
-                img.planets__table-item-planet(src="./assets/img/planets/planet-6.png", alt="planet")
-                img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
-                span.planets__table-item-progress.planets__table-item-progress--blocked Задания выполнены
+    .page__container
+        .planets(fade-in-preloader) 
+            .planets__img 
+                img(src="./assets/img/planets/main-control.png", alt="main-control")
+            .planets__table 
+                .planets__table-item.planets__table-item--1
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-1.png", alt="planet")
+                    img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress Задания 0/2 
+                .planets__table-item.planets__table-item--2
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-2.png", alt="planet")
+                    img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                .planets__table-item.planets__table-item--3
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-3.png", alt="planet")
+                    img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                .planets__table-item.planets__table-item--4 
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-4.png", alt="planet")
+                    img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                .planets__table-item.planets__table-item--5
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-5.png", alt="planet")
+                    img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress.planets__table-item-progress--blocked Задания выполнены
+                .planets__table-item.planets__table-item--6
+                    img.planets__table-item-planet(src="./assets/img/planets/planet-6.png", alt="planet")
+                    img.planets__table-item-rocket.disabled(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                    span.planets__table-item-progress.planets__table-item-progress--blocked Задания выполнены
