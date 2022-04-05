@@ -1,38 +1,47 @@
 .hints {
     z-index: 170;
-    position: absolute;
+    position: fixed;
     opacity: 1;
 
     transition: .4s;
-    height: 0;
-    top: 80%;
+    height: auto;
 
-    bottom: 5%;
-    right: 5%;
+    bottom: initial;
+    right: initial;
+
+    transform: translate(1100%, 550%);
 
     @media (max-height: 840px), (max-width: 1480px){
-        top: 77%;
-        right: 2%;
+        transform: translate(900%, 400%);
+    }
+
+    @media (max-height: 610px), (max-width: 1200px){
+        right: 4%;
+        transform: translateY(390%);
     }
 
     &--hidden {
         opacity: 0 !important;
-        transform: translateY(100px);
-        position: absolute;
         z-index: -5;
     }
     &--planets {
-        right: 2%;
+        transform: translate(1100%, 530%);
+        .hints__message--1 {
+            .message__next { height: 48px }
+        }
+
         @media (max-height: 840px), (max-width: 1480px) { 
-            top: 74%;
+            transform: translate(900%, 380%);
             .message__next {
                 span { text-decoration: none }
             }
             .hints__message-cloud { background-size: 80% 80% }
         }
 
-        .hints__message--1 {
-            .message__next { height: 48px }
+        
+        @media (max-height: 610px), (max-width: 1200px){
+            transform: translateY(360%);
+            right: 4%;
         }
     }
     &--d-none {

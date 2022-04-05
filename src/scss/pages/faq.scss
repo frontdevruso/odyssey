@@ -1,6 +1,8 @@
 .faq {
     padding: 107px 0 0;
     position: relative;
+
+    min-width: 1190px;
     height: 100%;
 
     &__list {
@@ -26,8 +28,8 @@
             height: 400px;
             overflow-y: scroll;
 
-            -webkit-mask-image: -webkit-linear-gradient(270deg, #9062C3 -0.04%, rgba(144, 98, 195, 0) 95.9%);
-            mask-image: linear-gradient(270deg, #9062C3 -0.04%, rgba(144, 98, 195, 0) 95.9%);
+            -webkit-mask-image: -webkit-linear-gradient(270deg, #9062C3 90%, rgba(144, 98, 195, 0) 98.9%);
+            mask-image: linear-gradient(270deg, #9062C3 90%, rgba(144, 98, 195, 0) 98.9%);
             mask-composite: intersect;
 
             &::-webkit-scrollbar {

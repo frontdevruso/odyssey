@@ -7,57 +7,57 @@ block content
   .page__border.page__border--hidden
     include _includes/blocks/preloader
     .page.page-main-bg
-    .page.page-profile-bg(fade-in-preloader)
-    .page-focus.page-focus--center(fade-in-preloader)
-    header.header(fade-in-preloader).header--profile
-        .container.--flex.--jcsb
-            a.header__logo(href="index.html") 
-                img(src="./assets/img/header/logo.svg", alt="")
-            .header__title
-                a(href="#")
-                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
-                    span Вернуться к карте планет 
-            .header__right 
-                a(href="#") 
-                    picture
-                    main 
-                        h3 Игорь Тимофеев
-                        span 
-                            em #7 в рейтинге
-                            b 2 536 баллов
-    .hints.hints--control(fade-in-preloader)
-        .hints__container
-            .hints__messages 
-                .hints__message.hints__message--control.hints__message--1.is-active
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                        p Добро пожаловать в <br>Центр управления! Здесь ты <br> можешь отслеживать, какие <br> планеты открыты и сколько <br> из них ты уже прошел.
-                    .message__next(data-message="hints__message--2")
-                        span.btn.--link Разве не все планеты доступны?
-                .hints__message.hints__message--control.hints__message--2
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                        p Планеты открываются <br>по очереди. Каждые две <br> недели игроки получают <br> доступ к новой планете. <br>Следи за Картой планет!
-                    a(href="#controlLaunching").message__next(data-message="hints__message--3")
-                        span.btn.--link Спасибо, что предупредил.
-                .hints__message.hints__message--control.hints__message--3
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                        p В Центре управления <br> хранятся добытые тобой <br> артефакты. С их помощью <br> ты сможешь запустить <br> межгалактическую ракету. 
-                    a(href="#controlRaiting").message__next(data-message="hints__message--4")
-                        span.btn.--link Вот это я понимаю — пазл!
-                .hints__message.hints__message--control.hints__message--4
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                        p А еще здесь находится <br> рейтинг всех участников <br> Одиссеи. Надеюсь, скоро в <br> нем появится и твое имя!
-                    .message__next(data-message="hints__message--5")
-                        span.btn.--link Можешь не сомневаться!
-                .hints__message.hints__message--control.hints__message--fifth.hints__message--5
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-14.svg)") 
-                        p Тогда добро пожаловать <br>в открытый космос!
-                        a(href="#").btn.--texture Перейти к карте планет
-            .hints__circles 
-                main 
-                a(href="#").hints__circles-faq FAQ 
-                a(href="#").hints__circles-info I 
     .page__container(fade-in-preloader)
-        section.control
+        .page-focus.page-focus--center(fade-in-preloader)
+        .hints.hints--control(fade-in-preloader)
+            .hints__container
+                .hints__messages 
+                    .hints__message.hints__message--control.hints__message--1.is-active
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
+                            p Добро пожаловать в <br>Центр управления! Здесь ты <br> можешь отслеживать, какие <br> планеты открыты и сколько <br> из них ты уже прошел.
+                        .message__next(data-message="hints__message--2")
+                            span.btn.--link Разве не все планеты доступны?
+                    .hints__message.hints__message--control.hints__message--2
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
+                            p Планеты открываются <br>по очереди. Каждые две <br> недели игроки получают <br> доступ к новой планете. <br>Следи за Картой планет!
+                        a(href="#controlLaunching").message__next(data-message="hints__message--3")
+                            span.btn.--link Спасибо, что предупредил.
+                    .hints__message.hints__message--control.hints__message--3
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
+                            p В Центре управления <br> хранятся добытые тобой <br> артефакты. С их помощью <br> ты сможешь запустить <br> межгалактическую ракету. 
+                        a(href="#controlRaiting").message__next(data-message="hints__message--4")
+                            span.btn.--link Вот это я понимаю — пазл!
+                    .hints__message.hints__message--control.hints__message--4
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
+                            p А еще здесь находится <br> рейтинг всех участников <br> Одиссеи. Надеюсь, скоро в <br> нем появится и твое имя!
+                        .message__next(data-message="hints__message--5")
+                            span.btn.--link Можешь не сомневаться!
+                    .hints__message.hints__message--control.hints__message--fifth.hints__message--5
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-14.svg)") 
+                            p Тогда добро пожаловать <br>в открытый космос!
+                            a(href="#").btn.--texture Перейти к карте планет
+                .hints__circles 
+                    main 
+                    a(href="#").hints__circles-faq FAQ 
+                    a(href="#").hints__circles-info I 
+
+        section.control.page-profile-bg
+            header.header(fade-in-preloader).header--profile
+                .container.--flex.--jcsb
+                    a.header__logo(href="index.html") 
+                        img(src="./assets/img/header/logo.svg", alt="")
+                    .header__title
+                        a(href="#")
+                            img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                            span Вернуться к карте планет 
+                    .header__right 
+                        a(href="#") 
+                            picture
+                            main 
+                                h3 Игорь Тимофеев
+                                span 
+                                    em #7 в рейтинге
+                                    b 2 536 баллов
             .control__container
                 h1.g-title Центр управления
                 .control__progress

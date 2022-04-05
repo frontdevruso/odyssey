@@ -7,7 +7,6 @@ block content
   .page__border.page__border--hidden
     include _includes/blocks/preloader
     .page.page-main-bg
-    .page.page-profile-bg(fade-in-preloader)
     .page-focus.page-focus--left(fade-in-preloader)
     .hints(fade-in-preloader)
         .hints__container
@@ -39,24 +38,24 @@ block content
                 main 
                 a(href="#").hints__circles-faq FAQ 
                 a(href="#").hints__circles-info I 
-    header.header(fade-in-preloader).header--profile
-        .container.--flex.--jcsb
-            a.header__logo(href="index.html") 
-                img(src="./assets/img/header/logo.svg", alt="")
-            .header__title
-                a(href="#")
-                    img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
-                    span Вернуться к карте планет 
-            .header__right 
-                a(href="#") 
-                    picture
-                    main 
-                        h3 Игорь Тимофеев
-                        span 
-                            em #7 в рейтинге
-                            b 2 536 баллов
     .page__container(fade-in-preloader)
-        section.profile.profile--hidden
+        section.profile.page-profile-bg.profile--hidden
+            header.header(fade-in-preloader).header--profile
+                .container.--flex.--jcsb
+                    a.header__logo(href="index.html") 
+                        img(src="./assets/img/header/logo.svg", alt="")
+                    .header__title
+                        a(href="#")
+                            img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                            span Вернуться к карте планет 
+                    .header__right 
+                        a(href="#") 
+                            picture
+                            main 
+                                h3 Игорь Тимофеев
+                                span 
+                                    em #7 в рейтинге
+                                    b 2 536 баллов
             .profile__container
                 h1.g-title Профиль
                 .profile__tabs

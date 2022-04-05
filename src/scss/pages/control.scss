@@ -304,7 +304,7 @@
 
     &__raiting {
         position: relative;
-        height: 400px;
+        height: auto;
         top: -6%;
 
         h2 {
@@ -389,7 +389,7 @@
             @media (max-height: 840px), (max-width: 1480px) {
                 padding: 40px 20px 40px 20px;
                 height: 360px;
-                background-size: 107% 430px;
+                background-size: 94% 345px;
             }
 
             header {
