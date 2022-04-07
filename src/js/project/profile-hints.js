@@ -84,8 +84,8 @@ const profileHints = () => {
     
             }, 1000);
         });
-    
-        $('.hints__message--4 .message__next').on('click', function() {
+
+        $('.hints__message--3 .message__next').on('click', function(event) {    
             pageFocus.classList.remove('page-focus--rightCenter');
             pageFocus.classList.add('hidden');
             prizesAchivments.forEach(function(item) {
@@ -93,7 +93,12 @@ const profileHints = () => {
             });
     
             $('.page__border').removeClass('page__border--hidden');
-            $('.profile__tabs-item--first main profile__tabs-item-info a').addClass('pulse-anim');
+            const scrollBar = new SimpleBar(document.getElementById('pageContainerProfile'));
+            $("#pageContainerProfile").animate({ scrollBottom: $(document).height() }, 1000);
+            $('.profile__tabs-item--first .profile__tabs-item-info-control').addClass('pulse-anim');
+        });
+
+        $('.hints__message--4 .message__next').on('click', function(event) {
         });
     
         if (hintSection) {

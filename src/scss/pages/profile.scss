@@ -165,6 +165,7 @@
 
     padding: 107px 0 55px;
     min-width: 1190px;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
         display: block;
@@ -194,6 +195,7 @@
 
     &__container {
         padding: 0 48px;
+        scroll-behavior: smooth;
     }
 
     &__title {
@@ -271,9 +273,7 @@
                     margin-bottom: 17px;
                 }
 
-                a {
-                    border-bottom: 1px dashed $dark-blue;
-                    transition: .4s;
+                &-control {
                     &.pulse-anim {
                         animation: blinking 1s infinite linear;
                         @keyframes blinking {
@@ -299,6 +299,11 @@
                             }
                         }
                     }
+                }
+
+                a {
+                    border-bottom: 1px dashed $dark-blue;
+                    transition: .4s;
                 }
             }
 

@@ -38,15 +38,11 @@ const control = () => {
                 $('.hints').removeClass('hints--hidden');
                 $('.hints').removeClass('hints--d-none');
             }, 200);
-            
-            let elementClick = $(this).attr("href");
-            let destination = $(elementClick).offset().bottom;
-            if ($.browser.safari) {
-                $('body').animate({ scrollbottom: destination }, 1100); //1100 - скорость
-            } else {
-                $('html').animate({ scrollbottom: destination }, 1100);
-            }
-            return false; 
+        });
+    
+        $(".hints__message--4 .message__next").click(function () {
+            const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
+            controlBar.getScrollElement().scrollTop = 10
         });
     }
 }

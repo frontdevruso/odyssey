@@ -11,10 +11,10 @@ let app = {
         preloader();
         about();
         buttons();
+        planets();
         profileHints();
         control();
         faq();
-        planets();
     }
 };
 app.init();

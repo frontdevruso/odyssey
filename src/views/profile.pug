@@ -4,10 +4,9 @@ block config
   - var pagetitle = 'Профиль'
   - var bodyClass = ''
 block content
-  .page__border.page__border--hidden
+  .page__border
     include _includes/blocks/preloader
     .page.page-main-bg
-    .page-focus.page-focus--left(fade-in-preloader)
     .hints(fade-in-preloader)
         .hints__container
             .hints__messages 
@@ -22,12 +21,12 @@ block content
                 .hints__message.hints__message--3
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
                         p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
-                    .message__next(data-message="hints__message--4")
+                    a(href="#firstTab").message__next(data-message="hints__message--4") 
                         span.btn.--link Я понял, спасибо.
                 .hints__message.hints__message--4
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-10.svg)") 
                         p Отслеживай свой игровой <br> прогресс. Здесь будет видно, <br> сколько планет ты посетил и <br> какие задания уже выполнил, <br> а какие еще предстоит пройти.
-                    .message__next(data-message="hints__message--5")
+                    a(href="#profilePage").message__next(data-message="hints__message--5")
                         span.btn.--link Отлично!
                 .hints__message.hints__message--5
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-11.svg)") 
@@ -38,8 +37,9 @@ block content
                 main 
                 a(href="#").hints__circles-faq FAQ 
                 a(href="#").hints__circles-info I 
-    .page__container(fade-in-preloader)
-        section.profile.page-profile-bg.profile--hidden
+    .page__container#pageContainerProfile(fade-in-preloader)
+        .page-focus.page-focus--left(fade-in-preloader)
+        section.profile.page-profile-bg.profile--hidden#profilePage
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
                     a.header__logo(href="index.html") 
@@ -82,7 +82,7 @@ block content
                             button.new-profile-btn.new-profile-btn--animation
                             .profile__tabs-item-info 
                                 h3 Тимофеев Игорь
-                                a(href="./control.html") Центр управления
+                                a(href="./control.html").profile__tabs-item-info-control Центр управления
                     .profile__tabs-item.profile__tabs-item--second.prizes-achievement
                         h4 Достижения
                         main 
@@ -103,7 +103,7 @@ block content
                                     </filter>
                                 </defs>
                             </svg>
-                            ul 
+                            ul
                                 li 
                                     picture
                                     span Истинный Корпорулиец
@@ -147,7 +147,7 @@ block content
                                     p Зарабатывай как можно больше баллов, чтобы получать призы
                                     a(href="").profile__tabs-item-info-prizes 
                                         span Посмотреть, все призы 
-                .profile__tabs
+                .profile__tabs#firstTab
                     .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--first
                         h4   
                         main 

@@ -11,33 +11,7 @@
 
     height: 100%;
 
-    &::-webkit-scrollbar {
-        display: block;
-        width: 10px;
-        height: 4px;
-    }
-    
-    &::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-        border-radius: 10px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #8F62C3;
-        border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #8F62C3;
-    }
+    & > * { scroll-behavior: smooth }
 }
 
 .page {
@@ -50,33 +24,6 @@
     &--main {
         overflow-x: auto;
         padding: 0;
-
-        &::-webkit-scrollbar {
-            display: block;
-            width: 10px;
-            height: 4px;
-        }
-        
-        &::-webkit-scrollbar {
-            width: 4px;
-            border-radius: 10px;
-        }
-        
-        /* Track */
-        &::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: #8F62C3;
-            border-radius: 10px;
-        }
-        
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-            background: #8F62C3;
-        }
     }
 }
 
@@ -157,22 +104,14 @@
     position: relative;
     max-height: 800px;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 48px);
 
     max-width: 1440px;
-    min-width: 1200px;
     min-height: 610px;
 
     margin: auto;
     box-sizing: content-box;
     overflow: hidden;
-
-    
-    &::-webkit-scrollbar {
-        display: block;
-        width: 10px;
-        height: 4px;
-    }
     
     &::-webkit-scrollbar {
         width: 4px;
@@ -199,6 +138,12 @@
     &--hidden {
         .profile { overflow: hidden }
         .page__container { overflow: hidden }
+
+        .simplebar-content-wrapper {
+            overflow: hidden;
+
+            .simplebar-track { display: none }
+        }
     }
 
     @media (max-height: 840px), (max-width: 1480px) {
@@ -213,40 +158,12 @@
     position: static;
     height: 100%;
 
-    &-wrapper { overflow: hidden }
-    
-    &::-webkit-scrollbar {
-        width: 4px;
-        height: 4px;
-        border-radius: 10px;
-        background: transparent;
-    }
+    padding: 0;
 
-    
+    &-wrapper { overflow: hidden }
+
     &::-webkit-scrollbar {
-        display: block;
-        width: 10px;
-    }
-    
-    &::-webkit-scrollbar {
-        width: 4px;
-        border-radius: 10px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #8F62C3;
-        border-radius: 10px;
-    }
-    
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: #8F62C3;
+        display: none;
     }
 }
 
@@ -255,6 +172,13 @@
     &.page-main-dark {
         background: radial-gradient(62.57% 62.57% at 50% 50%, rgba(0, 0, 0, 0) 15.72%, #000000 100%), url(../img/main-bg.jpg) no-repeat center / cover;
     }
+}
+
+.page-control-bg {
+    background: url(../img/profile-hidden-background.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 100% 100%;
 }
 
 .main {

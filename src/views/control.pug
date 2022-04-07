@@ -6,9 +6,7 @@ block config
 block content
   .page__border.page__border--hidden
     include _includes/blocks/preloader
-    .page.page-main-bg
-    .page__container(fade-in-preloader)
-        .page-focus.page-focus--center(fade-in-preloader)
+    .page.page-control-bg
         .hints.hints--control(fade-in-preloader)
             .hints__container
                 .hints__messages 
@@ -40,7 +38,8 @@ block content
                     main 
                     a(href="#").hints__circles-faq FAQ 
                     a(href="#").hints__circles-info I 
-
+    .page__container#pageContainerControl(fade-in-preloader)
+        .page-focus.page-focus--center(fade-in-preloader)
         section.control.page-profile-bg
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
@@ -137,7 +136,7 @@ block content
                                 img(src="./assets/img/control/launching-artefacts-3.svg", alt="")
                                 span Гиперпростран-<br>ственный ускоритель
                             li.control__launching-content-table-item.control__launching-content-table-item--4(style="background-image: url('./assets/img/control/launching-bg-4.svg')")
-                                img(src="./assets/img/control/launching-artefacts-4.svg", alt="")
+                                img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
                                 span Нейросеть<br>Ева
                             li.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
