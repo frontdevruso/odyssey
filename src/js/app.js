@@ -12,9 +12,9 @@ let app = {
         about();
         buttons();
         planets();
-        profileHints();
         control();
         faq();
+        profileHints();
     }
 };
 app.init();
