@@ -80,6 +80,7 @@
                     }
                     h3 { color: #2E0D6F }
                 }
+                
                 picture {
                     max-width: 97px;
                     max-height: 97px;
@@ -89,6 +90,7 @@
                     img {
                         width: auto;
                         height: auto;
+                        filter: saturate(.3) brightness(80%);
 
                         margin: auto;
                     }
@@ -124,7 +126,7 @@
             }
 
             span {
-                width: 202px;
+                width: 17%;
                 height: 16px;
 
                 position: absolute;

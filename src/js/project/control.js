@@ -1,5 +1,6 @@
 const control = () => {
     const hintSection = document.querySelector('.hints');
+    const controlProgress = document.querySelector('.control__progress');
 
     if (document.querySelector('.control')) {
         if (hintSection) {
@@ -14,36 +15,52 @@ const control = () => {
                     nextMessage.addClass('is-active');
                 }, 600);
             });
+            $(".hints__message--2 .message__next").click(function () {
+                $('.page-focus').removeClass('page-focus--center');
+                $('.page-focus').addClass('hidden');
+                let elementClick = $(this).attr("href");
+                let destination = $(elementClick).offset().top;
+                if ($.browser.safari) {
+                    $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
+                } else {
+                    $('html').animate({ scrollTop: destination }, 1100);
+                }
+                return false; 
+            });
+        
+            $(".hints__message--3 .message__next").click(function () {
+                $('.page__border').removeClass('page__border--hidden');
+                $('.hints').addClass('hints--hidden');
+                $('.hints').addClass('hints--d-none');
+        
+                setTimeout(function() {
+                    $('.hints').removeClass('hints--hidden');
+                    $('.hints').removeClass('hints--d-none');
+                }, 200);
+            });
+        
+            $(".hints__message--4 .message__next").click(function () {
+                const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
+                controlBar.getScrollElement().scrollTop = 10
+            });
         }
-    
-        $(".hints__message--2 .message__next").click(function () {
-            $('.page-focus').removeClass('page-focus--center');
-            $('.page-focus').addClass('hidden');
-            let elementClick = $(this).attr("href");
-            let destination = $(elementClick).offset().top;
-            if ($.browser.safari) {
-                $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
-            } else {
-                $('html').animate({ scrollTop: destination }, 1100);
+            
+        if(controlProgress) {
+            function activatePlanets(planetCount) {
+                $('.control__progress ul li').each(function(index, item) {
+                    if (Number(planetCount) >= (index + 1)) {
+                        item.classList.add('active');
+                    }
+                })
             }
-            return false; 
-        });
-    
-        $(".hints__message--3 .message__next").click(function () {
-            $('.page__border').removeClass('page__border--hidden');
-            $('.hints').addClass('hints--hidden');
-            $('.hints').addClass('hints--d-none');
-    
-            setTimeout(function() {
-                $('.hints').removeClass('hints--hidden');
-                $('.hints').removeClass('hints--d-none');
-            }, 200);
-        });
-    
-        $(".hints__message--4 .message__next").click(function () {
-            const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
-            controlBar.getScrollElement().scrollTop = 10
-        });
+
+            function barWidth(level) {
+                $('.control__progress-bar-active').width(`${16.75 * level}%`)
+            }
+
+            barWidth(controlProgress.getAttribute('data-level'));
+            activatePlanets(controlProgress.getAttribute('data-level'));
+        }
     }
 }
 
