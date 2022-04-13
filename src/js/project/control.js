@@ -3,6 +3,7 @@ const control = () => {
     const controlProgress = document.querySelector('.control__progress');
 
     if (document.querySelector('.control')) {
+        const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
         if (hintSection) {
             $('.hints__message').find('.message__next').on('click', function() {
                 let currentMessage = this.closest('.hints__message');
@@ -29,7 +30,7 @@ const control = () => {
             });
         
             $(".hints__message--3 .message__next").click(function () {
-                $('.page__border').removeClass('page__border--hidden');
+                $('#pageContainerControl').removeClass('page__container--control-hd');
                 $('.hints').addClass('hints--hidden');
                 $('.hints').addClass('hints--d-none');
         
@@ -39,10 +40,10 @@ const control = () => {
                 }, 200);
             });
         
-            $(".hints__message--4 .message__next").click(function () {
-                const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
-                controlBar.getScrollElement().scrollTop = 10
-            });
+            // $(".hints__message--4 .message__next").click(function () {
+            //     const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
+            //     controlBar.getScrollElement().scrollTop = 10
+            // });
         }
             
         if(controlProgress) {

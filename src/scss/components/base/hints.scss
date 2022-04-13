@@ -24,6 +24,70 @@
         opacity: 0 !important;
         z-index: -5;
     }
+
+    &--profile {
+        .hints__message--4 {
+            margin-top: auto;
+            left: initial;
+            bottom: -25%;
+            right: -28%;
+            width: 200px;
+
+            .hints__message-cloud {
+                width: 200px;
+                height: 170px;
+
+                p { padding-bottom: 20px }
+            }
+
+            .message__next {
+                bottom: 10%;
+                left: 0;
+            }
+
+        }
+
+        .hints__message--5 {
+            margin-top: auto;
+            left: -5%;
+            
+            .hints__message-cloud {
+                width: 350px;
+                height: 270px;
+
+                p { padding-bottom: 20px }
+            }
+
+            .message__next {
+                bottom: 27%;
+                left: 5%;
+            }
+        }
+
+        .hints__message--6 {
+            margin-top: auto;
+            left: -5%;
+            .hints__message-cloud {
+                width: 320px;
+                height: 170px;
+
+                p { padding-bottom: 20px }
+
+                margin-bottom: 40px;
+                margin-right: 20px;
+                
+                &--second {
+                    width: 306px;
+                    height: 161px;
+
+                    position: absolute;
+                    top: 45%;
+                    right: -5%;
+                }
+            }
+        }
+    }
+
     &--planets {
         transform: translate(1100%, 530%);
         .hints__message--1 {

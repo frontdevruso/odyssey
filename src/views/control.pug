@@ -4,7 +4,7 @@ block config
   - var pagetitle = 'Панель Управление'
   - var bodyClass = ''
 block content
-  .page__border.page__border--hidden
+  .page__border
     include _includes/blocks/preloader
     .page.page-control-bg
         .hints.hints--control(fade-in-preloader)
@@ -38,7 +38,7 @@ block content
                     main 
                     a(href="#").hints__circles-faq FAQ 
                     a(href="#").hints__circles-info I 
-    .page__container#pageContainerControl(fade-in-preloader)
+    .page__container.page__container--control-hd#pageContainerControl(fade-in-preloader)
         .page-focus.page-focus--center(fade-in-preloader)
         section.control.page-profile-bg
             header.header(fade-in-preloader).header--profile
@@ -118,31 +118,44 @@ block content
                     .control__launching-content 
                         h2 Подготовка к запуску
                         main 
-                            img(src="./assets/img/control/launching-rocket.png", alt="rocket")
-                            button 
+                            picture 
+                                img(src="./assets/img/control/launching-rocket.png", alt="rocket")
+                                img.rocket-part.rocket-part--1.active(src="./assets/img/control/rocket-part-1.png", alt="rocket")
+                                img.rocket-part.rocket-part--2.active(src="./assets/img/control/rocket-part-2.png", alt="rocket")
+                                img.rocket-part.rocket-part--3.active(src="./assets/img/control/rocket-part-3.png", alt="rocket")
+                                img.rocket-part.rocket-part--4(src="./assets/img/control/rocket-part-4.png", alt="rocket")
+                                img.rocket-part.rocket-part--5(src="./assets/img/control/rocket-part-5.png", alt="rocket")
+                                img.rocket-part.rocket-part--6(src="./assets/img/control/rocket-part-6.png", alt="rocket")
+                            button.active
                                 span 
                                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.5 6.63397C14.1667 7.01887 14.1667 7.98113 13.5 8.36603L2.25 14.8612C1.58333 15.2461 0.749999 14.765 0.749999 13.9952L0.75 1.00481C0.75 0.23501 1.58333 -0.246117 2.25 0.138783L13.5 6.63397Z" fill="white"/>
                                     </svg>
                                 h4 Запустить <br> ракету
                         ul.control__launching-content-table
-                            li.control__launching-content-table-item.control__launching-content-table-item--1(style="background-image: url('./assets/img/control/launching-bg-1.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--1(style="background-image: url('./assets/img/control/launching-bg-1.svg')")
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть <br> Ева
-                            li.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
-                            li.control__launching-content-table-item.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
                                 img(src="./assets/img/control/launching-artefacts-3.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-3-active.png", alt="")
                                 span Гиперпростран-<br>ственный ускоритель
                             li.control__launching-content-table-item.control__launching-content-table-item--4(style="background-image: url('./assets/img/control/launching-bg-4.svg')")
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть<br>Ева
                             li.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
                             li.control__launching-content-table-item.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-6.svg", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-4-active.png", alt="")
                                 span Нейросеть <br> Ева
                 .control__raiting#controlRaiting
                     h2 Рейтинг участников
@@ -184,6 +197,30 @@ block content
                                 .control__raiting-table-subdivision Отдел маркетинга
                                 .control__raiting-table-post Оператор по работе с клиентами
                                 .control__raiting-table-score 781
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision Отдел маркетинга
+                                .control__raiting-table-post Инженер
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision Отдел маркетинга
+                                .control__raiting-table-post Инженер
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision Отдел маркетинга
+                                .control__raiting-table-post Инженер
+                                .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
                                 .control__raiting-table-profile 

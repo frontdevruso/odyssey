@@ -198,6 +198,18 @@
                         font-size: 16px;
                         line-height: 140%;
                         text-align: center;
+
+                        margin-top: 10px;
+                    }
+
+                    .control__launching-content-table-item-img-active {
+                        opacity: 0;
+                    }
+
+                    &.active {
+                        img { opacity: 0 }
+                        span { color: white }
+                        .control__launching-content-table-item-img-active { opacity: 1 }
                     }
 
                     &--1,&--2,&--4,&--5,&--6 {
@@ -223,10 +235,20 @@
 
                         img { transform: translateY(-60%) translateX(50%) }
 
+                        .control__launching-content-table-item-img-active {
+                            transform: translateY(-50%) translateX(50%) 
+                        }
+
                         @media (max-height: 840px), (max-width: 1480px) {
                             img { transform: translateY(-50%) translateX(50%); width: 55%; }
                         }
                     } 
+
+                    &--6 {
+                        .control__launching-content-table-item-img-active {
+                            transform: translateY(-50%) translateX(40%);
+                        }
+                    }
                 }
             }
         }
@@ -252,6 +274,49 @@
             justify-content: center;
             margin-top: 16px;
 
+            picture {
+                position: relative;
+
+                .rocket-part {
+                    position: absolute;
+                    top: -1%;
+                    opacity: 0;
+
+                    width: auto;
+
+                    &.active {
+                        opacity: 1;
+                    }
+
+                    &--1 {
+                        left: 6.5%;
+                        z-index: 3;
+                    }
+
+                    &--2 {
+                        left: 17%;
+                        z-index: 2;
+                    }
+
+                    &--3 {
+                        z-index: 1;
+                        left: 34.2%;
+                    }
+
+                    &--4 {
+                        left: 48%;
+                    }
+
+                    &--5 {
+                        left: 74%;
+                    }
+
+                    &--6 {
+                        left: 82.1%;
+                    }
+                }
+            }
+
             img {
                 @media (max-height: 840px), (max-width: 1480px) {
                     width: 64.7vw;
@@ -265,6 +330,13 @@
                 justify-content: center;
 
                 padding-top: 67px;
+
+                &.active {
+                    span {
+                        background: rgba(232, 80, 120, 0.6);
+                        box-shadow: 0px 4px 40px 16px #E85078;
+                    }
+                }
 
                 span {
                     width: 48px;
@@ -420,6 +492,39 @@
                 margin-left: auto;
                 margin-right: 76px;
 
+                height: 141px;
+                overflow-y: scroll;
+                            
+                &::-webkit-scrollbar {
+                    display: block;
+                    width: 10px;
+                    height: 4px;
+
+                    margin-left: 10px;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 10px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #8F62C3;
+                    border-radius: 10px;
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #8F62C3;
+                }
+
                 display: flex;
                 flex-direction: column;
 
@@ -551,5 +656,15 @@
                 }
             }
         }
+    }
+}
+
+.page__container--control-hd {
+    .simplebar-content-wrapper {
+        overflow: hidden !important;
+    }
+
+    .simplebar-track {
+        visibility: hidden !important;
     }
 }
