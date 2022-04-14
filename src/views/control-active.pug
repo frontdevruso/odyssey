@@ -59,7 +59,7 @@ block content
                                     b 2 536 баллов
             .control__container
                 h1.g-title Центр управления
-                .control__progress(data-level="1")
+                .control__progress(data-level="6")
                     <svg class="control__progress-bg" viewBox="0 0 1344 282" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_129_1376)">
                             <path d="M1343.46 250.452C1344.84 262.457 1335.83 270.65 1323.79 271.701C1180.27 284.234 288.486 286.97 25.9987 270.617C11.1321 269.691 -1.19904 260.644 0.845087 245.889C9.66888 182.199 85.3812 25.373 123.453 16.0537C196.367 -1.79433 1178.98 -11.1434 1227.07 22.853C1277.24 58.3166 1337.18 195.899 1343.46 250.452Z" fill="white"/>
@@ -120,40 +120,40 @@ block content
                         main 
                             picture 
                                 img(src="./assets/img/control/launching-rocket.png", alt="rocket")
-                                img.rocket-part.rocket-part--1(src="./assets/img/control/rocket-part-1.png", alt="rocket")
-                                img.rocket-part.rocket-part--2(src="./assets/img/control/rocket-part-2.png", alt="rocket")
-                                img.rocket-part.rocket-part--3(src="./assets/img/control/rocket-part-3.png", alt="rocket")
-                                img.rocket-part.rocket-part--4(src="./assets/img/control/rocket-part-4.png", alt="rocket")
-                                img.rocket-part.rocket-part--5(src="./assets/img/control/rocket-part-5.png", alt="rocket")
-                                img.rocket-part.rocket-part--6(src="./assets/img/control/rocket-part-6.png", alt="rocket")
-                            button
+                                img.rocket-part.rocket-part--1.active(src="./assets/img/control/rocket-part-1.png", alt="rocket")
+                                img.rocket-part.rocket-part--2.active(src="./assets/img/control/rocket-part-2.png", alt="rocket")
+                                img.rocket-part.rocket-part--3.active(src="./assets/img/control/rocket-part-3.png", alt="rocket")
+                                img.rocket-part.rocket-part--4.active(src="./assets/img/control/rocket-part-4.png", alt="rocket")
+                                img.rocket-part.rocket-part--5.active(src="./assets/img/control/rocket-part-5.png", alt="rocket")
+                                img.rocket-part.rocket-part--6.active(src="./assets/img/control/rocket-part-6.png", alt="rocket")
+                            button.active
                                 span 
                                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.5 6.63397C14.1667 7.01887 14.1667 7.98113 13.5 8.36603L2.25 14.8612C1.58333 15.2461 0.749999 14.765 0.749999 13.9952L0.75 1.00481C0.75 0.23501 1.58333 -0.246117 2.25 0.138783L13.5 6.63397Z" fill="white"/>
                                     </svg>
                                 h4 Запустить <br> ракету
                         ul.control__launching-content-table
-                            li.control__launching-content-table-item.control__launching-content-table-item--1(style="background-image: url('./assets/img/control/launching-bg-1.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--1(style="background-image: url('./assets/img/control/launching-bg-1.svg')")
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть <br> Ева
-                            li.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
-                            li.control__launching-content-table-item.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
                                 img(src="./assets/img/control/launching-artefacts-3.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-3-active.png", alt="")
                                 span Гиперпростран-<br>ственный ускоритель
-                            li.control__launching-content-table-item.control__launching-content-table-item--4(style="background-image: url('./assets/img/control/launching-bg-4.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--4(style="background-image: url('./assets/img/control/launching-bg-4.svg')")
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть<br>Ева
-                            li.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
-                            li.control__launching-content-table-item.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.active.control__launching-content-table-item.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 img(src="./assets/img/control/launching-artefacts-6.svg", alt="")
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-4-active.png", alt="")
                                 span Нейросеть <br> Ева
