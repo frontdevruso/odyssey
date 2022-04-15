@@ -1,0 +1,33 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = 'Профиль'
+  - var bodyClass = ''
+block content
+  .page__border
+    include _includes/blocks/preloader
+    .page.page-main-bg
+    .page__container#pageContainerEnd(fade-in-preloader)(data-simplebar="")
+        .end
+            header.header(fade-in-preloader).header--profile
+                .container.--flex.--jcsb
+                    a.header__logo(href="index.html") 
+                        img(src="./assets/img/header/logo.svg", alt="")
+                    .header__title 
+                        h1.h1 Поздравляем!
+                    .header__right 
+                        a(href="#") 
+                            picture
+                            main 
+                                h3 Игорь Тимофеев
+                                span 
+                                    em #7 в рейтинге
+                                    b 2 536 баллов
+            .end__container 
+                img.end__img(src="./assets/img/end/full-rocket.png", alt="")
+                img.end__img.end__img--astrounat(src="./assets/img/about/astronaut.png", alt="")
+                .end__text
+                    .end__text-wrapper 
+                        p Ты облетел галактику, посетил <br> много планет и достиг цели <br> путешествия - подготовил <br> ракету к запуску! <br><br> Совсем скоро станут известны <br> победители, которые получат <br> призы. Надеемся, твое имя <br> будет среди них. <br><br> Следи за новостями!
+                        span  Твой друг Ньютон!
+

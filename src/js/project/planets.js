@@ -15,6 +15,15 @@ const planets = () => {
                 }, 600);
             });
         }
+
+        $('.planets__table-item-title').lettering();
+        $('.planets__table-item-title').each(function(index, item) {
+            $(item).each(function(index, char) {
+                $(char).children().each(function(index, letter) {
+                    $(letter).css('transform', `rotate(${index * 8}deg)`)
+                })
+            });
+        });
     }
 }
 

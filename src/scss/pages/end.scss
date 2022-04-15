@@ -1,0 +1,82 @@
+.end {
+    position: relative;
+    min-width: 1200px;
+  
+    height: fit-content;
+    
+    &__img {
+        max-width: 1150px;
+        z-index: 10;
+
+        @media (max-height: 840px), (max-width: 1480px) {
+            max-width: 930px;
+        }
+
+        &--astrounat {
+            max-width: 450px;
+            position: absolute;
+            right: 5%;
+            bottom: -45%;
+
+            @media (max-height: 840px), (max-width: 1480px) {
+                max-width: 400px;
+                right: 3%;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+        color: white;
+
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        overflow: hidden;
+        padding-bottom: 80px;
+
+        font-size: 38px;
+        line-height: 120%;
+
+        position: absolute;
+        left: 50%;
+        bottom: -30%;
+
+        transform: translateX(-50%);
+
+        
+        @media (max-height: 840px), (max-width: 1480px) {
+            font-size: 27px;
+        }
+
+        &-wrapper {
+            transform-origin: 50% 100%;
+            transform: perspective(300px) rotateX(10deg) translateY(100%);
+            margin-bottom: 0;
+            animation: movingCredits 7s ease forwards;
+        }
+
+        @keyframes movingCredits {
+            from { transform: perspective(300px) rotateX(10deg) translateY(100%) }
+            to { transform: perspective(300px) rotateX(10deg) translateY(0%) }
+          }
+
+        span {
+            display: block;
+            color: $purple;
+            margin-left: 100px;
+            padding-top: 40px;
+        }
+    }
+}
+
+#pageContainerEnd {
+    .simplebar-content-wrapper {
+        overflow-y: hidden !important;
+    }
+
+    .simplebar-vertical {
+        visibility: hidden !important;
+    }
+}
