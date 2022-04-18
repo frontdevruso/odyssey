@@ -96,9 +96,6 @@
 
         @media (max-height: 840px), (max-width: 1480px) { 
             transform: translate(900%, 380%);
-            .message__next {
-                span { text-decoration: none }
-            }
             .hints__message-cloud { background-size: 80% 80% }
         }
 

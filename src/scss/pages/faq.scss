@@ -81,6 +81,9 @@
                         main {                            
                             height: auto;
                             opacity: 1;
+                            padding: 20px 38px 36px;
+
+                            transition: .4s;
 
                             & > * {
                                 padding: 28px 38px;
@@ -89,8 +92,11 @@
                             }
 
                             p {
+                                transition: none;
                                 line-height: 16px;
-                                padding: 20px 38px 28px;
+                                padding: 0;
+
+                                &:not(:last-child) { margin-bottom: 10px }
                             }
                         }
 
@@ -99,6 +105,8 @@
                             transform: rotate(180deg);
                         }
                     }
+
+                    
 
                     button {
                         display: flex;
@@ -122,7 +130,7 @@
                         background-size: 100% 100%;
 
                         border-bottom: 1.5px solid #9062C3;
-                        transition: .4s;
+                        transition: .1s;
 
                         height: 0;
                         opacity: 0;
