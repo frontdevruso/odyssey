@@ -37,8 +37,8 @@
         justify-content: right;
 
         a {
-            width: 100%;
-            max-width: 260px;
+            width: fit-content;
+            
 
             color: white;
             font-size: 16px;
@@ -69,8 +69,6 @@
             @media (max-height: 840px), (max-width: 1480px) {
                 grid-template-columns: 28px auto;
                 padding: 6px 12px;
-
-                max-width: 193px;
             }
     
             picture {
@@ -127,6 +125,8 @@
                 flex-direction: column;
                 line-height: 110%;
 
+                padding-right: 20px;
+
                 h3 {
                     font-weight: 700;
                     white-space: nowrap;
@@ -149,8 +149,9 @@
                     span { font-size: 8px }
                     & > *:not(:last-child) { margin-right: 6px }
                 }
-            }
 
+                @media (max-height: 840px), (max-width: 1480px) { padding-right: 12px }
+            }
         }
     }
 }
@@ -216,18 +217,13 @@
 
         width: 100%;
         margin-top: 46px;
-
         
-        &:nth-child(4) {
-            height: 620px;
-        }
+        &:nth-child(4) { height: 620px }
 
         @media (max-height: 840px), (max-width: 1480px) {
             grid-gap: 20px;
 
-            &:nth-child(3), &:nth-child(4) {
-                margin-top: 0;
-            }
+            &:nth-child(3), &:nth-child(4) { margin-top: 0 }
         }
 
         &-item {
@@ -236,9 +232,7 @@
             align-items: center;
             justify-content: center;
 
-            @media (max-height: 840px), (max-width: 1480px) {
-                margin: 0 auto;
-            }
+            @media (max-height: 840px), (max-width: 1480px) { margin: 0 auto }
 
             h4 {
                 text-align: center;

@@ -7,39 +7,7 @@ block content
   .page__border
     include _includes/blocks/preloader
     .page.page-control-bg
-        .hints.hints--control(fade-in-preloader)
-            .hints__container
-                .hints__messages 
-                    .hints__message.hints__message--control.hints__message--1.is-active
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Добро пожаловать в <br>Центр управления! Здесь ты <br> можешь отслеживать, какие <br> планеты открыты и сколько <br> из них ты уже прошел.
-                        .message__next(data-message="hints__message--2")
-                            span.btn.--link Разве не все планеты доступны?
-                    .hints__message.hints__message--control.hints__message--2
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Планеты открываются <br>по очереди. Каждые две <br> недели игроки получают <br> доступ к новой планете. <br>Следи за Картой планет!
-                        a(href="#controlLaunching").message__next(data-message="hints__message--3")
-                            span.btn.--link Спасибо, что предупредил.
-                    .hints__message.hints__message--control.hints__message--3
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p В Центре управления <br> хранятся добытые тобой <br> артефакты. С их помощью <br> ты сможешь запустить <br> межгалактическую ракету. 
-                        a(href="#controlRaiting").message__next(data-message="hints__message--4")
-                            span.btn.--link Вот это я понимаю — пазл!
-                    .hints__message.hints__message--control.hints__message--4
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p А еще здесь находится <br> рейтинг всех участников <br> Одиссеи. Надеюсь, скоро в <br> нем появится и твое имя!
-                        .message__next(data-message="hints__message--5")
-                            span.btn.--link Можешь не сомневаться!
-                    .hints__message.hints__message--control.hints__message--fifth.hints__message--5
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-14.svg)") 
-                            p Тогда добро пожаловать <br>в открытый космос!
-                            a(href="#").btn.--texture Перейти к карте планет
-                .hints__circles
-                    main 
-                    a(href="#").hints__circles-faq FAQ 
-                    a(href="#").hints__circles-info I 
-    .page__container.page__container--control-hd#pageContainerControl(fade-in-preloader)
-        .page-focus.page-focus--center(fade-in-preloader)
+    .page__container#pageContainerControl(fade-in-preloader)
         section.control.page-profile-bg
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
@@ -174,6 +142,24 @@ block content
                             </svg>
                             input(type="text")
                     .control__raiting-table 
+                        <svg width="1343" height="394" viewBox="0 0 1343 394" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_i_252_1427)">
+                                <path d="M9.56286e-08 37.1834C7.49612e-07 25.7872 7.42857 16.1691 18.7606 14.9615C193.974 -3.71098 1183.36 -7.91173 1316.02 19.9158C1323.41 21.4651 1328.24 27.4891 1329.62 34.9092C1345.33 119.575 1343.03 248.309 1342.68 358.665C1342.64 371.073 1333.55 381.412 1321.18 382.393C977.95 409.604 172.352 383.029 18.4121 363.255C7.27885 361.825 0.000354146 352.303 0.00033901 341.078C0.000205029 241.719 -5.1304e-06 128.251 9.56286e-08 37.1834Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_i_252_1427" x="0" y="-4" width="1343" height="398" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="-4"/>
+                                    <feGaussianBlur stdDeviation="4"/>
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_252_1427"/>
+                                </filter>
+                            </defs>
+                        </svg>
+
                         header 
                             span Место
                             span Участник Одиссеи

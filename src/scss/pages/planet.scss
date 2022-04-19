@@ -37,6 +37,10 @@
         background: #8F62C3;
     }
 
+    .header__title {
+        &::after { display: none }
+    }
+
     &__img {
         width: 769px;
         height: 888px;

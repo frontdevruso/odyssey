@@ -348,11 +348,43 @@
                 }
                 bottom: 13%;
             }
+
+            &.hints__message--5 {
+                .hints__message-cloud {
+                    filter: drop-shadow(0px 12px 40px #E85078);
+                } 
+            }
         }
 
         &--planets {
             right: 5%;
             top: -12%;
+
+            &.hints__message--1 {
+                .hints__message-cloud {
+                    height: 300px;
+                    filter: drop-shadow(0px 12px 40px #E85078);
+    
+                    p {
+                        font-size: 12px;
+                        padding-bottom: 0;
+                        @media (max-height: 840px), (max-width: 1480px) { font-size: 10px }
+                    }
+
+                    @media (max-height: 840px), (max-width: 1480px) {
+                        background-size: 60% 60%;
+                    }
+                }
+                .message__next { 
+                    bottom: 7%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+                @media (max-height: 840px), (max-width: 1480px) {
+                    .message__next { bottom: 12% }
+                }
+            }
 
             .hints__message-cloud {
                 height: 300px;
@@ -365,18 +397,14 @@
 
             .message__next {
                 bottom: 11%;
-                
-                span {
-                    line-height: 120%;
-                    text-decoration: underline dashed;
-                    border: none;
-                }
+                span { line-height: 120% }
 
                 @media (max-height: 840px), (max-width: 1480px) {
                     height: 40px !important;
                     span { font-size: 10px }
                 }
             }
+
         }
     }
 }
