@@ -1,5 +1,5 @@
 .header {
-    padding-top: 49px;
+    padding-top: 37px;
     position: relative;
     z-index: 100;
     &:after {
@@ -11,6 +11,10 @@
         top: -113px;
         background: #4617A4;
         filter: blur(105px);
+    }
+
+    .container {
+        padding: 0 48px;
     }
 }
 
