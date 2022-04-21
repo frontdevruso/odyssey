@@ -1,14 +1,14 @@
 const profileHints = () => {
-    const hintSection = document.querySelector('.hints');
-    const createProfile = document.querySelector('.create-profile');
-
-    const modalAvatar = document.getElementById('modalAvatar');
-    const modalReturnAvatar = document.getElementById('modalReturnAvatar');
-    const pageFocus = document.querySelector('.page-focus');
-
-    const prizesAchivments = document.querySelectorAll('.prizes-achievement');
-
     if (document.querySelector('.profile')) {
+        const hintSection = document.querySelector('.hints');
+        const createProfile = document.querySelector('.create-profile');
+    
+        const modalAvatar = document.getElementById('modalAvatar');
+        const modalReturnAvatar = document.getElementById('modalReturnAvatar');
+        const pageFocus = document.querySelector('.page-focus');
+    
+        const prizesAchivments = document.querySelectorAll('.prizes-achievement');
+
         const modalOpen = (modal) => {
             const content = modal.querySelector('.modal__content');
             modal.classList.remove('modal--close');
@@ -17,7 +17,7 @@ const profileHints = () => {
                 content.classList.add('modal__content--open');
             }, 1000);
         }
-    
+
         const modalClose = (modal) => {
             const content = modal.querySelector('.modal__content');
             content.classList.remove('modal__content--open');
@@ -27,17 +27,6 @@ const profileHints = () => {
             setTimeout(function() {
                 modal.classList.remove('modal--open');
             }, 1000);
-        }
-    
-        const thirdHintSwitch = () => {
-            document.querySelectorAll('.hints__message').forEach(function(message, index) {
-                if (index <= 1) {
-                    message.classList.remove('is-active');
-                    message.classList.add('d-none');
-                }
-                if (index === 2) { message.classList.add('is-active') }
-            });
-    
         }
     
         modalAvatar.querySelector('.modal-close').addEventListener('click', function() {
@@ -84,6 +73,17 @@ const profileHints = () => {
     
             }, 1000);
         });
+
+        const thirdHintSwitch = () => {
+            document.querySelectorAll('.hints__message').forEach(function(message, index) {
+                if (index <= 1) {
+                    message.classList.remove('is-active');
+                    message.classList.add('d-none');
+                }
+                if (index === 2) { message.classList.add('is-active') }
+            });
+    
+        }
 
         $('.hints__message--4 .message__next').on('click', function(event) {    
             pageFocus.classList.remove('page-focus--rightCenter');

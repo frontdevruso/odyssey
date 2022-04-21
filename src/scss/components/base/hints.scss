@@ -26,7 +26,29 @@
     }
 
     &--profile {
-        .hints__message--4 {
+        .hints__message-cloud {
+            background-size: 95% 95%;
+            p { font-size: 12px }
+
+            @media (max-height: 840px), (max-width: 1480px){
+                background-size: 80% 80%;
+                p { font-size: 10px }
+            }
+        }
+        
+        .hints__message {            
+            @media (max-height: 840px), (max-width: 1480px){
+                right: -5%;
+            }
+        }
+
+        .hints__message--4 {            
+            @media (max-height: 840px), (max-width: 1480px){
+                left: 2%;
+            }
+        }
+
+        .hints__message--3 {
             margin-top: auto;
             left: initial;
             bottom: -25%;
@@ -45,6 +67,9 @@
                 left: 0;
             }
 
+            @media (max-height: 840px), (max-width: 1480px){
+                right: -34%;
+            }
         }
 
         .hints__message--5 {
@@ -56,11 +81,17 @@
                 height: 270px;
 
                 p { padding-bottom: 20px }
+                a { box-shadow: none }
             }
 
             .message__next {
                 bottom: 27%;
                 left: 5%;
+            }
+
+            @media (max-height: 840px), (max-width: 1480px){
+                left: 2%;
+                bottom: 2%;
             }
         }
 
@@ -83,6 +114,13 @@
                     position: absolute;
                     top: 45%;
                     right: -5%;
+                }
+            }
+            
+            @media (max-height: 840px), (max-width: 1480px){
+                left: -1%;
+                .hints__message-cloud {
+                    margin-bottom: 10px;
                 }
             }
         }
@@ -216,6 +254,10 @@
                 line-height: 140%;
 
                 margin: auto 0;
+            }
+
+            &-toplanet {
+                box-shadow: 0px 16px 48px rgba(222, 75, 114, 0.8), inset 0px 4px 4px rgba(255, 255, 255, 0.25), inset 0px -8px 10px rgba(54, 6, 19, 0.32);
             }
         }
 

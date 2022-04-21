@@ -21,16 +21,17 @@ block content
                         p Давай создадим тебе крутой <br> аватар. Для этого нажми на <br> «+» в кружке слева от твоего <br> имени.
 
                 .hints__message.hints__message--3
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
-                        p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
-                    a(href="#firstTab").message__next(data-message="hints__message--4") 
-                        span.btn.--link Я понял, спасибо.
-
-                .hints__message.hints__message--4
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-17.svg)") 
                         p Отлично аватар!
-                    a(href="#firstTab").message__next(data-message="hints__message--5") 
+                    a(href="#firstTab").message__next(data-message="hints__message--4") 
                         span.btn.--link Спасибо
+
+                .hints__message.hints__message--4
+                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
+                        p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
+                    a(href="#firstTab").message__next(data-message="hints__message--5") 
+                        span.btn.--link Я понял, спасибо.
+
 
                 .hints__message.hints__message--5
                     .hints__message-cloud(style="background-image: url(./assets/img/message/message-10.svg)") 
@@ -56,10 +57,21 @@ block content
                         img(src="./assets/img/header/logo.svg", alt="")
                     .header__title
                         a(href="#")
-                            img(src="./assets/img/main/dot-arrow-right.svg", alt="arrow")  
+                            <div class="header__back-icon">
+                                <span> 
+                                    <svg width="14" height="10" viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.53033 8.46967C5.82322 8.76256 5.82322 9.23744 5.53033 9.53033C5.23744 9.82322 4.76256 9.82322 4.46967 9.53033L5.53033 8.46967ZM1 5L0.469671 5.53033C0.176777 5.23744 0.176777 4.76256 0.469671 4.46967L1 5ZM4.46967 0.469671C4.76256 0.176778 5.23744 0.176778 5.53033 0.469671C5.82322 0.762564 5.82322 1.23744 5.53033 1.53033L4.46967 0.469671ZM13 4.25C13.4142 4.25 13.75 4.58579 13.75 5C13.75 5.41421 13.4142 5.75 13 5.75L13 4.25ZM4.46967 9.53033L0.469671 5.53033L1.53033 4.46967L5.53033 8.46967L4.46967 9.53033ZM0.469671 4.46967L4.46967 0.469671L5.53033 1.53033L1.53033 5.53033L0.469671 4.46967ZM1 4.25C2 4.25 5 4.25 7.75 4.25C9.125 4.25 10.4375 4.25 11.4062 4.25C11.8906 4.25 12.2891 4.25 12.5664 4.25C12.7051 4.25 12.8135 4.25 12.8872 4.25C12.9241 4.25 12.9523 4.25 12.9713 4.25C12.9807 4.25 12.9879 4.25 12.9927 4.25C12.9951 4.25 12.997 4.25 12.9982 4.25C12.9988 4.25 12.9992 4.25 12.9995 4.25C12.9997 4.25 12.9998 4.25 12.9999 4.25C13 4.25 13 4.25 13 5C13 5.75 13 5.75 12.9999 5.75C12.9998 5.75 12.9997 5.75 12.9995 5.75C12.9993 5.75 12.9988 5.75 12.9982 5.75C12.997 5.75 12.9951 5.75 12.9927 5.75C12.9879 5.75 12.9808 5.75 12.9713 5.75C12.9523 5.75 12.9241 5.75 12.8872 5.75C12.8135 5.75 12.7051 5.75 12.5664 5.75C12.2891 5.75 11.8906 5.75 11.4062 5.75C10.4375 5.75 9.125 5.75 7.75 5.75C5 5.75 2 5.75 1 5.75L1 4.25Z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="header__back-circle">
+                                <svg width="3" height="2" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                                    <circle r="0.75" transform="matrix(1 -8.74228e-08 -8.74228e-08 -1 1.4502 0.951172)"></circle>
+                                </svg>
+                            </div>
                             span Вернуться к карте планет 
                     .header__right 
-                        a(href="#") 
+                        a(href="#")
                             picture
                             main 
                                 h3 Игорь Тимофеев
@@ -91,7 +103,7 @@ block content
                             </svg>
                             button.new-profile-btn.new-profile-btn--animation
                             .profile__tabs-item-info 
-                                h3 Тимофеев Игорь
+                                h3 Игорь Тимофеев
                                 a(href="./control.html").profile__tabs-item-info-control Центр управления
                     .profile__tabs-item.profile__tabs-item--second.prizes-achievement
                         h4 Достижения
@@ -424,7 +436,25 @@ block content
                                     li Кодекс Порталийца
                                     li Части артефакта
     .modal#modalAvatar
-        .modal__container(style="background-image: url('./assets/img/modal/big-modal.svg')")
+        .modal__container
+            <svg class="modal__bg" width="778" height="490" viewBox="0 0 778 490" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_107_998)">
+                <path d="M21.8499 43.5127C44.4844 -5.84962 729.908 -13.0674 757.836 21.1158C785.762 55.2986 783.66 415.274 757.836 445.47C715.495 494.977 49.7763 520.91 21.8499 426.61C-11.7286 313.224 -2.47274 96.5569 21.8499 43.5127Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_i_107_998" x="0" y="-4" width="778" height="494" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="-4"/>
+                <feGaussianBlur stdDeviation="4"/>
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_107_998"/>
+                </filter>
+                </defs>
+            </svg>
+
             .modal__content 
                 header 
                     h1 Твой аватар
@@ -471,7 +501,24 @@ block content
                             button(style="background-color: #DFDFDF")   
                 button.modal__content-create-btn.btn.--texture Создать аватар
     .modal.modal-return-avatar#modalReturnAvatar
-        .modal__container(style="background-image: url('./assets/img/modal/small-modal.svg')")
+        .modal__container
+            <svg class="modal__bg" width="422" height="336" viewBox="0 0 422 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_111_2212)">
+                <path d="M410.148 29.8373C397.871 -4.01117 26.0856 -8.96052 10.9376 14.4794C-4.21032 37.919 -3.07023 284.759 10.9376 305.465C33.9035 339.413 395 357.195 410.148 292.532C428.362 214.782 423.341 66.2104 410.148 29.8373Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_i_111_2212" x="0" y="-4" width="422" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="-4"/>
+                <feGaussianBlur stdDeviation="4"/>
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_111_2212"/>
+                </filter>
+                </defs>
+            </svg>
             .modal__content 
                 header
                     p Ты не выбрал аватар, поэтому мы сделали это за тебя. Можешь продолжить игру с ним или выбрать другой аватар. 

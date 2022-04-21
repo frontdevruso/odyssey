@@ -56,7 +56,7 @@ const control = () => {
             }
 
             function barWidth(level) {
-                $('.control__progress-bar-active').width(`${16.75 * level}%`)
+                $('.control__progress-bar-active').width(`${17 * level}%`)
             }
 
             barWidth(controlProgress.getAttribute('data-level'));

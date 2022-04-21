@@ -5,13 +5,22 @@
     width: 100%;
 }
 
+.page-colorfull-bg {
+    background: url(../img/colorfull-bg.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
 .header--profile {
     width: 100%;
     position: absolute;
     top: 0;
 
     height: 0;
-    padding-top: 37px;
 
     .header__title {
         display: flex;
@@ -28,6 +37,8 @@
             font-size: 16px;
     
             img { margin-right: 10px }
+
+            span { margin-left: 8px }
         }
     }
 
@@ -486,9 +497,24 @@
                             margin-top: 0;
                             width: 297px;
                             height: fit-content;
+
+                            p {
+                                font-size: 12px;
+                                max-width: 230px;
+
+                                margin-left: auto;
+                                margin-right: auto;
+                                line-height: 140%;
+                            }
                         }
 
-                        strong { margin-bottom: 8px }
+                        strong {
+                            margin-bottom: 8px;
+                            @media (max-height: 840px), (max-width: 1480px) {
+                                font-size: 12px;
+                                line-height: 1;
+                            }
+                        }
 
                         &-prizes {
                             display: block;
@@ -532,7 +558,7 @@
                             }
 
                             @media (max-height: 840px), (max-width: 1480px) {
-                                margin-top: 20px;
+                                margin-top: 40px;
                                 height: 44px;
                             }
                         }

@@ -73,15 +73,19 @@
                     text-align: left;
 
                     &.active {
+                        border-bottom: 1.5px solid #9062C3;
+                        &:last-child { border-bottom: none }
+
                         button {
                             border-bottom: none;
                             padding-bottom: 5px;
                         }
-
                         main {                            
                             height: auto;
                             opacity: 1;
+
                             padding: 20px 38px 36px;
+                            margin-bottom: 12px;
 
                             transition: .4s;
 
@@ -106,8 +110,6 @@
                         }
                     }
 
-                    
-
                     button {
                         display: flex;
                         align-items: center;
@@ -129,7 +131,6 @@
                         background-repeat: no-repeat;
                         background-size: 100% 100%;
 
-                        border-bottom: 1.5px solid #9062C3;
                         transition: .1s;
 
                         height: 0;
@@ -145,6 +146,18 @@
                             padding: 28px 38px;
                             line-height: 140%;
                             font-size: 12px;
+                        }
+                    }
+
+                    &.small {
+                        main {
+                            background-image: url('./../img/faq/faq-bg-2.svg');
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            background-position: 100% 100%;
+
+                            padding: 24px 24px 32px;
+                            margin-top: 10px;
                         }
                     }
                 }
