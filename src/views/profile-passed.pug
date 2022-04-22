@@ -7,50 +7,8 @@ block content
   .page__border
     include _includes/blocks/preloader
     .page.page-main-bg
-    .hints.hints--profile(fade-in-preloader)
-        .hints__container
-            .hints__messages 
-                .hints__message.hints__message--1.is-active
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-7.svg)") 
-                        p Это твой Профиль. <br>Здесь ты найдешь всю <br> информацию о прогрессе <br> игры и своих достижениях.
-                    .message__next(data-message="hints__message--2")
-                        span.btn.--link Спасибо, Ньютон!
-
-                .hints__message.hints__message--2
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-8.svg)") 
-                        p Давай создадим тебе крутой <br> аватар. Для этого нажми на <br> «+» в кружке слева от твоего <br> имени.
-
-                .hints__message.hints__message--3
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-17.svg)") 
-                        p Отлично аватар!
-                    a(href="#firstTab").message__next(data-message="hints__message--4") 
-                        span.btn.--link Спасибо
-
-                .hints__message.hints__message--4
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-9.svg)") 
-                        p Здесь хранятся твои <br> достижения за пройденные <br> задания и заработанные призы. 
-                    a(href="#firstTab").message__next(data-message="hints__message--5") 
-                        span.btn.--link Я понял, спасибо.
-
-
-                .hints__message.hints__message--5
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-10.svg)") 
-                        p Отслеживай свой игровой <br> прогресс. Здесь будет видно, <br> сколько планет ты посетил и <br> какие задания уже выполнил, <br> а какие еще предстоит пройти.
-                    a(href="#profilePage").message__next(data-message="hints__message--6")
-                        span.btn.--link Отлично!
-
-                .hints__message.hints__message--6
-                    .hints__message-cloud(style="background-image: url(./assets/img/message/message-11.svg)") 
-                        p А теперь погнали в Центр <br> управления! Покажу тебе святая <br> святых нашей экспедиции.
-                    .hints__message-cloud.hints__message-cloud--second(style="background-image: url(./assets/img/message/message-12.svg)") 
-                        p Скорее жми на ссылку <br> «Центр управления» около <br> своего аватара!
-            .hints__circles 
-                main 
-                a(href="#").hints__circles-faq FAQ 
-                a(href="#").hints__circles-info I 
-    .page__container#pageContainerProfile(fade-in-preloader)
-        .page-focus.page-focus--left(fade-in-preloader)
-        section.profile.page-profile-bg.profile--hidden#profilePage
+    .page__container(fade-in-preloader)(data-simplebar="")
+        section.profile.page-profile-bg#profilePage
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
                     a.header__logo(href="index.html") 
@@ -101,9 +59,9 @@ block content
                                     </filter>
                                 </defs>
                             </svg>
-                            button.new-profile-btn.new-profile-btn--animation
+                            img.avatar(src="./assets/img/modal/main-avatar.png", alt="")
                             .profile__tabs-item-info 
-                                h3 Игорь Тимофеев
+                                h3 Тимофеев Игорь
                                 a(href="./control.html").profile__tabs-item-info-control Центр управления
                     .profile__tabs-item.profile__tabs-item--second.prizes-achievement
                         h4 Достижения
@@ -126,25 +84,25 @@ block content
                                 </defs>
                             </svg>
                             ul
-                                li 
-                                    picture
+                                li.active
+                                    img(src="./assets/img/profile/medal-1.svg", alt="medal")
                                     span Истинный Корпорулиец
-                                li 
-                                    picture
+                                li.active
+                                    img(src="./assets/img/profile/medal-2.svg", alt="medal")
                                     span Мастер Маджипура
-                                li 
-                                    picture
+                                li.active
+                                    img(src="./assets/img/profile/medal-3.svg", alt="medal")
                                     span Великий Саркашиец
-                                li 
-                                    picture
+                                li.active
+                                    img(src="./assets/img/profile/medal-4.svg", alt="medal")
                                     span Гость Трантоора
-                                li 
-                                    picture
+                                li.active
+                                    img(src="./assets/img/profile/medal-5.svg", alt="medal")
                                     span Властелин Пандоры
-                                li 
-                                    picture 
+                                li.active
+                                    img(src="./assets/img/profile/medal-6.svg", alt="medal") 
                                     span Друг Ягийцев
-                    .profile__tabs-item.profile__tabs-item--third.prizes-achievement
+                    .profile__tabs-item.profile__tabs-item--third.prizes-achievement.profile__tabs-item--prizes
                         h4 Призы
                         main 
                             <svg class="profile__tabs-item-bg" viewBox="0 0 429 253" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,8 +123,42 @@ block content
                                 </defs>
                             </svg>
                                 .profile__tabs-item-info 
-                                    strong У тебя еще нет призов
-                                    p Зарабатывай как можно больше баллов, чтобы получать призы
+                                    .profile__prizes-slider.swiper
+                                        .swiper-wrapper 
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-1.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Футболка
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-2.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Толстовка
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-3.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Кепочка
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-1.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Футболка
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-2.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Толстовка
+                                            .swiper-slide
+                                                img(src="./assets/img/profile/prize-3.png", alt="prize")
+                                                span #7 – в общем рейтинге
+                                                h3 Кепочка
+                                        button.profile__prizes-slider-arrow.profile__prizes-slider-arrow--prev
+                                            <svg width="10" height="18" viewBox="0 0 10 18" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.34375 1.78125L1.03125 9.09375L8.34375 16.4062" stroke="#E85078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
+                                            </svg>
+                                        button.profile__prizes-slider-arrow.profile__prizes-slider-arrow--next
+                                            <svg width="10" height="18" viewBox="0 0 10 18" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.65625 1.78125L8.96875 9.09375L1.65625 16.4062" stroke="#E85078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
+                                            </svg>
+
+
                                     a(href="").profile__tabs-item-info-prizes 
                                         span Посмотреть, все призы 
                 .profile__tabs#firstTab
@@ -212,8 +204,26 @@ block content
                                     span Баллов за планету
                                     .profile__tabs-planet-info-score-number.btn.--texture 0
                                 ul 
-                                    li Кодекс Корпорулийца
-                                    li Части артефакта
+                                    li.b-none
+                                        span Кодекс Корпорулийца
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.b-dashed.fw400
+                                        span Баллы
+                                        b 490
+                                    li.b-dashed.fw400
+                                        span Время прохождения
+                                        b 2:45
+                                    li.fw400
+                                        span Правильные ответы
+                                        b 5/8
+                                    li 
+                                        span Части артефакта
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.fw400
+                                        span Баллы
+                                        b 490
                     .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--second
                         h4 Прогресс на планетах
                         main 
@@ -244,7 +254,6 @@ block content
                                 </radialGradient>
                                 </defs>
                             </svg>
-
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
@@ -298,10 +307,25 @@ block content
                                         span Задания недоступна
                                 .profile__tabs-planet-info-score 
                                     span Баллов за планету
-                                    .profile__tabs-planet-info-score-number.btn.--texture 0
+                                    .profile__tabs-planet-info-score-number.btn.--texture 490
                                 ul 
-                                    li Кодекс Физиляндийца
-                                    li Части артефакта
+                                    li 
+                                        span Кодекс Физиляндийца
+                                        .state.state--pause
+                                            img(src="./assets/img/profile/pause-planet.svg", alt="check.svg")
+                                    li.b-none
+                                        span Части артефакта
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.b-dashed.fw400
+                                        span Баллы
+                                        b 490
+                                    li.b-dashed.fw400
+                                        span Время прохождения
+                                        b 2:45
+                                    li.fw400
+                                        span Правильные ответы
+                                        b 5/8
                 .profile__tabs
                     .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--fourth
                         h4   
@@ -345,8 +369,26 @@ block content
                                     span Баллов за планету
                                     .profile__tabs-planet-info-score-number.btn.--texture 0
                                 ul 
-                                    li Кодекс Корпорулийца
-                                    li Части артефакта
+                                    li.b-none
+                                        span Кодекс Юрилийца
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.b-dashed.fw400
+                                        span Баллы
+                                        b 490
+                                    li.b-dashed.fw400
+                                        span Время прохождения
+                                        b 2:45
+                                    li.fw400
+                                        span Правильные ответы
+                                        b 5/8
+                                    li 
+                                        span Части артефакта
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.fw400
+                                        span Баллы
+                                        b 490
                     .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--second
                         h4   
                         main 
@@ -389,8 +431,26 @@ block content
                                     span Баллов за планету
                                     .profile__tabs-planet-info-score-number.btn.--texture 0
                                 ul 
-                                    li Кодекс Военных
-                                    li Части артефакта
+                                    li.b-none
+                                        span Кодекс Военных
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.b-dashed.fw400
+                                        span Баллы
+                                        b 490
+                                    li.b-dashed.fw400
+                                        span Время прохождения
+                                        b 2:45
+                                    li.fw400
+                                        span Правильные ответы
+                                        b 5/8
+                                    li 
+                                        span Части артефакта
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.fw400
+                                        span Баллы
+                                        b 490
                     .profile__tabs-item.profile__tabs-item--planet.profile__tabs-item.profile__tabs-item--planet--fiveth
                         h4   
                         main 
@@ -421,7 +481,6 @@ block content
                                 </radialGradient>
                                 </defs>
                             </svg>
-
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
@@ -433,8 +492,26 @@ block content
                                     span Баллов за планету
                                     .profile__tabs-planet-info-score-number.btn.--texture 0
                                 ul 
-                                    li Кодекс Порталийца
-                                    li Части артефакта
+                                    li.b-none
+                                        span Кодекс Порталийца
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.b-dashed.fw400
+                                        span Баллы
+                                        b 490
+                                    li.b-dashed.fw400
+                                        span Время прохождения
+                                        b 2:45
+                                    li.fw400
+                                        span Правильные ответы
+                                        b 5/8
+                                    li 
+                                        span Части артефакта
+                                        .state.state--passed
+                                            img(src="./assets/img/profile/check.svg", alt="check.svg")
+                                    li.fw400
+                                        span Баллы
+                                        b 490
     .modal#modalAvatar
         .modal__container
             <svg class="modal__bg" width="778" height="490" viewBox="0 0 778 490" fill="none" xmlns="http://www.w3.org/2000/svg">

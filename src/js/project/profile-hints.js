@@ -114,13 +114,30 @@ const profileHints = () => {
     
         if (createProfile) {
             const createProfileBtn = document.querySelector('.new-profile-btn');
-            createProfileBtn.addEventListener('click', function() {
-                createProfileBtn.classList.remove('new-profile-btn--animation');
-                createProfile.classList.remove('focus-priority');
-    
-                pageFocus.classList.remove('page-focus--left');
-                hintSection.classList.add('hints--hidden');
-                modalOpen(modalAvatar);
+            if (createProfileBtn) {
+                createProfileBtn.addEventListener('click', function() {
+                    createProfileBtn.classList.remove('new-profile-btn--animation');
+                    createProfile.classList.remove('focus-priority');
+        
+                    pageFocus.classList.remove('page-focus--left');
+                    hintSection.classList.add('hints--hidden');
+                    modalOpen(modalAvatar);
+                });
+            }
+        }
+
+        if(document.querySelector('.profile__prizes-slider')) {
+            console.log('FSDAF')
+
+            let swiperPrizes = new Swiper(".profile__prizes-slider", {
+                slidesPerView: "auto",
+                spaceBetween: 19,
+                freeMode: true,
+
+                navigation: {
+                    nextEl: ".profile__prizes-slider-arrow--next",
+                    prevEl: ".profile__prizes-slider-arrow--prev",
+                  },
             });
         }
     }
