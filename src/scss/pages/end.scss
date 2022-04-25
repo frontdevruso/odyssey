@@ -46,15 +46,13 @@
         transform: translateX(-50%);
 
         
-        @media (max-height: 840px), (max-width: 1480px) {
-            font-size: 27px;
-        }
+        @media (max-height: 840px), (max-width: 1480px) { font-size: 27px }
 
         &-wrapper {
             transform-origin: 50% 100%;
             transform: perspective(300px) rotateX(10deg) translateY(100%);
             margin-bottom: 0;
-            animation: movingCredits 7s ease forwards;
+            animation: movingCredits 12s linear forwards;
         }
 
         @keyframes movingCredits {
