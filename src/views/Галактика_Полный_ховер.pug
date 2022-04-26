@@ -1,0 +1,90 @@
+extends _includes/layout
+
+block config
+  - var pagetitle = 'Планеты'
+  - var bodyClass = ''
+block content
+  .page__border
+    include _includes/blocks/preloader
+    .page.page-main-bg
+    .page-focus.hidden(fade-in-preloader)
+    .page__container
+        .hints.hints--planets(fade-in-preloader) 
+            .hints__container
+                .hints__messages 
+                    .hints__message.hints__message--planets.hints__message--1.is-active
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-18.svg)") 
+                            p Перед тобой планеты <br> нашей галактики. Начни <br> с ближайшей — и постепенно <br> доберешься до самой <br> далекой и неизведанной!
+                        .message__next(data-message="hints__message--2")
+                            span.btn.--link А если я запутаюсь или у меня
+                            span.btn.--link появятся вопросы?
+                    .hints__message.hints__message--planets.hints__message--2
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-16.svg)") 
+                            p Просто наведи курсором на <br>один из кружков справа от<br> меня. Кружок «FAQ» подскажет<br> ответы на частые вопросы, а<br> кружок «i» отправит к Ньютону,<br> где тот рассказывает об игре.
+                        a(href="#controlLaunching").message__next(data-message="hints__message--3")
+                            span.btn.--link Спасибо, что предупредил.
+                    .hints__message.hints__message--planets.hints__message--3
+                .hints__circles 
+                    main 
+                    a(href="#").hints__circles-faq FAQ 
+                    a(href="#").hints__circles-info I 
+        .planets.page-colorfull-bg(fade-in-preloader)(data-simplebar="")
+            header.header(fade-in-preloader).header--profile
+                .container.--flex.--jcsb
+                    a.header__logo(href="index.html") 
+                        img(src="./assets/img/header/logo.svg", alt="")
+                    .header__title
+                    .header__right 
+                        a(href="#") 
+                            picture
+                            main 
+                                h3 Игорь Тимофеев
+                                span 
+                                    em #7 в рейтинге
+                                    b 2 536 баллов
+            .planets__container 
+                .planets__img 
+                    img(src="./assets/img/planets/main-control.png", alt="main-control")
+                .planets__table 
+                    .planets__table-item.planets__table-item--hover.planets__table-item--1
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-1.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Корпоруля
+                        span.planets__table-item-progress Задания 0/2 
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены
+                    .planets__table-item.planets__table-item--hover.planets__table-item--2
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-2.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Футурия
+                        span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены
+                    .planets__table-item.planets__table-item--hover.planets__table-item--3
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-3.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Физиляндия
+                        span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены
+                    .planets__table-item.planets__table-item--hover.planets__table-item--4
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-4.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Юриляндия
+                        span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены
+                    .planets__table-item.planets__table-item--hover.planets__table-item--5
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-5.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Военная
+                        span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены
+                    .planets__table-item.planets__table-item--hover.planets__table-item--6
+                        img.planets__table-item-planet(src="./assets/img/planets/planet-6.png", alt="planet")
+                        img.planets__table-item-rocket(src="./assets/img/planets/active-rocket.png", alt="active-rocket")
+                        h1.planets__table-item-title 
+                            span Порталия
+                        span.planets__table-item-progress.planets__table-item-progress--blocked Скоро откроется
+                        span.planets__table-item-progress.planets__table-item-progress--completed Задания выполнены

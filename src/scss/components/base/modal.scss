@@ -98,8 +98,8 @@
                     box-shadow: 0px 16px 40px rgba(70, 23, 164, 0.4);
 
                     @media (max-height: 840px), (max-width: 1480px){
-                        width: 66px;
-                        height: 66px;
+                        width: 64px;
+                        height: 64px;
                     }
                 }
 
@@ -169,6 +169,8 @@
                     width: 58px;
                     height: 58px;
 
+                    border: 2px solid transparent;
+
                     img {
                         border-radius: 100%;
                         width: 100%;
@@ -176,7 +178,6 @@
                     }
 
                     &:hover {
-                        box-sizing: border-box;
                         border: 2px solid #9062C3;
                         box-shadow: 0px 12px 16px rgba(232, 80, 120, 0.4);
                     }
@@ -219,6 +220,22 @@
             @media (max-height: 840px), (max-width: 1480px) { 
                 width: 352px;
                 height: 280px;
+            }
+
+            .modal__content {
+                header {
+                    picture {
+                        img {
+                            width: 63px;
+                            height: 63px;
+
+                            @media (max-height: 840px), (max-width: 1480px) { 
+                                width: 53px;
+                                height: 53px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

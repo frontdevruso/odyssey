@@ -134,6 +134,16 @@
 
     &-wrapper { overflow: hidden }
 
+    &--hidden {
+        .simplebar-content-wrapper {
+            overflow: hidden !important;
+        }
+    
+        .simplebar-track {
+            visibility: hidden !important;
+        }
+    }
+
     &::-webkit-scrollbar {
         display: none;
     }

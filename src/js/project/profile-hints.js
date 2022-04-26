@@ -87,13 +87,21 @@ const profileHints = () => {
 
         $('.hints__message--4 .message__next').on('click', function(event) {    
             pageFocus.classList.remove('page-focus--rightCenter');
+            pageFocus.classList.add('page-focus--center');
+        });
+    
+
+        $('.hints__message--5 .message__next').on('click', function(event) {    
+            pageFocus.classList.remove('page-focus--rightCenter');
             pageFocus.classList.add('hidden');
             prizesAchivments.forEach(function(item) {
                 item.classList.remove('focus-priority');
             });
     
             $('.page__border').removeClass('page__border--hidden');
-            const scrollBar = new SimpleBar(document.getElementById('pageContainerProfile'));
+            $("#pageContainerProfile").removeClass('page__container--hidden');
+            // const scrollBar = new SimpleBar(document.getElementById('pageContainerProfile'));
+            $("#pageContainerProfile").removeClass('.page__container--hidden');
             $("#pageContainerProfile").animate({ scrollBottom: $(document).height() }, 1000);
             $('.profile__tabs-item--first .profile__tabs-item-info-control').addClass('pulse-anim');
         });

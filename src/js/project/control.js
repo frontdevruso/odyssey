@@ -62,6 +62,22 @@ const control = () => {
             barWidth(controlProgress.getAttribute('data-level'));
             activatePlanets(controlProgress.getAttribute('data-level'));
         }
+
+        $(document).ready(function(){
+            $('#searchInput').on('keyup', function() {
+                console.log($(this).val());
+                $('.close-btn').attr('disabled', false);
+                $('.close-btn').on('click', function() {
+                    $('#searchInput').val('');
+                    $('.close-btn').attr('disabled', true);
+                });
+            });
+
+            $('.control__launching-content-table-item button').on('click', function() {
+                $(this).addClass('applied');
+                $(this).attr('disabled', true);
+            });
+        });
     }
 }
 
