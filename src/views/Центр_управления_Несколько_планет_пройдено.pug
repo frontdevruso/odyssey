@@ -38,7 +38,7 @@ block content
                                     b 2 536 баллов
             .control__container
                 h1.g-title Центр управления
-                .control__progress(data-level="6")
+                .control__progress(data-level="3")
                     <svg class="control__progress-bg" viewBox="0 0 1344 282" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_129_1376)">
                             <path d="M1343.46 250.452C1344.84 262.457 1335.83 270.65 1323.79 271.701C1180.27 284.234 288.486 286.97 25.9987 270.617C11.1321 269.691 -1.19904 260.644 0.845087 245.889C9.66888 182.199 85.3812 25.373 123.453 16.0537C196.367 -1.79433 1178.98 -11.1434 1227.07 22.853C1277.24 58.3166 1337.18 195.899 1343.46 250.452Z" fill="white"/>
@@ -102,17 +102,17 @@ block content
                                 img.rocket-part.rocket-part--1.active(src="./assets/img/control/rocket-part-1.png", alt="rocket")
                                 img.rocket-part.rocket-part--2.active(src="./assets/img/control/rocket-part-2.png", alt="rocket")
                                 img.rocket-part.rocket-part--3.active(src="./assets/img/control/rocket-part-3.png", alt="rocket")
-                                img.rocket-part.rocket-part--4.active(src="./assets/img/control/rocket-part-4.png", alt="rocket")
-                                img.rocket-part.rocket-part--5.active(src="./assets/img/control/rocket-part-5.png", alt="rocket")
-                                img.rocket-part.rocket-part--6.active(src="./assets/img/control/rocket-part-6.png", alt="rocket")
-                            button.active
+                                img.rocket-part.rocket-part--4(src="./assets/img/control/rocket-part-4.png", alt="rocket")
+                                img.rocket-part.rocket-part--5(src="./assets/img/control/rocket-part-5.png", alt="rocket")
+                                img.rocket-part.rocket-part--6(src="./assets/img/control/rocket-part-6.png", alt="rocket")
+                            button
                                 span 
                                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.5 6.63397C14.1667 7.01887 14.1667 7.98113 13.5 8.36603L2.25 14.8612C1.58333 15.2461 0.749999 14.765 0.749999 13.9952L0.75 1.00481C0.75 0.23501 1.58333 -0.246117 2.25 0.138783L13.5 6.63397Z" fill="white"/>
                                     </svg>
                                 h4 Запустить <br> ракету
                         ul.control__launching-content-table
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--1
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--1
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -135,7 +135,7 @@ block content
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть <br> Ева
                                 button.btn.--texture Применить
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--2
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--2
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -158,7 +158,7 @@ block content
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
                                 button.btn.--texture Применить
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
                                 <svg class="control__launching-content-table-item-bg" width="245" height="134" viewBox="0 0 245 134" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_126_854" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="245" height="134">
                                     <path d="M243.196 6.10398C242.964 4.13491 241.691 2.76011 239.724 2.51604C215.208 -0.524911 53.844 -1.20997 6.16867 2.71406C3.42265 2.94008 1.24988 4.68703 0.963015 7.42737C-1.40605 30.058 0.495296 127.77 7.78739 130.15C20.898 134.43 229.016 136.672 237.664 128.52C247.315 119.421 245.436 25.0963 243.196 6.10398Z" fill="url(#paint0_linear_126_854)" fill-opacity="0.96"/>
@@ -181,7 +181,7 @@ block content
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-3-active.png", alt="")
                                 span Гиперпростран-<br>ственный ускоритель
                                 button.btn.--texture Применить
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--4
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--4
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -204,7 +204,7 @@ block content
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
                                 span Нейросеть<br>Ева
                                 button.btn.--texture Применить
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -227,7 +227,7 @@ block content
                                 img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
                                 span Кристалл <br> знаний
                                 button.btn.--texture Применить
-                            li.active.control__launching-content-table-item.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>

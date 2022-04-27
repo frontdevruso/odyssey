@@ -188,6 +188,7 @@
 
                 position: absolute;
                 border-radius: 16px;
+                max-width: 100%;
 
                 background-color: $yellow;
                 background-image: url('./../img/control/texture-dirt.png');
@@ -243,6 +244,10 @@
                     justify-content: center;
                     flex-direction: column;
 
+                    &.active {
+                        button { display: flex }
+                    }
+
                     img {
                         position: absolute;
                         top: 0;
@@ -271,20 +276,19 @@
                         border-radius: 15px;
                     }
 
-                    .control__launching-content-table-item-img-active {
-                        opacity: 0;
-                    }
+                    .control__launching-content-table-item-img-active { opacity: 0 }
 
                     button {
                         padding: 5px 16px;
                         position: absolute;
                         bottom: -10%;
 
-                        &.applied {
-                            opacity: 0;
-                        }
+                        display: none;
 
+                        &.applied { opacity: 0 }
                         &:disabled { cursor: initial }
+
+                        @media (max-height: 840px), (max-width: 1480px) { bottom: -20% }
                     }
 
                     &.active {
@@ -298,6 +302,23 @@
                                 box-shadow: 0px 8px 26px 10px rgba(144, 98, 195, 0.4);
                                 backdrop-filter: blur(16px);
                             }
+                        }
+                    }
+
+                    &--hover {
+                        img { transition: .4s }
+
+                        button {
+                            display: flex;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            button {
+                                &:not(.applied) { opacity: 1 }
+                            }
+                            img { opacity: 0 }
+                            .control__launching-content-table-item-img-active { opacity: 1 }
                         }
                     }
 
@@ -330,6 +351,7 @@
 
                         button {
                             bottom: 0;
+                            @media (max-height: 840px), (max-width: 1480px) { bottom: -5%; }
                         }
 
                         @media (max-height: 840px), (max-width: 1480px) {
@@ -620,7 +642,7 @@
             background-size: auto auto;
 
             color: #9062C3;
-            padding: 70px 0;
+            padding: 50px 0;
 
             filter: drop-shadow(0px 12px 80px #E85078);
 
@@ -671,7 +693,7 @@
 
                 padding-right: 15px;
 
-                height: 141px;
+                height: 175px;
                 overflow-y: scroll;
                             
                 &::-webkit-scrollbar {
@@ -718,6 +740,7 @@
                 @media (max-height: 840px), (max-width: 1480px) {
                     max-width: 1050px;
                     margin: 0 auto;
+                    height: 141px;
                 }
 
                 li {
@@ -751,9 +774,18 @@
                             span { border-bottom: 1px dashed rgba(255, 255, 255, 0.5) }
                         }
 
-                        &:hover {
-                            background-color: #2E0D6F;
-                        }
+                        &:hover { background-color: #2E0D6F }
+                    }
+
+                    .control__raiting-table-subdivision span, .control__raiting-table-post span {
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+
+                        width: auto;
+                        margin-right: 20px;
                     }
 
                     .control__raiting-table-position {
@@ -789,8 +821,7 @@
                             display: flex;
 
                             position: absolute;
-                            right: -200%;
-                            bottom: -70%;
+                            transform: translate(100px, -20px);
 
                             width: 363px;
                             height: 166px;
@@ -806,10 +837,12 @@
                             align-items: center;
                             justify-content: center;
 
-                            span {
+                            p {
                                 font-size: 14px;
                                 width: fit-content;
                                 height: fit-content;
+
+                                color: #2E0D6F;
 
                                 max-width: 67%;
                                 padding-bottom: 40px;

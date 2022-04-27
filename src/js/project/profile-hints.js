@@ -46,11 +46,9 @@ const profileHints = () => {
             modalClose(modalReturnAvatar);
             thirdHintSwitch();
             setTimeout(function() {
-                pageFocus.classList.add('page-focus--rightCenter');
+                pageFocus.classList.add('page-focus--left');
                 hintSection.classList.remove('hints--hidden');
-                prizesAchivments.forEach(function(item) {
-                    item.classList.add('focus-priority');
-                });
+                createProfile.classList.add('focus-priority');
             }, 1000);
         });
     
@@ -65,12 +63,9 @@ const profileHints = () => {
             modalClose(modalAvatar);
             thirdHintSwitch();
             setTimeout(function() {
-                pageFocus.classList.add('page-focus--rightCenter');
+                pageFocus.classList.add('page-focus--left');
                 hintSection.classList.remove('hints--hidden');
-                prizesAchivments.forEach(function(item) {
-                    item.classList.add('focus-priority');
-                });
-    
+                createProfile.classList.add('focus-priority');
             }, 1000);
         });
 
@@ -84,6 +79,16 @@ const profileHints = () => {
             });
     
         }
+
+        $('.hints__message--3 .message__next').on('click', function(event) {    
+            pageFocus.classList.remove('page-focus--left');
+            pageFocus.classList.add('page-focus--rightCenter');
+            createProfile.classList.remove('focus-priority');
+
+            prizesAchivments.forEach(function(item) {
+                item.classList.add('focus-priority');
+            });
+        });
 
         $('.hints__message--4 .message__next').on('click', function(event) {    
             pageFocus.classList.remove('page-focus--rightCenter');
@@ -100,7 +105,6 @@ const profileHints = () => {
     
             $('.page__border').removeClass('page__border--hidden');
             $("#pageContainerProfile").removeClass('page__container--hidden');
-            // const scrollBar = new SimpleBar(document.getElementById('pageContainerProfile'));
             $("#pageContainerProfile").removeClass('.page__container--hidden');
             $("#pageContainerProfile").animate({ scrollBottom: $(document).height() }, 1000);
             $('.profile__tabs-item--first .profile__tabs-item-info-control').addClass('pulse-anim');
