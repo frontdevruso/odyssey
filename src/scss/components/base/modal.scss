@@ -166,10 +166,11 @@
                     border: 2px solid transparent;
                     box-sizing: content-box;
 
-                    width: 54px;
-                    height: 54px;
+                    width: 58px;
+                    height: 58px;
 
                     border: 2px solid transparent;
+                    box-sizing: border-box;
 
                     img {
                         border-radius: 100%;
@@ -183,8 +184,8 @@
                     }
 
                     @media (max-height: 840px), (max-width: 1480px){
-                        width: 44px;
-                        height: 44px;
+                        width: 48px;
+                        height: 48px;
                     }
                 }
             }
@@ -226,12 +227,12 @@
                 header {
                     picture {
                         img {
-                            width: 63px;
-                            height: 63px;
+                            width: 61px;
+                            height: 61px;
 
                             @media (max-height: 840px), (max-width: 1480px) { 
-                                width: 53px;
-                                height: 53px;
+                                width: 51px;
+                                height: 51px;
                             }
                         }
                     }

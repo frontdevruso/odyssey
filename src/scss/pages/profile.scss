@@ -73,7 +73,6 @@
                 border: 2px solid rgba(232, 80, 120, 0.48);
                 box-sizing: border-box;
                 box-shadow: 0px 8px 40px #CA375E;
-                backdrop-filter: blur(16px);
             }
                                                                 
             @media (max-height: 840px), (max-width: 1480px) {
@@ -367,8 +366,8 @@
                     }
 
                     button {
-                        width: 93px;
-                        height: 93px;
+                        width: 95px;
+                        height: 95px;
                         border-radius: 100%;
                         box-shadow: 0px 10px 40px rgba(70, 23, 164, 0.7);
 
@@ -454,7 +453,6 @@
                             border-radius: 100%;
                             box-sizing: border-box;
                             box-shadow: 0px 4px 24px #D5C1FF;
-                            backdrop-filter: blur(8px);
 
                             @media (max-height: 840px), (max-width: 1480px) {
                                 max-width: 40px;
@@ -869,7 +867,6 @@
                             background-image: url(../img/control/texture-dirt.png);
 
                             box-shadow: 0px 8px 24px rgba(144, 98, 195, 0.48), inset 0px -4px 8px rgba(51, 25, 81, 0.32);
-                            backdrop-filter: blur(16px);
                             border-radius: 20px;
 
                             position: absolute;

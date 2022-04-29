@@ -877,18 +877,12 @@
                             }
                         }
 
-                        span {
-                            border-bottom: 1px dashed #9062C3;
-                        }
+                        span { border-bottom: 1px dashed #9062C3 }
                     }
 
-                    .control__raiting-table-score {
-                        text-align: right;
-                    }
+                    .control__raiting-table-score { text-align: right }
 
-                    &:hover {
-                        background-color: #FFE2AB;
-                    }
+                    &:hover { background-color: #FFE2AB }
                 }
             }
 
@@ -1063,7 +1057,7 @@
 
                             span {
                                 font-size: 16px;
-                                font-weight: 600;
+                                font-weight: 500;
                                 color: #2E0D6F;
                             }
                         }
@@ -1137,4 +1131,9 @@
     .simplebar-track {
         visibility: hidden !important;
     }
+}
+
+.border-text {
+    border: 1px solid #2E0D6F;
+    padding: 10px;
 }
