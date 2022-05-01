@@ -319,6 +319,7 @@
             &-bg {
                 position: absolute;
                 top: 0;right: 0;bottom: 0;left: 0;
+                filter: drop-shadow(0px 12px 80px #E85078);
 
                 &--planet {
                     width: 100%;
