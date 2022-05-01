@@ -76,8 +76,12 @@ const control = () => {
             $('.control__launching-content-table-item button').on('click', function() {
                 $(this).addClass('applied');
                 $(this).attr('disabled', true);
+                $(this).parent().addClass('active');
+                $(this).parent().removeClass('control__launching-content-table-item--hover');
             });
         });
+
+
     }
 }
 

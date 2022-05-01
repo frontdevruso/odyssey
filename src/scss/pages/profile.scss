@@ -243,6 +243,11 @@
 
             @media (max-height: 840px), (max-width: 1480px) { margin: 0 auto }
 
+            &--upper {
+                position: relative;
+                filter: drop-shadow(0px 12px 80px #E85078);
+            }
+
             h4 {
                 text-align: center;
                 margin-bottom: 16px;
@@ -314,7 +319,6 @@
             &-bg {
                 position: absolute;
                 top: 0;right: 0;bottom: 0;left: 0;
-                filter: drop-shadow(0px 12px 80px #E85078);
 
                 &--planet {
                     width: 100%;

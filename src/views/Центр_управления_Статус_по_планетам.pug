@@ -38,7 +38,7 @@ block content
                                     b 2 536 баллов
             .control__container
                 h1.g-title Центр управления
-                .control__progress(data-level="3")
+                .control__progress.control__progress--message(data-level="6")
                     <svg class="control__progress-bg" viewBox="0 0 1344 282" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_i_129_1376)">
                             <path d="M1343.46 250.452C1344.84 262.457 1335.83 270.65 1323.79 271.701C1180.27 284.234 288.486 286.97 25.9987 270.617C11.1321 269.691 -1.19904 260.644 0.845087 245.889C9.66888 182.199 85.3812 25.373 123.453 16.0537C196.367 -1.79433 1178.98 -11.1434 1227.07 22.853C1277.24 58.3166 1337.18 195.899 1343.46 250.452Z" fill="white"/>
@@ -92,6 +92,9 @@ block content
                             <path d="M986 0V16" stroke="#FFC700" stroke-width="2"/>
                         </svg>
                         span.control__progress-bar-active
+                    .control__progress-message.control__progress-message--days
+                        span До начала нового этапа осталось
+                        b 12 дней
                 .control__launching#controlLaunching
                     img.control__launching-bg(src="./assets/img/control/launching-bg.png", alt="launching")
                     .control__launching-content 
@@ -102,10 +105,10 @@ block content
                                 img.rocket-part.rocket-part--1.active(src="./assets/img/control/rocket-part-1.png", alt="rocket")
                                 img.rocket-part.rocket-part--2.active(src="./assets/img/control/rocket-part-2.png", alt="rocket")
                                 img.rocket-part.rocket-part--3.active(src="./assets/img/control/rocket-part-3.png", alt="rocket")
-                                img.rocket-part.rocket-part--4(src="./assets/img/control/rocket-part-4.png", alt="rocket")
-                                img.rocket-part.rocket-part--5(src="./assets/img/control/rocket-part-5.png", alt="rocket")
-                                img.rocket-part.rocket-part--6(src="./assets/img/control/rocket-part-6.png", alt="rocket")
-                            button
+                                img.rocket-part.rocket-part--4.active(src="./assets/img/control/rocket-part-4.png", alt="rocket")
+                                img.rocket-part.rocket-part--5.active(src="./assets/img/control/rocket-part-5.png", alt="rocket")
+                                img.rocket-part.rocket-part--6.active(src="./assets/img/control/rocket-part-6.png", alt="rocket")
+                            button.active
                                 span 
                                     <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.5 6.63397C14.1667 7.01887 14.1667 7.98113 13.5 8.36603L2.25 14.8612C1.58333 15.2461 0.749999 14.765 0.749999 13.9952L0.75 1.00481C0.75 0.23501 1.58333 -0.246117 2.25 0.138783L13.5 6.63397Z" fill="white"/>
@@ -132,7 +135,7 @@ block content
                                     </defs>
                                 </svg>
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", srcset="./assets/img/control/launching-artefacts-1-active@2x.png" alt="")
                                 span Нейросеть <br> Ева
                                 button.btn.--texture Применить
                             li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--2
@@ -155,10 +158,10 @@ block content
                                     </defs>
                                 </svg>
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", srcset="./assets/img/control/launching-artefacts-2-active@2x.png" alt="")
                                 span Кристалл <br> знаний
                                 button.btn.--texture Применить
-                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--3(style="background-image: url('./assets/img/control/launching-bg-3.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--3
                                 <svg class="control__launching-content-table-item-bg" width="245" height="134" viewBox="0 0 245 134" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_126_854" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="245" height="134">
                                     <path d="M243.196 6.10398C242.964 4.13491 241.691 2.76011 239.724 2.51604C215.208 -0.524911 53.844 -1.20997 6.16867 2.71406C3.42265 2.94008 1.24988 4.68703 0.963015 7.42737C-1.40605 30.058 0.495296 127.77 7.78739 130.15C20.898 134.43 229.016 136.672 237.664 128.52C247.315 119.421 245.436 25.0963 243.196 6.10398Z" fill="url(#paint0_linear_126_854)" fill-opacity="0.96"/>
@@ -178,7 +181,7 @@ block content
                                     </defs>
                                 </svg>
                                 img(src="./assets/img/control/launching-artefacts-3.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-3-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-3-active.png", srcset="./assets/img/control/launching-artefacts-3-active@2x.png" alt="")
                                 span Гиперпростран-<br>ственный ускоритель
                                 button.btn.--texture Применить
                             li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--4
@@ -201,10 +204,10 @@ block content
                                     </defs>
                                 </svg>                      
                                 img(src="./assets/img/control/launching-artefacts-1.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-1-active.png", srcset="./assets/img/control/launching-artefacts-1-active@2x.png" alt="")
                                 span Нейросеть<br>Ева
                                 button.btn.--texture Применить
-                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--2(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--2
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -224,10 +227,10 @@ block content
                                     </defs>
                                 </svg>  
                                 img(src="./assets/img/control/launching-artefacts-2.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-2-active.png", srcset="./assets/img/control/launching-artefacts-2-active@2x.png" alt="")
                                 span Кристалл <br> знаний
                                 button.btn.--texture Применить
-                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--6(style="background-image: url('./assets/img/control/launching-bg-2.svg')")
+                            li.control__launching-content-table-item.control__launching-content-table-item--hover.control__launching-content-table-item--6
                                 <svg class="control__launching-content-table-item-bg" width="161" height="118" viewBox="0 0 161 118" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_138_1695" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="161" height="118">
                                         <path d="M1.1723 5.52315C1.33002 3.6874 2.40252 2.35552 4.22723 2.10005C22.3028 -0.430629 122.228 -0.994415 155.136 2.2028C158.075 2.48831 160.235 4.51552 160.434 7.46138C161.886 28.9796 160.604 112.545 155.883 114.61C147.267 118.379 10.5037 120.353 4.82108 113.174C-1.50283 105.185 -0.293465 22.5835 1.1723 5.52315Z" fill="url(#paint0_linear_138_1695)" fill-opacity="0.96"/>
@@ -247,7 +250,7 @@ block content
                                     </defs>
                                 </svg>  
                                 img(src="./assets/img/control/launching-artefacts-6.svg", alt="")
-                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-4-active.png", alt="")
+                                img.control__launching-content-table-item-img-active(src="./assets/img/control/launching-artefacts-4-active.png", srcset="./assets/img/control/launching-artefacts-4-active@2x.png" alt="")
                                 span Нейросеть <br> Ева
                                 button.btn.--texture Применить
                 .control__raiting#controlRaiting
@@ -271,7 +274,7 @@ block content
                                     <path d="M1 1L13 13" stroke="white" stroke-linecap="round"/>
                                     <path d="M13 1L1 13" stroke="white" stroke-linecap="round"/>
                                 </svg>
-                    .control__raiting-table 
+                    .control__raiting-table.control__raiting-table--small 
                         <svg width="1343" height="394" viewBox="0 0 1343 394" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_252_1427)">
                                 <path d="M9.56286e-08 37.1834C7.49612e-07 25.7872 7.42857 16.1691 18.7606 14.9615C193.974 -3.71098 1183.36 -7.91173 1316.02 19.9158C1323.41 21.4651 1328.24 27.4891 1329.62 34.9092C1345.33 119.575 1343.03 248.309 1342.68 358.665C1342.64 371.073 1333.55 381.412 1321.18 382.393C977.95 409.604 172.352 383.029 18.4121 363.255C7.27885 361.825 0.000354146 352.303 0.00033901 341.078C0.000205029 241.719 -5.1304e-06 128.251 9.56286e-08 37.1834Z" fill="white"/>
@@ -304,10 +307,12 @@ block content
                                     span Тимофеев Игорь
                                 .control__raiting-table-subdivision 
                                     span Департамент продаж
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Менеджер проектов
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 969
                             li 
                                 .control__raiting-table-position #2
@@ -316,10 +321,12 @@ block content
                                     span Константин Константинов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Оператор по работе с клиентами
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 781
                             li 
                                 .control__raiting-table-position #3
@@ -328,10 +335,12 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -340,10 +349,12 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -352,10 +363,12 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -364,10 +377,180 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .control__raiting-table-subdivision-hint 
+                                    .raiting-table-hint
                                         p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li
+                                .control__raiting-table-position #1
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
+                                    span Тимофеев Игорь
+                                .control__raiting-table-subdivision 
+                                    span Департамент продаж
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Менеджер проектов
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 969
+                            li 
+                                .control__raiting-table-position #2
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
+                                    span Константин Константинов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Оператор по работе с клиентами
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 781
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li
+                                .control__raiting-table-position #1
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
+                                    span Тимофеев Игорь
+                                .control__raiting-table-subdivision 
+                                    span Департамент продаж
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Менеджер проектов
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 969
+                            li 
+                                .control__raiting-table-position #2
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
+                                    span Константин Константинов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Оператор по работе с клиентами
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 781
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-post 
+                                    span Инженер
+                                    .raiting-table-hint
+                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                         footer 
                             .control__raiting-table-history-star 
