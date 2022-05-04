@@ -317,7 +317,9 @@
                             @media (max-height: 840px), (max-width: 1480px) { width: 60% }
                         }
                     }
-                    &--1,&--4 {            
+                    &--1,&--4 {          
+                        img { top: -10% }
+                        @media (max-height: 840px), (max-width: 1480px) { top: -20% }
                         .control__launching-content-table-item-img-active {
                             top: -5%;
                             @media (max-height: 840px), (max-width: 1480px) {
@@ -337,7 +339,14 @@
                         }
                     }
 
-                    &--6 {            
+                    &--2,&--5 {          
+                        img { top: -10% }
+                        @media (max-height: 840px), (max-width: 1480px) { top: -20% }
+                    }
+
+                    &--6 {
+                        img { top: -10% }
+                        @media (max-height: 840px), (max-width: 1480px) { top: -20% }
                         .control__launching-content-table-item-img-active {
                             @media (max-height: 840px), (max-width: 1480px) { top: -5% }
                         }
@@ -373,7 +382,6 @@
                         
                         &:hover {
                             transform: translateY(-20px);
-                            box-shadow: 0px 8px 26px rgba(144, 98, 195, 0.7);
                             
                             height: 131px;
                             .control__launching-content-table-item-img-active { filter: initial }
@@ -404,7 +412,7 @@
                         .control__launching-content-table-item-bg { transition: .4s }
 
                         &:hover {
-                            box-shadow: 0px 8px 26px rgba(144, 98, 195, 0.7);
+                            box-shadow: 0px 0px 26px rgba(144, 98, 195, 0.7);
                         }
                     }
 
@@ -516,6 +524,10 @@
                 @media (max-height: 840px), (max-width: 1480px) {
                     width: 64.7vw;
                     height: 14.25VW;
+                }
+                @media (max-height: 650px), (max-width: 1240px) {
+                    width: 802px;
+                    height: 179px;
                 }
             }
 
@@ -838,7 +850,7 @@
                 margin-right: 50px;
                 padding-right: 15px;
 
-                height: 175px;
+                height: 200px;
                 overflow-y: scroll;
                 position: relative;
 
@@ -970,6 +982,23 @@
                         }
                     }
 
+                    &:first-child {
+                        &:hover {
+                            z-index: 20;
+                        }
+                        .raiting-table-hint {
+                            transform: translate(110px, 55px);
+                        }    
+                    }
+                    &:nth-child(2) {
+                        &:hover {
+                            z-index: 20;
+                        }
+                        .raiting-table-hint {
+                            transform: translate(110px, 55px);
+                        }    
+                    }
+
                     .control__raiting-table-subdivision span, .control__raiting-table-post span {
                         text-overflow: ellipsis;
                         display: -webkit-box;
@@ -1017,6 +1046,8 @@
                             }
                         }
                     }
+
+                    .control__raiting-table-post { z-index: 14 }
 
                     .control__raiting-table-profile {
                         display: flex;
@@ -1308,8 +1339,8 @@
 
             &--small {
                 header {
-                    grid-template-columns: 7.4% 24.4% 23.7% 35% 5%;
-                    margin: 0px 55px 16px 56px;
+                    grid-template-columns: 7% 24.4% 23.7% 35% 6%;
+                    margin: 0px 37px 16px 56px;
                 }
 
                 svg {
@@ -1317,7 +1348,7 @@
                 }
                 
                 ul {
-                    max-width: 1300px;
+                    max-width: 1325px;
                     margin-right: 40px;
                     margin-left: 70px;
                 }

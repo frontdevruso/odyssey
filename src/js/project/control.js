@@ -79,6 +79,16 @@ const control = () => {
                 $(this).parent().addClass('active');
                 $(this).parent().removeClass('control__launching-content-table-item--hover');
             });
+
+            document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post').forEach(function(item) {
+                const itemData = item.querySelector('span').innerHTML;
+                if (itemData.length > 30) {
+                    item.innerHTML += 
+                    "<div class='raiting-table-hint'>" + 
+                        "<p>" + itemData + "</p>" +
+                    "</div>"
+                }
+            });
         });
 
 

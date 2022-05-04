@@ -60,27 +60,27 @@ block content
                     ul
                         li.active
                             picture 
-                                img(src="./assets/img/control/planet-1-active.png", alt="planets-active")
+                                img(src="./assets/img/control/planet-1.png", srcset="./assets/img/control/planet-1@2x.png 2x", alt="planets")
                             h3 Корпорулия
                         li
                             picture 
-                                img(src="./assets/img/control/planet-2.png", alt="planets")
+                                img(src="./assets/img/control/planet-2.png", srcset="./assets/img/control/planet-2@2x.png 2x", alt="planets")
                             h3 Футурия
                         li
                             picture 
-                                img(src="./assets/img/control/planet-3.png", alt="planets")
+                                img(src="./assets/img/control/planet-3.png", srcset="./assets/img/control/planet-3@2x.png 2x", alt="planets")
                             h3 Физиляндия
                         li
                             picture 
-                                img(src="./assets/img/control/planet-4.png", alt="planets")
+                                img(src="./assets/img/control/planet-4.png", srcset="./assets/img/control/planet-4@2x.png 2x", alt="planets")
                             h3 Юриляндия
                         li
                             picture 
-                                img(src="./assets/img/control/planet-5.png", alt="planets")
+                                img(src="./assets/img/control/planet-5.png", srcset="./assets/img/control/planet-5@2x.png 2x", alt="planets")
                             h3 Военная
                         li
                             picture 
-                                img(src="./assets/img/control/planet-6.png", alt="planets")
+                                img(src="./assets/img/control/planet-6.png", srcset="./assets/img/control/planet-6@2x.png 2x", alt="planets")
                             h3 Порталия
                     .control__progress-bar 
                         <svg width="1184" height="16" viewBox="0 0 1184 16" xmlns="http://www.w3.org/2000/svg">
@@ -296,6 +296,7 @@ block content
                             span Подразделение
                             span Должность
                             span Баллы
+
                         ul 
                             li.active
                                 .control__raiting-table-position #1
@@ -303,13 +304,9 @@ block content
                                     img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
                                     span Тимофеев Игорь
                                 .control__raiting-table-subdivision 
-                                    span Департамент продаж
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                    span Департамент продаж и глав. закупок и ещё раз закупок
                                 .control__raiting-table-post 
-                                    span Менеджер проектов
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                    span Менеджер проектов различных, в основном ответсвенных
                                 .control__raiting-table-score 969
                             li 
                                 .control__raiting-table-position #2
@@ -318,12 +315,68 @@ block content
                                     span Константин Константинов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Оператор по работе с клиентами
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                .control__raiting-table-score 781
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел производьства
+                                .control__raiting-table-post 
+                                    span Почти главный инжинер, немного не хватило
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел добычи
+                                .control__raiting-table-post 
+                                    span Шахтёр первого уровня на планете Фурляндия
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел по меж космическим направлениям
+                                .control__raiting-table-post 
+                                    span Инженер
+                                .control__raiting-table-score 614
+                            li 
+                                .control__raiting-table-position #3
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                .control__raiting-table-post 
+                                    span Инженер
+                                .control__raiting-table-score 614
+                            li
+                                .control__raiting-table-position #1
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
+                                    span Тимофеев Игорь
+                                .control__raiting-table-subdivision 
+                                    span Департамент продаж
+                                .control__raiting-table-post 
+                                    span Менеджер проектов
+                                .control__raiting-table-score 969
+                            li 
+                                .control__raiting-table-position #2
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
+                                    span Константин Константинов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                .control__raiting-table-post 
+                                    span Оператор по работе с клиентами
                                 .control__raiting-table-score 781
                             li 
                                 .control__raiting-table-position #3
@@ -332,12 +385,8 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -346,12 +395,8 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -360,12 +405,8 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -374,12 +415,8 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li
                                 .control__raiting-table-position #1
@@ -388,26 +425,28 @@ block content
                                     span Тимофеев Игорь
                                 .control__raiting-table-subdivision 
                                     span Департамент продаж
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Менеджер проектов
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 969
                             li 
+                                .control__raiting-table-position #2
+                                .control__raiting-table-profile 
+                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
+                                    span Константин Константинов
+                                .control__raiting-table-subdivision 
+                                    span Отдел маркетинга
+                                .control__raiting-table-post 
+                                    span Оператор по работе с клиентами
+                                .control__raiting-table-score 781
+                            li 
                                 .control__raiting-table-position #3
                                 .control__raiting-table-profile 
                                     img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -416,12 +455,8 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
                             li 
                                 .control__raiting-table-position #3
@@ -430,27 +465,19 @@ block content
                                     span Гарик Серов
                                 .control__raiting-table-subdivision 
                                     span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-post 
                                     span Инженер
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
                                 .control__raiting-table-score 614
-                            li
-                                .control__raiting-table-position #1
+                            li 
+                                .control__raiting-table-position #3
                                 .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
-                                    span Тимофеев Игорь
+                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                                    span Гарик Серов
                                 .control__raiting-table-subdivision 
-                                    span Департамент продаж
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
+                                    span Отдел маркетинга
                                 .control__raiting-table-post 
-                                    span Менеджер проектов
-                                    .raiting-table-hint
-                                        p Управляющий эксперт, Дирекция информационной безопасности
-                                .control__raiting-table-score 969
+                                    span Инженер
+                                .control__raiting-table-score 614
                         footer 
                             .control__raiting-table-history-star 
                                 img(src="./assets/img/control/star.svg", alt="star")
