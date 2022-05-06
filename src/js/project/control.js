@@ -73,6 +73,13 @@ const control = () => {
                 });
             });
 
+            $('.control__raiting-planets-inputs input').on('focus', function() {
+                $('.control__raiting-planets-inputs').addClass('--focus');
+            });
+            $('.control__raiting-planets-inputs input').on('blur', function() {
+                $('.control__raiting-planets-inputs').removeClass('--focus');
+            });
+
             $('.control__launching-content-table-item button').on('click', function() {
                 $(this).addClass('applied');
                 $(this).attr('disabled', true);
@@ -80,15 +87,31 @@ const control = () => {
                 $(this).parent().removeClass('control__launching-content-table-item--hover');
             });
 
-            document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post').forEach(function(item) {
-                const itemData = item.querySelector('span').innerHTML;
-                if (itemData.length > 30) {
-                    item.innerHTML += 
-                    "<div class='raiting-table-hint'>" + 
-                        "<p>" + itemData + "</p>" +
-                    "</div>"
-                }
-            });
+            if (document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post')) {
+                document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post').forEach(function(item) {
+                    const itemData = item.querySelector('span').innerHTML;
+                    if (itemData.length > 30) {
+                        item.innerHTML += 
+                        "<div class='raiting-table-hint'>" + 
+                            "<p>" + itemData + "</p>" +
+                        "</div>"
+                    }
+                });
+            }
+
+            if (document.querySelectorAll('.control__raiting-table-item-main main')) {
+                document.querySelectorAll('.control__raiting-table-item-main main').forEach(function(item) {
+                    const itemData = item.querySelector('span').innerHTML;
+                    if (itemData.length > 20) {
+                        item.innerHTML += 
+                        "<div class='raiting-table-hint'>" + 
+                            "<p>" + itemData + "</p>" +
+                        "</div>"
+                    }
+                });
+            }
+            
+
         });
 
 

@@ -157,7 +157,6 @@
             ul {
                 display: flex;
                 justify-content: space-between;
-
                 margin-bottom: 16px;
 
                 button {
@@ -190,6 +189,16 @@
                     @media (max-height: 840px), (max-width: 1480px){
                         width: 48px;
                         height: 48px;
+                    }
+                }
+            }
+
+            &--colors {
+                ul {
+                    li {
+                        button {
+                            border-color:  #d1beef;
+                        }
                     }
                 }
             }
