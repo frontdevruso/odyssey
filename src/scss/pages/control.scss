@@ -400,22 +400,27 @@
                         img { opacity: 0 }
                         .control__launching-content-table-item-img-active { opacity: 1; filter: drop-shadow(0px 12px 24px #D5C1FF) }
                         
-                        &:hover {
-                            transform: translateY(-20px);
-                            
-                            height: 131px;
-                            .control__launching-content-table-item-img-active { filter: initial }
+                        transform: translateY(-20px);
+                        
+                        height: 131px;
+                        .control__launching-content-table-item-img-active { filter: initial }
 
-                            button {
-                                bottom: 6%;
-                                &:not(.applied) { opacity: 1 }
+                        button {
+                            bottom: 6%;
+                            &:not(.applied) { opacity: 1 }
+                        }
+                                                    
+                        &.control__launching-content-table-item--3 {           
+                            height: 130px;
+                            @media (max-height: 840px), (max-width: 1480px) {
+                                height: 128px;
+                                span { margin-bottom: 20px; }
                             }
-                                                        
-                            &.control__launching-content-table-item--3 {           
-                                height: 160px;
-                                @media (max-height: 840px), (max-width: 1480px) { height: 148px }
-                            }
-                            span { color: white; margin-bottom: 10px; }
+                        }
+                        span { color: white; margin-bottom: 10px; }
+                        @media (max-height: 840px), (max-width: 1480px) { 
+                            button { bottom: -18% }
+                            span { margin-bottom: 0 }
                         }
                     }
 
