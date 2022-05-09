@@ -3,27 +3,30 @@ const planets = () => {
 
     if (document.querySelector('.planets')) {
         if (hintSection) {
-            $('.hints__message').find('.message__next').on('click', function() {
-                let currentMessage = this.closest('.hints__message');
-                let nextClass = this.getAttribute('data-message');
-                let nextMessage = $(this).parent().siblings(`.${nextClass}`)
-                currentMessage.classList.remove('is-active');
-    
-                setTimeout(function() {
-                    currentMessage.classList.add('d-none');
-                    nextMessage.addClass('is-active');
-                }, 600);
-            });
+            document.querySelectorAll('.message__next').forEach(message => {
+                message.addEventListener('click', function() {
+                    let currentMessage = this.closest('.hints__message');
+                    let nextMessage = message.parentElement.nextElementSibling;
+                    currentMessage.classList.remove('is-active');
+
+                    setTimeout(function() {
+                        currentMessage.classList.add('d-none');
+                        nextMessage.classList.add('is-active');
+                    }, 600);
+                });
+            })
         }
 
-        $('.planets__table-item-title').lettering();
-        $('.planets__table-item-title').each(function(index, item) {
-            $(item).each(function(index, char) {
-                $(char).children().each(function(index, letter) {
-                    $(letter).css('transform', `rotate(${index * 8}deg)`)
-                })
-            });
+        document.querySelectorAll('.planets__table-item-title').forEach(function(wordText) {
+            const template = wordText.getAttribute('data-planet').split('').map( (l,i) => `<span class="char${i + 1}">${l}</span>` ).join('');
+            wordText.innerHTML += template;
         });
+        
+        document.querySelectorAll('.planets__table-item-title').forEach(function(item) {
+            item.querySelectorAll('span').forEach(function(char, index) {
+                char.style.transform = `rotate(${index * 8}deg)`
+            })
+        })
     }
 }
 

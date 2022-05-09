@@ -80,48 +80,47 @@ const profileHints = () => {
     
         }
 
-        $('.hints__message--3 .message__next').on('click', function(event) {    
+        document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
             pageFocus.classList.remove('page-focus--left');
             pageFocus.classList.add('page-focus--rightCenter');
             createProfile.classList.remove('focus-priority');
-
+    
             prizesAchivments.forEach(function(item) {
                 item.classList.add('focus-priority');
             });
-        });
+        })
 
-        $('.hints__message--4 .message__next').on('click', function(event) {    
+        document.querySelector('.hints__message--4 .message__next').addEventListener('click', function() {
             pageFocus.classList.remove('page-focus--rightCenter');
             pageFocus.classList.add('page-focus--center');
         });
     
 
-        $('.hints__message--5 .message__next').on('click', function(event) {    
+        document.querySelector('.hints__message--5 .message__next').addEventListener('click', function() {
             pageFocus.classList.remove('page-focus--rightCenter');
             pageFocus.classList.add('hidden');
             prizesAchivments.forEach(function(item) {
                 item.classList.remove('focus-priority');
             });
     
-            $('.page__border').removeClass('page__border--hidden');
-            $("#pageContainerProfile").removeClass('page__container--hidden');
-            $("#pageContainerProfile").removeClass('.page__container--hidden');
-            $("#pageContainerProfile").animate({ scrollBottom: $(document).height() }, 1000);
-            $('.profile__tabs-item--first .profile__tabs-item-info-control').addClass('pulse-anim');
+            document.querySelector('.page__border').classList.remove('page__border--hidden');
+            document.querySelector('#pageContainerProfile').classList.remove('page__container--hidden');
+            document.querySelector('.profile__tabs-item--first .profile__tabs-item-info-control').classList.add('pulse-anim');
         });
     
         if (hintSection) {
-            $('.hints__message').find('.message__next').on('click', function() {
-                let currentMessage = this.closest('.hints__message');
-                let nextClass = this.getAttribute('data-message');
-                let nextMessage = $(this).parent().siblings(`.${nextClass}`)
-                currentMessage.classList.remove('is-active');
-    
-                setTimeout(function() {
-                    currentMessage.classList.add('d-none');
-                    nextMessage.addClass('is-active');
-                }, 600);
-            });
+            document.querySelectorAll('.message__next').forEach(message => {
+                message.addEventListener('click', function() {
+                    let currentMessage = this.closest('.hints__message');
+                    let nextMessage = message.parentElement.nextElementSibling;
+                    currentMessage.classList.remove('is-active');
+
+                    setTimeout(function() {
+                        currentMessage.classList.add('d-none');
+                        nextMessage.classList.add('is-active');
+                    }, 600);
+                });
+            })
         }
     
         if (createProfile) {

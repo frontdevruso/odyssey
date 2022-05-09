@@ -3,88 +3,91 @@ const control = () => {
     const controlProgress = document.querySelector('.control__progress');
 
     if (document.querySelector('.control')) {
-        const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
+        const pageFocus = document.querySelector('.page-focus');
+        const hints = document.querySelector('.hints');
+
         if (hintSection) {
-            $('.hints__message').find('.message__next').on('click', function() {
-                let currentMessage = this.closest('.hints__message');
-                let nextClass = this.getAttribute('data-message');
-                let nextMessage = $(this).parent().siblings(`.${nextClass}`)
-                currentMessage.classList.remove('is-active');
-    
-                setTimeout(function() {
-                    currentMessage.classList.add('d-none');
-                    nextMessage.addClass('is-active');
-                }, 600);
-            });
-            $(".hints__message--2 .message__next").click(function () {
-                $('.page-focus').removeClass('page-focus--center');
-                $('.page-focus').addClass('hidden');
-                let elementClick = $(this).attr("href");
-                let destination = $(elementClick).offset().top;
-                if ($.browser.safari) {
-                    $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
+            document.querySelectorAll('.message__next').forEach(message => {
+                message.addEventListener('click', function() {
+                    let currentMessage = this.closest('.hints__message');
+                    let nextMessage = message.parentElement.nextElementSibling;
+                    currentMessage.classList.remove('is-active');
+
+                    setTimeout(function() {
+                        currentMessage.classList.add('d-none');
+                        nextMessage.classList.add('is-active');
+                    }, 600);
+                });
+            })
+
+            document.querySelector('.hints__message--2 .message__next').addEventListener('click', function() {
+                pageFocus.classList.remove('page-focus--center');
+                pageFocus.classList.add('hidden');
+                let elementClick = this.href;
+                let is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+
+                let destination = elementClick.offsetTop;
+
+                if (is_safari) {
+                    window.scrollTo({top: destination, behavior: 'smooth'}); // 1100 - скорость
                 } else {
-                    $('html').animate({ scrollTop: destination }, 1100);
+                    document.querySelector('html').scrollTo({top: destination, behavior: 'smooth'})
                 }
                 return false; 
-            });
-        
-            $(".hints__message--3 .message__next").click(function () {
-                $('#pageContainerControl').removeClass('page__container--control-hd');
-                $('.hints').addClass('hints--hidden');
-                $('.hints').addClass('hints--d-none');
-        
+            })
+
+            document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
+                document.getElementById('#pageContainerControl').classList.remove('page__container--control-hd');
+                hints.classList.add('hints--hidden');
+                hints.classList.add('hints--d-none');
+
                 setTimeout(function() {
-                    $('.hints').removeClass('hints--hidden');
-                    $('.hints').removeClass('hints--d-none');
+                    hints.classList.remove('hints--hidden');
+                    hints.classList.remove('hints--d-none');
                 }, 200);
             });
-        
-            // $(".hints__message--4 .message__next").click(function () {
-            //     const controlBar = new SimpleBar(document.getElementById('pageContainerControl'));
-            //     controlBar.getScrollElement().scrollTop = 10
-            // });
         }
             
         if(controlProgress) {
             function activatePlanets(planetCount) {
-                $('.control__progress ul li').each(function(index, item) {
-                    if (Number(planetCount) >= (index + 1)) {
-                        item.classList.add('active');
-                    }
-                })
+                document.querySelectorAll('.control__progress ul li').forEach(function(item, index) {
+                    if (Number(planetCount) >= (index + 1)) { item.classList.add('active') }
+                });
             }
 
             function barWidth(level) {
-                $('.control__progress-bar-active').width(`${17 * level}%`)
+                document.querySelector('.control__progress-bar-active').style.width = `${17 * level}%`;
             }
 
             barWidth(controlProgress.getAttribute('data-level'));
             activatePlanets(controlProgress.getAttribute('data-level'));
         }
 
-        $(document).ready(function(){
-            $('#searchInput').on('keyup', function() {
-                console.log($(this).val());
-                $('.close-btn').attr('disabled', false);
-                $('.close-btn').on('click', function() {
-                    $('#searchInput').val('');
-                    $('.close-btn').attr('disabled', true);
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('searchInput').addEventListener('keyup', function() {
+                document.querySelector('.close-btn').disabled = false;
+                document.querySelector('.close-btn').addEventListener('click', function() {
+                    document.querySelector('.close-btn').addEventListener('click', function() {
+                        document.querySelector('.close-btn').disabled = true;
+                        document.getElementById('searchInput').value = "";
+                    });
                 });
             });
 
-            $('.control__raiting-planets-inputs input').on('focus', function() {
-                $('.control__raiting-planets-inputs').addClass('--focus');
+            document.querySelector('.control__raiting-planets-inputs input').addEventListener('focus', function() {
+                document.querySelector('.control__raiting-planets-inputs').classList.add('--focus');
             });
-            $('.control__raiting-planets-inputs input').on('blur', function() {
-                $('.control__raiting-planets-inputs').removeClass('--focus');
+            document.querySelector('.control__raiting-planets-inputs input').addEventListener('blur', function() {
+                document.querySelector('.control__raiting-planets-inputs').classList.remove('--focus');
             });
 
-            $('.control__launching-content-table-item button').on('click', function() {
-                $(this).addClass('applied');
-                $(this).attr('disabled', true);
-                $(this).parent().addClass('active');
-                $(this).parent().removeClass('control__launching-content-table-item--hover');
+            document.querySelectorAll('.control__launching-content-table-item button').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    btn.classList.add('applied')
+                    btn.disabled = true;
+                    btn.parentElement.classList.add('active');
+                    btn.parentElement.classList.remove('control__launching-content-table-item--hover');
+                })
             });
 
             if (document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post')) {
@@ -110,8 +113,6 @@ const control = () => {
                     }
                 });
             }
-            
-
         });
 
 

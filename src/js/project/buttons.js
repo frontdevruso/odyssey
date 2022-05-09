@@ -9,7 +9,6 @@ const buttons = () => {
             let classOpen = elem.getAttribute('button-fadein');
             let openBlock = document.querySelector(`.${classOpen}`);
             fadeIn(openBlock);
-
         })
     })
 }
