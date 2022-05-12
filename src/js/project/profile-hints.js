@@ -29,45 +29,45 @@ const profileHints = () => {
             }, 1000);
         }
     
-        modalAvatar.querySelector('.modal-close').addEventListener('click', function() {
-            modalClose(modalAvatar);
-            setTimeout(function() {
-                // pageFocus.classList.add('page-focus--leftCenter');
-                // prizesAchivments.forEach(function(item) {
-                //     item.classList.add('focus-priority');
-                // });
-                // hintSection.classList.remove('hints--hidden');
-    
-                modalOpen(modalReturnAvatar);
-            }, 1000);
-        });
+        if (modalAvatar.querySelector('.modal-close')) {
+            modalAvatar.querySelector('.modal-close').addEventListener('click', function() {
+                modalClose(modalAvatar);
+                setTimeout(function() {
+                    modalOpen(modalReturnAvatar);
+                }, 1000);
+            });
+        }
     
         modalReturnAvatar.querySelector('.modal__content-offer-btn').addEventListener('click', function() {
             modalClose(modalReturnAvatar);
             thirdHintSwitch();
             setTimeout(function() {
-                pageFocus.classList.add('page-focus--left');
-                hintSection.classList.remove('hints--hidden');
-                createProfile.classList.add('focus-priority');
+                if (pageFocus) pageFocus.classList.add('page-focus--left');
+                if (hintSection) hintSection.classList.remove('hints--hidden');
+                if (pageFocus) createProfile.classList.add('focus-priority');
             }, 1000);
         });
+        
+        if (modalReturnAvatar.querySelector('.modal__content-create-btn')) {
+            modalReturnAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
+                modalClose(modalReturnAvatar);
+                setTimeout(function() {
+                    modalOpen(modalAvatar);
+                }, 1000);
+            });
+        }
     
-        modalReturnAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
-            modalClose(modalReturnAvatar);
-            setTimeout(function() {
-                modalOpen(modalAvatar);
-            }, 1000);
-        });
-    
-        modalAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
-            modalClose(modalAvatar);
-            thirdHintSwitch();
-            setTimeout(function() {
-                pageFocus.classList.add('page-focus--left');
-                hintSection.classList.remove('hints--hidden');
-                createProfile.classList.add('focus-priority');
-            }, 1000);
-        });
+        if (modalAvatar.querySelector('.modal__content-create-btn')) {
+            modalAvatar.querySelector('.modal__content-create-btn').addEventListener('click', function() {
+                modalClose(modalAvatar);
+                thirdHintSwitch();
+                setTimeout(function() {
+                    if (pageFocus) pageFocus.classList.add('page-focus--left');
+                    if (hintSection) hintSection.classList.remove('hints--hidden');
+                    if (pageFocus) createProfile.classList.add('focus-priority');
+                }, 1000);
+            });
+        }
 
         const thirdHintSwitch = () => {
             document.querySelectorAll('.hints__message').forEach(function(message, index) {
@@ -80,33 +80,39 @@ const profileHints = () => {
     
         }
 
-        document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
-            pageFocus.classList.remove('page-focus--left');
-            pageFocus.classList.add('page-focus--rightCenter');
-            createProfile.classList.remove('focus-priority');
-    
-            prizesAchivments.forEach(function(item) {
-                item.classList.add('focus-priority');
-            });
-        })
+        if (document.querySelector('.hints__message--3 .message__next')) {
+            document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
+                pageFocus.classList.remove('page-focus--left');
+                pageFocus.classList.add('page-focus--rightCenter');
+                createProfile.classList.remove('focus-priority');
+        
+                prizesAchivments.forEach(function(item) {
+                    item.classList.add('focus-priority');
+                });
+            })
+        }
 
-        document.querySelector('.hints__message--4 .message__next').addEventListener('click', function() {
-            pageFocus.classList.remove('page-focus--rightCenter');
-            pageFocus.classList.add('page-focus--center');
-        });
+        if (document.querySelector('.hints__message--4 .message__next')) {
+            document.querySelector('.hints__message--4 .message__next').addEventListener('click', function() {
+                pageFocus.classList.remove('page-focus--rightCenter');
+                pageFocus.classList.add('page-focus--center');
+            });
+        }
     
 
-        document.querySelector('.hints__message--5 .message__next').addEventListener('click', function() {
-            pageFocus.classList.remove('page-focus--rightCenter');
-            pageFocus.classList.add('hidden');
-            prizesAchivments.forEach(function(item) {
-                item.classList.remove('focus-priority');
+        if (document.querySelector('.hints__message--5 .message__next')) {
+            document.querySelector('.hints__message--5 .message__next').addEventListener('click', function() {
+                pageFocus.classList.remove('page-focus--rightCenter');
+                pageFocus.classList.add('hidden');
+                prizesAchivments.forEach(function(item) {
+                    item.classList.remove('focus-priority');
+                });
+        
+                document.querySelector('.page__border').classList.remove('page__border--hidden');
+                document.querySelector('#pageContainerProfile').classList.remove('page__container--hidden');
+                document.querySelector('.profile__tabs-item--first .profile__tabs-item-info-control').classList.add('pulse-anim');
             });
-    
-            document.querySelector('.page__border').classList.remove('page__border--hidden');
-            document.querySelector('#pageContainerProfile').classList.remove('page__container--hidden');
-            document.querySelector('.profile__tabs-item--first .profile__tabs-item-info-control').classList.add('pulse-anim');
-        });
+        }
     
         if (hintSection) {
             document.querySelectorAll('.message__next').forEach(message => {
@@ -127,11 +133,12 @@ const profileHints = () => {
             const createProfileBtn = document.querySelector('.new-profile-btn');
             if (createProfileBtn) {
                 createProfileBtn.addEventListener('click', function() {
+                    console.log(createProfile);
                     createProfileBtn.classList.remove('new-profile-btn--animation');
                     createProfile.classList.remove('focus-priority');
         
-                    pageFocus.classList.remove('page-focus--left');
-                    hintSection.classList.add('hints--hidden');
+                    if (pageFocus) pageFocus.classList.remove('page-focus--left');
+                    if (hintSection) hintSection.classList.add('hints--hidden');
                     modalOpen(modalAvatar);
                 });
             }

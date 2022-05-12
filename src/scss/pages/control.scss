@@ -115,11 +115,18 @@
             li {
                 margin-top: auto;
 
-                &.active {
+                &.active {  
+                    cursor: pointer;
                     picture {
                         img { filter: drop-shadow(0px 16px 22px #B38EFF) }
                     }
                     h3 { color: #2E0D6F }
+
+                    &:hover {
+                        picture {
+                            img { filter: drop-shadow(0px 11px 28px #E85078) }
+                        }
+                    }
                 }
                 
                 picture {
@@ -398,12 +405,9 @@
                         }
 
                         img { opacity: 0 }
-                        .control__launching-content-table-item-img-active { opacity: 1; filter: drop-shadow(0px 12px 24px #D5C1FF) }
-                        
+                        .control__launching-content-table-item-img-active { opacity: 1; filter: drop-shadow(0px 4px 16px rgba(213, 193, 255, 0.6)) }
                         transform: translateY(-20px);
-                        
                         height: 131px;
-                        .control__launching-content-table-item-img-active { filter: initial }
 
                         button {
                             bottom: 6%;
@@ -432,7 +436,7 @@
                         span { color: white }
                         .control__launching-content-table-item-img-active {
                             opacity: 1;
-                            filter: drop-shadow(0px 4px 16px rgba(213, 193, 255, 0.6)); 
+                            filter: drop-shadow(0px 12px 24px #D5C1FF);
                         }
                         .control__launching-content-table-item-bg { transition: .4s }
                         &:hover { box-shadow: 0px 0px 26px rgba(144, 98, 195, 0.7) }
@@ -866,14 +870,18 @@
                     top: -60px;bottom: 0;
                     right: 0;left: 0;
 
-                    width: calc(100% - 15px);
-                    height: 600px;
+                    width: calc(100% - 25px);
+                    height: 530px;
 
                     background-image: url('./../img/control/raiting-table-long-bg.svg');
                     background-repeat: no-repeat;
                     
                     background-size: 100% 100%;
-                    @media (max-height: 840px), (max-width: 1480px) { top: -90px }
+                    @media (max-height: 840px), (max-width: 1480px) {
+                        top: -90px;
+                        height: 395px;
+                        
+                    }
                 }
                             
                 &::-webkit-scrollbar {
@@ -945,11 +953,6 @@
 
                         .control__raiting-table-profile {
                             span { border-bottom: 1px dashed rgba(255, 255, 255, 0.5) }
-                        }
-
-                        .control__raiting-table-position {
-                            color: white;
-                            background-image: none;
                         }
 
                         &::after { background-color: #9062C3 }
@@ -1266,7 +1269,7 @@
                         main {
                             display: flex;
                             flex-direction: column;
-                            max-width: 170px;
+                            width: 170px;
 
                             position: relative;
                             cursor: default;

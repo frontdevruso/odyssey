@@ -9,6 +9,7 @@
 
     &__container {
         height: 100%;
+        position: relative;
     }
 
     &::-webkit-scrollbar {
@@ -43,30 +44,38 @@
     }
 
     &__img {
-        width: 769px;
-        height: 888px;
-
         position: absolute;
         right: 50%;
+        transform: translateX(50%);
         bottom: -50%;
 
-        z-index: 20;
-        transform: translateX(50%);
-
-        img {
-            width: 100%;
-            height: 100%;
-
-            transition: .4s;
-        }
+        transition: .4s;
+        width: 769px;
+        height: 888px;
 
         @media (max-height: 840px), (max-width: 1480px) {
             width: 645px;
             height: auto;
+            bottom: -55%;
         }
 
-        &:hover {
-            img { filter: saturate(1.4) }
+        &-link {
+            width: 502px;
+            height: 345px;
+
+            position: absolute;
+            display: block;
+
+            right: 50%;
+            transform: translateX(50%);
+            bottom: 0;
+
+            z-index: 15;
+            
+            @media (max-height: 840px), (max-width: 1480px) {
+                width: 419px;
+                height: 270px;
+            }
         }
     }
 
@@ -740,4 +749,8 @@
 @keyframes rocketRotation {
     0% { transform: rotate(0deg) }
     100% { transform: rotate(360deg) }
+}
+
+.planets__img-link {
+    &:hover + .planets__img { filter: saturate(1.4) }
 }

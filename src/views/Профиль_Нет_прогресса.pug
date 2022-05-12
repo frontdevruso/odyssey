@@ -1,13 +1,13 @@
 extends _includes/layout
 
 block config
-  - var pagetitle = 'Профиль | Активный'
+  - var pagetitle = 'Профиль'
   - var bodyClass = ''
 block content
   .page__border
     include _includes/blocks/preloader
-    .page.page-main-bg.page-colorfull-bg
-    .page__container#pageContainerProfile(fade-in-preloader)(data-simplebar="")
+    .page.page-main-bg
+    .page__container#pageContainerProfile(data-simplebar="")(fade-in-preloader)
         section.profile.page-profile-bg#profilePage
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
@@ -29,10 +29,10 @@ block content
                             </div>
                             span Вернуться к карте планет 
                     .header__right 
-                        a(href="#") 
+                        a(href="#")
                             picture
                             main 
-                                h3 Игорь Тимофеев
+                                h3 Тимофеев Игорь
                                 span 
                                     em #7 в рейтинге
                                     b 2 536 баллов
@@ -78,7 +78,7 @@ block content
                             </svg>
                             button.new-profile-btn.new-profile-btn--animation
                             .profile__tabs-item-info 
-                                h3 Тимофеев Игорь
+                                h3 Игорь Тимофеев
                                 a(href="./Центр_управления_Середина_прогресса_Дизайн.html").profile__tabs-item-info-control Центр управления
                     .profile__tabs-item.profile__tabs-item--second.prizes-achievement
                         h4 Достижения
@@ -213,7 +213,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-1.png", alt="planet-1")
+                                        img(src="./assets/img/profile/planet-1.png", srcset="./assets/img/profile/planet-1@2x.png 2x", alt="planet-1")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Корпорулия
                                         a(href="#") Начать задания
@@ -257,7 +257,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-2.png", alt="planet-2")
+                                        img(src="./assets/img/profile/planet-2.png", srcset="./assets/img/profile/planet-2@2x.png 2x", alt="planet-2")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Футурия
                                         span Задания недоступна
@@ -301,7 +301,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-3.png", alt="planet-3")
+                                        img(src="./assets/img/profile/planet-3.png", srcset="./assets/img/profile/planet-3@2x.png 2x", alt="planet-3")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Физиляндия
                                         span Задания недоступна
@@ -346,7 +346,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-4.png", alt="planet-4")
+                                        img(src="./assets/img/profile/planet-4.png", srcset="./assets/img/profile/planet-4@2x.png 2x", alt="planet-4")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Юриляндия
                                         a(href="#") Начать задания
@@ -390,7 +390,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-5.png", alt="planet-5")
+                                        img(src="./assets/img/profile/planet-5.png", srcset="./assets/img/profile/planet-5@2x.png 2x", alt="planet-5")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Военная
                                         span Задания недоступна
@@ -434,7 +434,7 @@ block content
                             .profile__tabs-planet-info 
                                 .profile__tabs-planet-info-mission
                                     picture 
-                                        img(src="./assets/img/profile/planet-6.png", alt="planet-6")
+                                        img(src="./assets/img/profile/planet-6.png", srcset="./assets/img/profile/planet-6@2x.png 2x", alt="planet-6")
                                     .profile__tabs-planet-info-mission-text 
                                         h3 Планета Порталия
                                         span Задания недоступна
@@ -445,7 +445,25 @@ block content
                                     li Кодекс Порталийца
                                     li Части артефакта
     .modal#modalAvatar
-        .modal__container(style="background-image: url('./assets/img/modal/big-modal.svg')")
+        .modal__container
+            <svg class="modal__bg" width="778" height="490" viewBox="0 0 778 490" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_107_998)">
+                <path d="M21.8499 43.5127C44.4844 -5.84962 729.908 -13.0674 757.836 21.1158C785.762 55.2986 783.66 415.274 757.836 445.47C715.495 494.977 49.7763 520.91 21.8499 426.61C-11.7286 313.224 -2.47274 96.5569 21.8499 43.5127Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_i_107_998" x="0" y="-4" width="778" height="494" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="-4"/>
+                <feGaussianBlur stdDeviation="4"/>
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_107_998"/>
+                </filter>
+                </defs>
+            </svg>
+
             .modal__content 
                 header 
                     h1 Твой аватар
@@ -457,26 +475,16 @@ block content
                     .modal__content-panel 
                         h2 Выбери аватар
                         ul 
-                            button 
-                                img(src="./assets/img/modal/avatar-1.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-2.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-3.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-4.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-5.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-6.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-7.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-2.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-9.png", alt="avatar")
-                            button 
-                                img(src="./assets/img/modal/avatar-6.png", alt="avatar")
+                            button(style="background-image: url(./assets/img/modal/avatar-1.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-2.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-3.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-4.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-5.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-6.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-7.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-2.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-9.png)")
+                            button(style="background-image: url(./assets/img/modal/avatar-6.png)")
                     .modal__content-panel.modal__content-panel--colors
                         h2 Выбери фон для аватара
                         ul 
@@ -492,7 +500,24 @@ block content
                             button(style="background-color: #DFDFDF")   
                 button.modal__content-create-btn.btn.--texture Создать аватар
     .modal.modal-return-avatar#modalReturnAvatar
-        .modal__container(style="background-image: url('./assets/img/modal/small-modal.svg')")
+        .modal__container
+            <svg class="modal__bg" width="422" height="336" viewBox="0 0 422 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_i_111_2212)">
+                <path d="M410.148 29.8373C397.871 -4.01117 26.0856 -8.96052 10.9376 14.4794C-4.21032 37.919 -3.07023 284.759 10.9376 305.465C33.9035 339.413 395 357.195 410.148 292.532C428.362 214.782 423.341 66.2104 410.148 29.8373Z" fill="white"/>
+                </g>
+                <defs>
+                <filter id="filter0_i_111_2212" x="0" y="-4" width="422" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="-4"/>
+                <feGaussianBlur stdDeviation="4"/>
+                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.909804 0 0 0 0 0.313726 0 0 0 0 0.470588 0 0 0 0.48 0"/>
+                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_111_2212"/>
+                </filter>
+                </defs>
+            </svg>
             .modal__content 
                 header
                     p Ты не выбрал аватар, поэтому мы сделали это за тебя. Можешь продолжить игру с ним или выбрать другой аватар. 

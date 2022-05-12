@@ -162,18 +162,32 @@
                 button {
                     display: flex;
                     border-radius: 100%;
-                    border: 2px solid transparent;
                     box-sizing: content-box;
 
                     width: 58px;
                     height: 58px;
 
-                    border: 2px solid transparent;
                     box-sizing: border-box;
+                    position: relative;
 
                     background-size: 100% 100%;
-                    background-position: 100% 100%;
+                    background-position: center;
                     background-repeat: no-repeat;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+
+                        width: 100%;
+                        height: 100%;
+
+                        box-sizing: border-box;
+                        border: 2px solid #9062C3;
+                        border-radius: 100%;
+
+                        opacity: 0;
+                    }
 
                     img {
                         border-radius: 100%;
@@ -182,8 +196,8 @@
                     }
 
                     &:hover {
-                        border: 2px solid #9062C3;
                         box-shadow: 0px 12px 16px rgba(232, 80, 120, 0.4);
+                        &::after { opacity: 1 }
                     }
 
                     @media (max-height: 840px), (max-width: 1480px){
@@ -195,10 +209,11 @@
 
             &--colors {
                 ul {
-                    li {
-                        button {
-                            border-color:  #d1beef;
-                        }
+                    button { 
+                        border: 2px solid #d1beef;
+                        &::after { display: none }
+
+                        &:hover { border-color: #9062C3 }
                     }
                 }
             }
