@@ -90,27 +90,33 @@ const control = () => {
                 })
             });
 
+            function hintSetting(value, hint, letterLength) {
+                hint.querySelector('.raiting-table-hint p').innerHTML = value;
+
+                if (value.length > letterLength) {
+                    hint.querySelector('.raiting-table-hint').classList.add('active');
+                } else return hint.querySelector('.raiting-table-hint').classList.remove('active');
+            }
+
             if (document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post')) {
                 document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post').forEach(function(item) {
                     const itemData = item.querySelector('span').innerHTML;
-                    if (itemData.length > 30) {
-                        item.innerHTML += 
-                        "<div class='raiting-table-hint'>" + 
-                            "<p>" + itemData + "</p>" +
-                        "</div>"
-                    }
+                    hintSetting(itemData, item, 30);
+
+                    item.querySelector('span').addEventListener('DOMSubtreeModified', function() {
+                        hintSetting(this.innerHTML, item, 30);
+                    });
                 });
             }
 
             if (document.querySelectorAll('.control__raiting-table-item-main main')) {
                 document.querySelectorAll('.control__raiting-table-item-main main').forEach(function(item) {
                     const itemData = item.querySelector('span').innerHTML;
-                    if (itemData.length > 20) {
-                        item.innerHTML += 
-                        "<div class='raiting-table-hint'>" + 
-                            "<p>" + itemData + "</p>" +
-                        "</div>"
-                    }
+                    hintSetting(itemData, item, 20);
+
+                    item.querySelector('span').addEventListener('DOMSubtreeModified', function() {
+                        hintSetting(this.innerHTML, item, 20);
+                    });
                 });
             }
         });

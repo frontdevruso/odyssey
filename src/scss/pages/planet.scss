@@ -121,11 +121,6 @@
                 .planets__table-item-planet { transition: .4s }
                 .planets__table-item-title { transition: .4s }
                 .planets__table-item-rocket { transition: 1s }
-                
-                &:hover {
-                    .planets__table-item-title { color: white }
-                    .planets__table-item-planet { filter: saturate(1) brightness(100%) }
-                }
             }
 
             &-progress {
@@ -188,6 +183,8 @@
             
             &.active {
                 width: 343px;
+                cursor: pointer;
+
                 .planets__table-item-planet {
                     filter: drop-shadow(0px 4px 34px #E85078) drop-shadow(0px 4px 34px #E85078);
                     width: 182px;
@@ -211,14 +208,45 @@
                 }
 
                 @media (max-height: 840px), (max-width: 1480px) { width: 252px }
+
+                &:hover {
+                    .planets__table-item-planet {
+                        transform: scale(1.05);
+                    }
+                }
             }
             
             &--completed {
-                .planets__table-item-planet { filter: drop-shadow(3px -42px 21px #2E0D6F) }
+                .planets__table-item-planet { filter: drop-shadow(3px -42px 21px #2E0D6F); transition: .4s; }
                 .planets__table-item-title { color: white }
                 .planets__table-item-progress { display: none }
                 .planets__table-item-progress--blocked { display: none }
                 .planets__table-item-progress--completed { display: flex }
+
+                cursor: pointer;
+
+                &:hover {
+                    .planets__table-item-planet {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            
+            &--passed {
+                .planets__table-item-planet { filter: drop-shadow(0px 4px 64px #E85078) drop-shadow(0px 4px 64px #E85078); transition: .4s; }
+                .planets__table-item-title { color: white }
+                .planets__table-item-progress { display: none }
+                .planets__table-item-progress--blocked { display: none }
+                .planets__table-item-progress--completed { display: flex }
+
+                cursor: pointer;
+
+                &:hover {
+                    .planets__table-item-planet {
+                        transform: scale(1.05);
+                        filter: drop-shadow(0px 4px 64px #E85078) drop-shadow(0px 4px 64px #E85078);
+                    }
+                }
             }
 
             &--1 {
