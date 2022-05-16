@@ -330,6 +330,11 @@
                                 height: 120px;
                             }
                         }
+
+                        span {
+                            bottom: 7%;
+                            @media (max-height: 840px), (max-width: 1480px) { bottom: 11% }
+                        }
                     }
                     &--1,&--4 {
                         img { top: -10% }
@@ -418,9 +423,11 @@
                                                     
                         &.control__launching-content-table-item--3 {           
                             height: 130px;
+
+                            span { bottom: 3% }
                             @media (max-height: 840px), (max-width: 1480px) {
                                 height: 128px;
-                                span { margin-bottom: 20px; }
+                                span { margin-bottom: 20px }
                             }
                         }
                         span { color: white; margin-bottom: 10px; }
@@ -957,6 +964,36 @@
                         }
 
                         &::after { background-color: #9062C3 }
+                        &:hover {
+                            &::after { background-color: #BA7DFF }
+                        }
+                    }
+
+                    &.bottom-active {
+                        color: white;
+                        padding: 0px 14px 10px;
+                        
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            padding: 0px 14px 4px;
+                        }
+
+                        .control__raiting-table-profile {
+                            span { border-bottom: 1px dashed rgba(255, 255, 255, 0.5) }
+                        }
+                        .control__raiting-table-position {
+                            color: white;
+                            background-image: none;
+                        }
+
+                        &::after {
+                            background-color: #9062C3;
+                            transform: skew(-0.07turn, 0);
+                            border-radius: 5px 30px 10px 10px;
+
+                            left: 7px;
+                            width: calc(100% - 7px);
+                        }
+
                         &:hover {
                             &::after { background-color: #BA7DFF }
                         }
