@@ -441,9 +441,10 @@
                         transition: .4s;
 
                         & > * { transition: .4s }
-                        img { opacity: 0 }
+                        img { opacity: 0; display: none }
                         span { color: white }
                         .control__launching-content-table-item-img-active {
+                            display: initial;
                             opacity: 1;
                             filter: drop-shadow(0px 12px 24px #D5C1FF);
                         }
@@ -566,9 +567,7 @@
                 &.active {
                     span {
                         background: rgba(232, 80, 120, 0.6);
-                        box-shadow: 0px 4px 40px 16px #E85078;
-
-                        animation: pulsingControl 1s infinite linear;
+                        box-shadow: 0px 4px 40px 30px #E85078;
 
                         @keyframes pulsingControl {
                             0% { box-shadow: 0px 4px 40px 16px #E85078 }
@@ -871,6 +870,14 @@
                 overflow-y: scroll;
                 position: relative;
 
+                &.main-user {
+                    height: auto;
+                    overflow: hidden;
+                    padding-top: 20px;
+
+                    &::after { content: initial }
+                }
+
                 &::after {
                     content: "";
                     display: block;
@@ -963,6 +970,10 @@
                             span { border-bottom: 1px dashed rgba(255, 255, 255, 0.5) }
                         }
 
+                        .control__raiting-table-position {
+                            color: white;
+                        }
+
                         &::after { background-color: #9062C3 }
                         &:hover {
                             &::after { background-color: #BA7DFF }
@@ -973,9 +984,7 @@
                         color: white;
                         padding: 0px 14px 10px;
                         
-                        @media (max-height: 840px), (max-width: 1480px) {
-                            padding: 0px 14px 4px;
-                        }
+                        @media (max-height: 840px), (max-width: 1480px) { padding: 0px 14px 4px }
 
                         .control__raiting-table-profile {
                             span { border-bottom: 1px dashed rgba(255, 255, 255, 0.5) }
@@ -1138,7 +1147,7 @@
                         }
                     }
                 }
-            }
+            }    
 
             footer {
                 display: flex;

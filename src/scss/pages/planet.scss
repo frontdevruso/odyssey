@@ -107,7 +107,7 @@
                 transition: .4s;
 
                 position: absolute;
-                animation: rocketRotation 5s infinite forwards linear;
+                animation: rocketRotation 7s infinite forwards linear;
                               
                 @media (max-height: 840px), (max-width: 1480px) {
                     width: 200px;
@@ -189,6 +189,8 @@
                     filter: drop-shadow(0px 4px 34px #E85078) drop-shadow(0px 4px 34px #E85078);
                     width: 182px;
                     max-width: 182px;
+
+                    transition: .4s;
                     
                     @media (max-height: 840px), (max-width: 1480px) { width: 144px }
                 }
@@ -196,14 +198,14 @@
                 .planets__table-item-title { color: white }
                 .planets__table-item-rocket { 
                     display: flex;
-                    min-width: 450px;
-                    height: 450px;
+                    min-width: 400px;
+                    height: 400px;
 
                     opacity: 1;
 
                     @media (max-height: 840px), (max-width: 1480px) {
-                        min-width: 400px;
-                        height: 400px;
+                        min-width: 350px;
+                        height: 350px;
                     }
                 }
 
@@ -776,6 +778,7 @@
 
 @keyframes rocketRotation {
     0% { transform: rotate(0deg) }
+    50% { transform:  rotate(180deg) translateX(-10px);}
     100% { transform: rotate(360deg) }
 }
 
