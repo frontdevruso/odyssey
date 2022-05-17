@@ -2,6 +2,14 @@ const control = () => {
     const hintSection = document.querySelector('.hints');
     const controlProgress = document.querySelector('.control__progress');
 
+    // THIS FUNCTION RESPOND FOR TABLE SIZING
+    function tableSizing() {
+        const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+        if (allPlayers.length >= 12) {
+            document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
+        }
+    }
+
     if (document.querySelector('.control')) {
         const pageFocus = document.querySelector('.page-focus');
         const hints = document.querySelector('.hints');
@@ -37,14 +45,15 @@ const control = () => {
             })
 
             document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
-                document.getElementById('#pageContainerControl').classList.remove('page__container--control-hd');
-                hints.classList.add('hints--hidden');
-                hints.classList.add('hints--d-none');
+                document.getElementById('pageContainerControl').classList.remove('page__container--control-hd');
+
+                hintSection.classList.add('hints--hidden');
+                hintSection.classList.add('hints--d-none');
 
                 setTimeout(function() {
-                    hints.classList.remove('hints--hidden');
-                    hints.classList.remove('hints--d-none');
-                }, 200);
+                    hintSection.classList.remove('hints--hidden');
+                    hintSection.classList.remove('hints--d-none');
+                }, 0);
             });
         }
             
@@ -62,6 +71,17 @@ const control = () => {
             barWidth(controlProgress.getAttribute('data-level'));
             activatePlanets(controlProgress.getAttribute('data-level'));
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            tableSizing();
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+            if (allPlayers.length >= 12) {
+                document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
+            }
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('searchInput').addEventListener('keyup', function() {
@@ -119,9 +139,7 @@ const control = () => {
                     });
                 });
             }
-        });
-
-
+        });  
     }
 }
 
