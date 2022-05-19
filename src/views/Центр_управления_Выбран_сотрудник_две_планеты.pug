@@ -1,93 +1,13 @@
 extends _includes/layout
 
 block config
-  - var pagetitle = 'Панель Управление | Длинный список'
+  - var pagetitle = 'Панель Управление | Найти игрока'
   - var bodyClass = ''
 block content
   .page__border
     include _includes/blocks/preloader
     .page.page-control-bg
-        .hints.hints--control(fade-in-preloader)
-            .hints__container
-                .hints__messages 
-                    .hints__message.hints__message--control.hints__message--1.is-active
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Добро пожаловать в <br>Центр управления! Здесь ты <br> можешь отслеживать, какие <br> планеты открыты и сколько <br> из них ты уже прошел.
-                        .message__next(data-message="hints__message--2")
-                            span.btn.--link Разве не все планеты доступны?
-                    .hints__message.hints__message--control.hints__message--2
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Планеты открываются <br>по очереди. Каждые две <br> недели игроки получают <br> доступ к новой планете. <br>Следи за Картой планет!
-                        a(href="#controlLaunching").message__next(data-message="hints__message--3")
-                            span.btn.--link Спасибо, что предупредил.
-                    .hints__message.hints__message--control.hints__message--3
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p В Центре управления <br> хранятся добытые тобой <br> артефакты. С их помощью <br> ты сможешь запустить <br> межгалактическую ракету. 
-                        a(href="#controlRaiting").message__next(data-message="hints__message--4")
-                            span.btn.--link Вот это я понимаю — пазл!
-                    .hints__message.hints__message--control.hints__message--4
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p А еще здесь находится <br> рейтинг всех участников <br> Одиссеи. Надеюсь, скоро в <br> нем появится и твое имя!
-                        .message__next(data-message="hints__message--5")
-                            span.btn.--link Можешь не сомневаться!
-                    .hints__message.hints__message--control.hints__message--fifth.hints__message--5
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-14.svg)") 
-                            p Тогда добро пожаловать <br>в открытый космос!
-                            a(href="./planets.html").btn.--texture.hints__message-cloud-toplanet 
-                                span Перейти к карте планет
-            .hints__circles 
-                main 
-                    <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M94 47C94 21.0426 72.9574 0 47 0C21.0426 0 0 21.0426 0 47C0 72.9574 21.0426 94 47 94C72.9574 94 94 72.9574 94 47Z" fill="url(#paint0_radial_219_379)" fill-opacity="0.96"/>
-                        <defs>
-                            <radialGradient id="paint0_radial_219_379" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36.7187) rotate(79.4722) scale(56.27 57.4948)">
-                                <stop stop-color="#FFCC55" stop-opacity="0"/>
-                                <stop offset="1" stop-color="#FFCC55"/>
-                            </radialGradient>
-                        </defs>
-                    </svg>
-
-                a(href="#").hints__circles-faq
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_b_219_383)">
-                            <rect width="26" height="26" rx="13" fill="url(#paint0_radial_219_383)" fill-opacity="0.96"/>
-                        </g>
-                        <path d="M4.13828 9H8.64828V10.3H5.61828V11.93H8.40828V13.23H5.61828V16H4.13828V9ZM13.4061 14.51H11.0461L10.4761 16H8.99609L11.7361 8.95H12.8261L15.5761 16H14.0061L13.4061 14.51ZM11.4561 13.34H13.0561L12.5161 11.88L12.2761 10.77H12.2261L11.9861 11.89L11.4561 13.34ZM22.8661 18.12C22.6861 18.1667 22.5094 18.1967 22.3361 18.21C22.1628 18.23 21.9894 18.24 21.8161 18.24C21.4494 18.24 21.0894 18.2067 20.7361 18.14C20.3894 18.0733 20.0528 17.9967 19.7261 17.91C19.4061 17.83 19.0928 17.7567 18.7861 17.69C18.4861 17.6233 18.2028 17.59 17.9361 17.59C17.7561 17.59 17.5861 17.61 17.4261 17.65V16.35C17.6328 16.31 17.8394 16.29 18.0461 16.29C18.3461 16.29 18.6461 16.3233 18.9461 16.39C19.2528 16.4567 19.5628 16.5267 19.8761 16.6C20.1894 16.68 20.5094 16.7533 20.8361 16.82C21.1694 16.8867 21.5161 16.92 21.8761 16.92C22.2094 16.92 22.5394 16.8867 22.8661 16.82V18.12ZM15.6461 12.5C15.6461 11.9267 15.7194 11.4133 15.8661 10.96C16.0128 10.5067 16.2228 10.1267 16.4961 9.82C16.7761 9.50667 17.1161 9.27 17.5161 9.11C17.9161 8.94333 18.3694 8.86 18.8761 8.86C19.4161 8.86 19.8861 8.95 20.2861 9.13C20.6928 9.30333 21.0294 9.55 21.2961 9.87C21.5694 10.19 21.7728 10.5733 21.9061 11.02C22.0461 11.4667 22.1161 11.96 22.1161 12.5C22.1161 13.0733 22.0394 13.5867 21.8861 14.04C21.7394 14.4933 21.5261 14.8767 21.2461 15.19C20.9661 15.4967 20.6261 15.7333 20.2261 15.9C19.8261 16.06 19.3761 16.14 18.8761 16.14C18.3361 16.14 17.8628 16.0533 17.4561 15.88C17.0561 15.7 16.7194 15.45 16.4461 15.13C16.1794 14.81 15.9794 14.4267 15.8461 13.98C15.7128 13.5333 15.6461 13.04 15.6461 12.5ZM17.2161 12.5C17.2161 12.8467 17.2494 13.1633 17.3161 13.45C17.3828 13.7367 17.4828 13.9833 17.6161 14.19C17.7494 14.3967 17.9194 14.5567 18.1261 14.67C18.3394 14.7833 18.5894 14.84 18.8761 14.84C19.4028 14.84 19.8128 14.66 20.1061 14.3C20.3994 13.94 20.5461 13.34 20.5461 12.5C20.5461 12.1667 20.5161 11.8567 20.4561 11.57C20.3961 11.2833 20.2961 11.0367 20.1561 10.83C20.0228 10.6167 19.8494 10.4533 19.6361 10.34C19.4294 10.22 19.1761 10.16 18.8761 10.16C18.3561 10.16 17.9494 10.3467 17.6561 10.72C17.3628 11.0933 17.2161 11.6867 17.2161 12.5Z" fill="white"/>
-                        <defs>
-                            <filter id="filter0_b_219_383" x="-16" y="-16" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
-                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_219_383"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_219_383" result="shape"/>
-                            </filter>
-                            <radialGradient id="paint0_radial_219_383" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.1562) rotate(79.4722) scale(15.5641 15.9028)">
-                                <stop stop-color="#FFCC55" stop-opacity="0"/>
-                                <stop offset="1" stop-color="#FFCC55"/>
-                            </radialGradient>
-                        </defs>
-                    </svg>
-                a(href="#").hints__circles-info 
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_b_219_391)">
-                            <rect width="26" height="26" rx="13" fill="url(#paint0_radial_219_391)" fill-opacity="0.96"/>
-                        </g>
-                        <path d="M12.2615 11.8H11.4615V11H14.5415V11.8H13.7415V17.2H14.5415V18H11.4615V17.2H12.2615V11.8Z" fill="white"/>
-                        <circle cx="13" cy="9" r="1" fill="white"/>
-                        <defs>
-                            <filter id="filter0_b_219_391" x="-16" y="-16" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feGaussianBlur in="BackgroundImage" stdDeviation="8"/>
-                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_219_391"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_219_391" result="shape"/>
-                            </filter>
-                            <radialGradient id="paint0_radial_219_391" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.1562) rotate(79.4722) scale(15.5641 15.9028)">
-                                <stop stop-color="#FFCC55" stop-opacity="0"/>
-                                <stop offset="1" stop-color="#FFCC55"/>
-                            </radialGradient>
-                        </defs>
-                    </svg>
-    .page__container.page__container--control-hd#pageContainerControl(fade-in-preloader)
-        .page-focus.page-focus--center(fade-in-preloader)
+    .page__container#pageContainerControl(fade-in-preloader)
         section.control.page-profile-bg
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
@@ -340,7 +260,7 @@ block content
                         button Юриляндия
                         button Военная
                         button Порталия
-                        .control__raiting-planets-inputs 
+                        .control__raiting-planets-inputs
                             <svg class="search-btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 8.125C12 10.6103 10.0663 13 8.17391 13C5.86872 13 4 10.9853 4 8.5C4 6.01472 5.04348 4 8.17391 4C10.4791 4 12 5.63972 12 8.125Z" stroke="white" fill="transparent"/>
                                 <path d="M11 11L13 13" stroke="white" stroke-linecap="round"/>
@@ -351,7 +271,7 @@ block content
                                     <path d="M1 1L13 13" stroke="white" stroke-linecap="round"/>
                                     <path d="M13 1L1 13" stroke="white" stroke-linecap="round"/>
                                 </svg>
-                    .control__raiting-table
+                    .control__raiting-table.control__raiting-table--player
                         <svg width="1346" height="489" viewBox="0 0 1346 489" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_460_1312)">
                                 <path d="M7.64225e-08 36.0637C6.30548e-07 24.5201 7.61266 14.8418 19.1022 13.7256C195.441 -3.40718 1185.05 -7.25512 1318.76 18.2699C1326.28 19.7059 1331.3 25.6076 1332.65 33.1454C1348.3 120.348 1346.04 340.277 1345.68 454.589C1345.65 467.065 1336.44 477.434 1324 478.338C980.191 503.321 173.932 478.949 18.8027 460.776C7.49528 459.451 0.000353657 449.861 0.00033889 438.476C0.000204747 335.058 -4.58158e-06 133.1 7.64225e-08 36.0637Z" fill="white"/>
@@ -369,271 +289,67 @@ block content
                                 </filter>
                             </defs>
                         </svg>
-
-                        header 
-                            span Место
-                            span Участник Одиссеи
-                            span Подразделение
-                            span Должность
-                            span Баллы
-                        ul 
-                            li
-                                .control__raiting-table-position #1
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
-                                    span <b>Тимофеев </b>Игорь
-                                .control__raiting-table-subdivision 
-                                    span Департамент продаж и глав. закупок и ещё раз закупок
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Менеджер проектов различных, в основном ответсвенных
-                                .control__raiting-table-score 969
-                            li 
-                                .control__raiting-table-position #2
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
-                                    span <b>Константин </b>Константинов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Оператор по работе с клиентами
-                                .control__raiting-table-score 781
-                            li 
-                                .control__raiting-table-position #3
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
+                        main 
+                            h4 Об игроке
+                            .control__raiting-table-item.control__raiting-table-item--profile 
+                                .control__raiting-table-item-header 
+                                    img(src="./assets/img/control/find-raiting-avatar-1.png", alt="raiting")
                                     span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел производьства
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Почти главный инжинер, немного не хватило
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #4
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел добычи
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Шахтёр первого уровня на планете Фурляндия
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #5
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел по меж космическим направлениям
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #6
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li
-                                .control__raiting-table-position #7
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
-                                    span <b>Тимофеев </b>Игорь
-                                .control__raiting-table-subdivision 
-                                    span Департамент продаж
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Менеджер проектов
-                                .control__raiting-table-score 969
-                            li 
-                                .control__raiting-table-position #8
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
-                                    span <b>Константин </b>Константинов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Оператор по работе с клиентами
-                                .control__raiting-table-score 781
-                            li 
-                                .control__raiting-table-position #9
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #10
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #11
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #12
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li
-                                .control__raiting-table-position #13
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-1.png", alt="avatar")
-                                    span <b>Тимофеев </b>Игорь
-                                .control__raiting-table-subdivision 
-                                    span Департамент продаж
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Менеджер проектов
-                                .control__raiting-table-score 969
-                            li 
-                                .control__raiting-table-position #14
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-2.png", alt="avatar")
-                                    span <b>Константин </b>Константинов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Оператор по работе с клиентами
-                                .control__raiting-table-score 781
-                            li 
-                                .control__raiting-table-position #15
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #16
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                            li 
-                                .control__raiting-table-position #17
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                        ul.main-user
-                            li.bottom-active
-                                .control__raiting-table-position #18
-                                .control__raiting-table-profile 
-                                    img(src="./assets/img/control/raiting-avatar-3.png", alt="avatar")
-                                    span <b>Гарик </b>Серов
-                                .control__raiting-table-subdivision 
-                                    span Отдел маркетинга
-                                    .raiting-table-hint
-                                        p
-                                .control__raiting-table-post  
-                                    .raiting-table-hint
-                                        p
-                                    span Инженер
-                                .control__raiting-table-score 614
-                        footer 
-                            .control__raiting-table-history-star 
-                                img(src="./assets/img/control/star.svg", alt="star")
-                                p – участники, которые получат гарантированные призы
-                            .control__raiting-table-history-position 
-                                span
-                                p – ваша позиция в рейтинге
+                                .control__raiting-table-item-main
+                                    main 
+                                        h5 Место в общем рейтинге
+                                        span #3 из 14 031
+                                        .raiting-table-hint
+                                            p
+                                    main 
+                                        h5 Подразделение
+                                        span Отдел маркетинга для самых разных продуктов
+                                        .raiting-table-hint
+                                            p
+                                    main 
+                                        h5 Должность
+                                        span Супер инженер меж космический лучшей планеты
+                                        .raiting-table-hint
+                                            p
+                            h4 Рейтинг по планетам
+                            .control__raiting-table-planet-conainer
+                                .control__raiting-table-item.control__raiting-table-item--planet 
+                                    .control__raiting-table-item-header 
+                                        img(src="./assets/img/profile/planet-1.png", alt="raiting")
+                                        span Корпурулия
+                                    .control__raiting-table-item-main
+                                        main 
+                                            h5 Место в рейтинге планеты
+                                            span # 2 из 14 031
+                                            .raiting-table-hint
+                                                p
+                                        main 
+                                            h5 Кодекс Корпорулийца
+                                            span Фохандрет ейди фор балла
+                                            .raiting-table-hint
+                                                p
+                                        main 
+                                            h5 Части артефакта
+                                            span 490 баллов
+                                            .raiting-table-hint
+                                                p
+                                .control__raiting-table-item.control__raiting-table-item--planet 
+                                    .control__raiting-table-item-header 
+                                        img(src="./assets/img/profile/planet-2.png", alt="raiting")
+                                        span Футурия
+                                    .control__raiting-table-item-main
+                                        main 
+                                            h5 Место в рейтинге планеты
+                                            span # 2 из 14 031
+                                            .raiting-table-hint
+                                                p
+                                        main 
+                                            h5 Кодекс Корпорулийца
+                                            span Фохандрет ейди фор балла
+                                            .raiting-table-hint
+                                                p
+                                        main 
+                                            h5 Части артефакта
+                                            span 490 баллов
+                                            .raiting-table-hint
+                                                p

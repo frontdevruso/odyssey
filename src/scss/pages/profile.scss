@@ -47,6 +47,7 @@
         justify-content: right;
 
         a {
+            margin-left: auto;
             width: fit-content;
             height: 58px;
 
@@ -965,11 +966,12 @@
                 }
 
                 &--first {
-
                     margin-top: 14px;
                     @media (max-height: 840px), (max-width: 1480px) {
                         .profile__tabs-planet-info {
                             &-mission {    
+                                padding: 30px 12px 23px;
+
                                 picture {
                                     max-width: 76px;
                                     max-height: 76px;
@@ -1000,7 +1002,7 @@
                             padding: 5px 10px 20px;
 
                             @media (max-height: 840px), (max-width: 1480px) {
-                                padding: 15px 10px 20px;
+                                padding: 15px 2px 20px;
                             }
 
                             picture {
@@ -1067,21 +1069,52 @@
                     .profile__tabs-planet-info {
                         &-mission {
                             padding: 10px 0 23px 0;
+                            @media (max-height: 840px), (max-width: 1480px) { padding: 15px 10px 23px 0 } 
 
                             picture {
                                 margin-right: 15px;
+
+                                @media (max-height: 840px), (max-width: 1480px) {
+                                    max-width: 98px;
+                                    max-height: 94px;
+                                } 
                             }
                         }
                     }
                 }
 
                 &--fiveth {
-
                     .profile__tabs-planet-info {
                         &-mission {
-                            padding: 10px 26px 23px 0;
-                            @media (max-height: 840px), (max-width: 1480px) { padding: 20px 0 23px 0 } 
-                            picture { margin-right: 15px }
+                            padding: 5px 18px 20px;
+                            @media (max-height: 840px), (max-width: 1480px) { padding: 20px 2px 20px 2px; } 
+                            picture {
+                                margin-right: 15px;
+
+                                @media (max-height: 840px), (max-width: 1480px) {
+                                    max-width: 96px;
+                                    max-height: 96px;
+                                    margin-right: 20px;
+                                } 
+                            }
+                        }
+                    }
+                }
+
+                &--sixth {
+                    .profile__tabs-planet-info {
+                        &-mission {
+                            padding: 15px 26px 23px 0;
+                            @media (max-height: 840px), (max-width: 1480px) {  padding: 25px 5px 23px 0; } 
+                            picture {
+                                margin-right: 15px;
+
+                                @media (max-height: 840px), (max-width: 1480px) {
+                                    max-width: 97px;
+                                    max-height: 97px;
+                                    margin-right: 20px;
+                                } 
+                            }
                         }
                     }
                 }

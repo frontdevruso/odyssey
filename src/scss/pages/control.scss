@@ -417,7 +417,7 @@
                         height: 131px;
 
                         button {
-                            bottom: 6%;
+                            bottom: -6%;
                             &:not(.applied) { opacity: 1 }
                         }
                                                     
@@ -449,7 +449,6 @@
                             filter: drop-shadow(0px 12px 24px #D5C1FF);
                         }
                         .control__launching-content-table-item-bg { transition: .4s }
-                        &:hover { box-shadow: 0px 0px 26px rgba(144, 98, 195, 0.7) }
                     }
 
                     &--1,&--2,&--4,&--5,&--6 {
@@ -473,7 +472,7 @@
                         img { transform: translateY(-60%) translateX(50%) }
                         .control__launching-content-table-item-img-active { transform: translateY(-50%) translateX(50%) }
 
-                        button { bottom: 5% }
+                        button { bottom: 0 }
 
                         @media (max-height: 840px), (max-width: 1480px) {
                             width: 204px;
@@ -786,7 +785,7 @@
                 top: 0;bottom: 0;
                 right: 0;left: 0;
 
-                width: calc(100% - 80px);
+                width: calc(100% - 75px);
                 height: 100%;
 
                 margin: 0 45px;
@@ -795,10 +794,10 @@
 
             header {
                 display: grid;
-                grid-template-columns: 6.7% 24.4% 23.7% 35% 5%;
+                grid-template-columns: 6.8% 24.4% 24.2% 35% 5%;
                 width: auto;
 
-                padding: 0 0 8px 14px;
+                padding: 0 0 8px 25px;
                 margin: 0 40px 16px 56px;
                 border-bottom: 1px solid #AB80DC;
 
@@ -814,7 +813,7 @@
                     margin: 0 20px 16px 24px;
                     padding-right: 20px;
 
-                    grid-template-columns: 9.5% 24.7% 23.8% 33% 8%;
+                    grid-template-columns: 8.7% 24.7% 24.2% 31% 8%;
                 }
             }
 
@@ -884,6 +883,10 @@
                     display: none;
 
                     &::after { content: initial }
+
+                    .control__raiting-table-profile {
+                        img { margin-bottom: -9px }
+                    }
                 }
 
                 &::after {
@@ -895,15 +898,14 @@
                     right: 0;left: 0;
 
                     width: calc(100% - 25px);
-                    height: 530px;
+                    height: 560px;
 
                     background-image: url('./../img/control/raiting-table-long-bg.svg');
                     background-repeat: no-repeat;
                     
                     background-size: 100% 100%;
                     @media (max-height: 840px), (max-width: 1480px) {
-                        top: -90px;
-                        height: 395px;
+                        height: 438px;
                     }
                 }
                             
@@ -1271,6 +1273,8 @@
                         display: flex;
                         align-items: center;
 
+                        width: 220px;
+
                         img {
                             width: 60px;
                             height: 60px;
@@ -1295,16 +1299,20 @@
                         justify-content: space-between;
 
                         width: 100%;
-                        max-width: 592px;
-                        margin: 0 auto;
+                        max-width: 800px;
+                        margin: 0 auto 0 auto;
+
+                        @media (max-height: 840px), (max-width: 1480px) { max-width: 700px }
 
                         main {
                             display: flex;
                             flex-direction: column;
-                            width: 170px;
+                            width: 200px;
 
                             position: relative;
                             cursor: default;
+
+                            @media (max-height: 840px), (max-width: 1480px) { width: 170px }
 
                             h5 {
                                 font-size: 12px;
@@ -1344,7 +1352,7 @@
                         }
                     }
 
-                    &:not(:last-child) { margin-bottom: 30px }
+                    &:not(:last-child) { margin-bottom: 20px }
 
                     @media (max-height: 840px), (max-width: 1480px) {
                         &:not(:last-child) { margin-bottom: 15px }

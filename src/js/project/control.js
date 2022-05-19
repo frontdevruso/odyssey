@@ -2,14 +2,6 @@ const control = () => {
     const hintSection = document.querySelector('.hints');
     const controlProgress = document.querySelector('.control__progress');
 
-    // THIS FUNCTION RESPOND FOR TABLE SIZING
-    function tableSizing() {
-        const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
-        if (allPlayers.length >= 12) {
-            document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
-        }
-    }
-
     if (document.querySelector('.control')) {
         const pageFocus = document.querySelector('.page-focus');
         const hints = document.querySelector('.hints');
@@ -56,7 +48,7 @@ const control = () => {
                 }, 0);
             });
         }
-            
+        
         if(controlProgress) {
             function activatePlanets(planetCount) {
                 document.querySelectorAll('.control__progress ul li').forEach(function(item, index) {
@@ -73,7 +65,25 @@ const control = () => {
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            tableSizing();
+            const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+            if (allPlayers.length >= 12) {
+                document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.control__raiting-table').addEventListener('DOMNodeInserted', function() {
+                const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+                if (allPlayers.length >= 12) {
+                    document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
+                }
+            })
+            document.querySelector('.control__raiting-table').addEventListener('DOMNodeRemoved', function() {
+                const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+                if (allPlayers.length <= 12) {
+                    document.querySelector('.control__raiting-table').classList.remove('control__raiting-table--long');
+                }
+            })
         });
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -139,7 +149,7 @@ const control = () => {
                     });
                 });
             }
-        });  
+        });
     }
 }
 
