@@ -64,6 +64,10 @@ const control = () => {
             activatePlanets(controlProgress.getAttribute('data-level'));
         }
 
+        document.querySelectorAll('.control__raiting-table-score').forEach(function(score) {
+            score.innerHTML = score.innerHTML.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+        })
+
         document.addEventListener('DOMContentLoaded', function() {
             const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
             if (allPlayers.length >= 12) {
