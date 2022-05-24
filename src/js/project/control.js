@@ -77,11 +77,31 @@ const control = () => {
 
         document.addEventListener('DOMContentLoaded', function() {
             const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+            const allPlanets = document.querySelectorAll('.control__raiting-table-item--planet')
 
-            if (allPlayers.length >= 7) {
+            if (allPlayers.length >= 7 || allPlanets.length >= 3) {
                 document.querySelector('.control__raiting-table-bg--large').classList.remove('control__raiting-table-bg--hidden');
                 document.querySelector('.control__raiting-table-bg--regular').classList.add('control__raiting-table-bg--hidden');
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.control__raiting-table-planet-conainer').addEventListener('DOMNodeInserted', function() {
+                const allPlanets = document.querySelectorAll('.control__raiting-table-item--planet')
+    
+                if (allPlanets.length >= 3) {
+                    document.querySelector('.control__raiting-table-bg--large').classList.remove('control__raiting-table-bg--hidden');
+                    document.querySelector('.control__raiting-table-bg--regular').classList.add('control__raiting-table-bg--hidden');
+                }
+            })
+            document.querySelector('.control__raiting-table-planet-conainer').addEventListener('DOMNodeRemoved', function() {
+                const allPlanets = document.querySelectorAll('.control__raiting-table-item--planet')
+                
+                if (allPlanets.length <= 3) {
+                    document.querySelector('.control__raiting-table-bg--large').classList.add('control__raiting-table-bg--hidden');
+                    document.querySelector('.control__raiting-table-bg--regular').classList.remove('control__raiting-table-bg--hidden');
+                }
+            })
         });
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -172,7 +192,7 @@ const control = () => {
             }
 
             if (document.querySelectorAll('.control__raiting-table-item-main main')) {
-                document.querySelectorAll('.control__raiting-table-item-main main').forEach(function(item) {
+                document.querySelectorAll('.control__raiting-table-item-main main, .control__raiting-table-item-header').forEach(function(item) {
                     const itemData = item.querySelector('span').innerHTML;
                     hintSetting(itemData, item, 20);
 

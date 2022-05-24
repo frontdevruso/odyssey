@@ -1398,6 +1398,16 @@
                             overflow: hidden;
                             width: auto;
                         }
+
+                        &:hover {
+                            .raiting-table-hint  {
+                                &.active {
+                                    z-index: 100;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
 
                     &-main {
@@ -1414,7 +1424,7 @@
 
                         @media (max-height: 840px), (max-width: 1480px) {
                             max-width: 700px;
-                            padding-left: 40px;
+                            padding-left: 35px;
                         }
 
                         main {
