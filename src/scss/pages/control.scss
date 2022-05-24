@@ -324,7 +324,7 @@
                         
                         bottom: -7%;
                         @media (max-height: 840px), (max-width: 1480px) {
-                            bottom: -20%;
+                            bottom: -15%;
                         }
                     }
 
@@ -342,7 +342,6 @@
                     .control__launching-content-table-item-img-active { opacity: 0 }
                                             
                     &--3 {            
-
                         .control__launching-content-table-item-img-active {
                             width: 140px;
                             height: 140px;
@@ -354,12 +353,25 @@
 
                         span {
                             bottom: -1%;
-                            @media (max-height: 840px), (max-width: 1480px) { bottom: -2% }
+                            @media (max-height: 840px), (max-width: 1480px) { bottom: 2% }
+                        }
+
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            img {
+                                width: 92px;
+                                height: 44px;
+                            }
                         }
                     }
                     &--1,&--4 {
                         img { top: 0 }
-                        @media (max-height: 840px), (max-width: 1480px) { top: -20% }
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            top: -20%;
+                            img {
+                                width: 64px;
+                                height: 64px;
+                            }
+                        }
                         .control__launching-content-table-item-img-active {
                             top: -5%;
                             width: 81px;
@@ -386,7 +398,13 @@
                     
                     &--2,&--5 {          
                         img { top: 0 }
-                        @media (max-height: 840px), (max-width: 1480px) { top: -20% }
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            top: -20%;
+                            img {
+                                width: 61px;
+                                height: 65px;
+                            }
+                        }
                         .control__launching-content-table-item-img-active {
                             width: 111px;
                             height: 111px;
@@ -398,7 +416,14 @@
                     }
 
                     &--6 {
-                        img { top: 0 }
+                        img {
+                            top: 0;
+                            @media (max-height: 840px), (max-width: 1480px) {
+                                width: 58px;
+                                height: 69px;
+                            }
+                        }
+                        
                         @media (max-height: 840px), (max-width: 1480px) { top: -20% }
                         .control__launching-content-table-item-img-active {
                             width: 99px;
@@ -856,6 +881,10 @@
 
                 margin: 0 45px;
                 filter: drop-shadow(0px 12px 15px #E85078);
+
+                &--hidden {
+                    display: none;
+                }
             }
 
             header {
@@ -1310,7 +1339,7 @@
             }
 
             &--player {
-                padding: 40px 0 6%;
+                padding: 40px 0 5%;
 
                 @media (max-height: 840px), (max-width: 1480px) {
                     padding: 40px 0 6%;
@@ -1467,7 +1496,7 @@
             }
 
             &--long {
-                padding: 60px 0 6%;
+                padding: 40px 0 4%;
 
                 @media (max-height: 840px), (max-width: 1480px) {
                     padding: 60px 20px 6% 20px;
@@ -1481,7 +1510,7 @@
             }
 
             &--long {
-                padding: 50px 0 6%;
+                padding: 40px 0 4%;
                 margin-top: 15px;
 
                 svg {
@@ -1490,7 +1519,7 @@
                 }
 
                 @media (max-height: 840px), (max-width: 1480px) {
-                    padding: 50px 20px 6% 20px;
+                    padding: 40px 20px 4% 20px;
                 }
 
                 ul {

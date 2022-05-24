@@ -76,6 +76,34 @@ const control = () => {
         });
 
         document.addEventListener('DOMContentLoaded', function() {
+            const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+
+            if (allPlayers.length >= 7) {
+                document.querySelector('.control__raiting-table-bg--large').classList.remove('control__raiting-table-bg--hidden');
+                document.querySelector('.control__raiting-table-bg--regular').classList.add('control__raiting-table-bg--hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.control__raiting-table').addEventListener('DOMNodeInserted', function() {
+                const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+    
+                if (allPlayers.length >= 7) {
+                    document.querySelector('.control__raiting-table-bg--large').classList.remove('control__raiting-table-bg--hidden');
+                    document.querySelector('.control__raiting-table-bg--regular').classList.add('control__raiting-table-bg--hidden');
+                }
+            })
+            document.querySelector('.control__raiting-table').addEventListener('DOMNodeRemoved', function() {
+                const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
+    
+                if (allPlayers.length <= 7) {
+                    document.querySelector('.control__raiting-table-bg--large').classList.add('control__raiting-table-bg--hidden');
+                    document.querySelector('.control__raiting-table-bg--regular').classList.remove('control__raiting-table-bg--hidden');
+                }
+            })
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.control__raiting-table').addEventListener('DOMNodeInserted', function() {
                 const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
                 if (allPlayers.length >= 12) {
