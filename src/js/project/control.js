@@ -20,21 +20,23 @@ const control = () => {
                 });
             })
 
-            document.querySelector('.hints__message--2 .message__next').addEventListener('click', function() {
-                pageFocus.classList.remove('page-focus--center');
-                pageFocus.classList.add('hidden');
-                let elementClick = this.href;
-                let is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
-
-                let destination = elementClick.offsetTop;
-
-                if (is_safari) {
-                    window.scrollTo({top: destination, behavior: 'smooth'}); // 1100 - скорость
-                } else {
-                    document.querySelector('html').scrollTo({top: destination, behavior: 'smooth'})
-                }
-                return false; 
-            })
+            if(document.querySelector('.hints__message--2 .message__next')) {
+                document.querySelector('.hints__message--2 .message__next').addEventListener('click', function() {
+                    pageFocus.classList.remove('page-focus--center');
+                    pageFocus.classList.add('hidden');
+                    let elementClick = this.href;
+                    let is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+    
+                    let destination = elementClick.offsetTop;
+    
+                    if (is_safari) {
+                        window.scrollTo({top: destination, behavior: 'smooth'}); // 1100 - скорость
+                    } else {
+                        document.querySelector('html').scrollTo({top: destination, behavior: 'smooth'})
+                    }
+                    return false;
+                })
+            }
 
             document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
                 document.getElementById('pageContainerControl').classList.remove('page__container--control-hd');
@@ -181,7 +183,7 @@ const control = () => {
             }
 
             if (document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post')) {
-                document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post').forEach(function(item) {
+                document.querySelectorAll('.control__raiting-table ul li .control__raiting-table-subdivision, .control__raiting-table ul li .control__raiting-table-post, .control__raiting-table-profile').forEach(function(item) {
                     const itemData = item.querySelector('span').innerHTML;
                     hintSetting(itemData, item, 30);
 
@@ -191,7 +193,7 @@ const control = () => {
                 });
             }
 
-            if (document.querySelectorAll('.control__raiting-table-item-main main')) {
+            if (document.querySelectorAll('.control__raiting-table-item-main main, .control__raiting-table-item-header')) {
                 document.querySelectorAll('.control__raiting-table-item-main main, .control__raiting-table-item-header').forEach(function(item) {
                     const itemData = item.querySelector('span').innerHTML;
                     hintSetting(itemData, item, 20);

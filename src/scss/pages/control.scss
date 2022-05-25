@@ -1225,7 +1225,26 @@
 
                         span {
                             border-bottom: 1px dashed #9062C3;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            width: auto;
+
+                            margin-right: 15px;
+
                             b { font-weight: 700 }
+                        }
+
+                        &:hover {
+                            .raiting-table-hint  {
+                                &.active {
+                                    z-index: 100;
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
 
