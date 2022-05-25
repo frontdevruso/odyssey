@@ -70,6 +70,11 @@ const control = () => {
             score.innerHTML = score.innerHTML.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
         })
 
+        if (document.querySelector('.control__raiting-table ul .active')) {
+            console.log('I FIND HIM!')
+            document.querySelector('.main-user').classList.add('main-user--hidden');
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
             if (allPlayers.length >= 12) {
@@ -88,6 +93,13 @@ const control = () => {
         });
 
         document.addEventListener('DOMContentLoaded', function() {
+            const allPlanets = document.querySelectorAll('.control__raiting-table-item--planet')
+
+            if (allPlanets.length >= 3) {
+                document.querySelector('.control__raiting-table-bg--large').classList.remove('control__raiting-table-bg--hidden');
+                document.querySelector('.control__raiting-table-bg--regular').classList.add('control__raiting-table-bg--hidden');
+            }
+
             document.querySelector('.control__raiting-table-planet-conainer').addEventListener('DOMNodeInserted', function() {
                 const allPlanets = document.querySelectorAll('.control__raiting-table-item--planet')
     
@@ -128,13 +140,13 @@ const control = () => {
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.control__raiting-table').addEventListener('DOMNodeInserted', function() {
                 const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
-                if (allPlayers.length >= 12) {
+                if (allPlayers.length >= 13) {
                     document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
                 }
             })
             document.querySelector('.control__raiting-table').addEventListener('DOMNodeRemoved', function() {
                 const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
-                if (allPlayers.length <= 12) {
+                if (allPlayers.length <= 13) {
                     document.querySelector('.control__raiting-table').classList.remove('control__raiting-table--long');
                 }
             })
@@ -142,7 +154,7 @@ const control = () => {
 
         document.addEventListener('DOMContentLoaded', function() {
             const allPlayers = document.querySelectorAll('.control__raiting-table ul li');
-            if (allPlayers.length >= 12) {
+            if (allPlayers.length >= 13) {
                 document.querySelector('.control__raiting-table').classList.add('control__raiting-table--long');
             }
         });
