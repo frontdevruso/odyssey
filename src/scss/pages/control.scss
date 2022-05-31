@@ -515,7 +515,7 @@
                         height: 134px;
                         
                         border-radius: 14px;
-                        img { transform: translateY(-60%) translateX(50%) }
+                        img { transform: translateY(-50%) translateX(50%) }
                         .control__launching-content-table-item-img-active { transform: translateY(-50%) translateX(50%) }
 
                         button { bottom: 0 }
@@ -1540,8 +1540,8 @@
                 margin-top: 20px;
 
                 svg {
-                    width: calc(100% - 60px);
-                    margin: 0 30px;
+                    width: calc(100% - 75px);
+                    margin: 0 45px;
                 }
 
                 @media (max-height: 840px), (max-width: 1480px) { padding: 40px 20px 4% 20px }
