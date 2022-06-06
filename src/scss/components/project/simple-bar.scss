@@ -22,4 +22,4 @@
     & > * { scroll-behavior: smooth }
 }
 
-.simplebar-content-wrapper { scroll-behavior: smooth }
+.simplebar-content-wrapper { scroll-behavior: smooth; transition: 5s; }
