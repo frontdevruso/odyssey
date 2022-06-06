@@ -177,7 +177,7 @@
 
     padding: 107px 0 55px;
     min-width: 1190px;
-    scroll-behavior: smooth;
+
 
     &::-webkit-scrollbar {
         display: block;
@@ -207,7 +207,6 @@
 
     &__container {
         padding: 0 48px;
-        scroll-behavior: smooth;
     }
 
     &__title {

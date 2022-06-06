@@ -1,6 +1,16 @@
 const control = () => {
     const hintSection = document.querySelector('.hints');
     const controlProgress = document.querySelector('.control__progress');
+            
+    const smoothLinks = document.querySelectorAll('a[href^="#"]');
+    smoothLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
 
     if (document.querySelector('.control')) {
         const pageFocus = document.querySelector('.page-focus');
@@ -200,8 +210,8 @@ const control = () => {
                     hintSetting(itemData, item, 30);
 
                     item.querySelector('span').addEventListener('DOMSubtreeModified', function() {
-                        hintSetting(this.innerHTML, item, 30);
-                    });
+                       hintSetting(this.innerHTML, item, 30);
+                    }); 
                 });
             }
 

@@ -94,9 +94,9 @@ block content
                             </radialGradient>
                         </defs>
                     </svg>
-
     .page__container.page__container--hidden#pageContainerProfile(data-simplebar="")(fade-in-preloader)
         section.profile.page-profile-bg.profile--hidden#profilePage
+            .page-focus.page-focus--left(fade-in-preloader)
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb
                     a.header__logo(href="index.html") 
@@ -532,7 +532,7 @@ block content
                                 ul 
                                     li Кодекс Порталийца
                                     li Части артефакта
-    .modal#modalAvatar
+    .modal.modal-choose-avatar#modalAvatar
         .modal__container
             <svg class="modal__bg" width="778" height="490" viewBox="0 0 778 490" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_i_107_998)">
@@ -606,6 +606,7 @@ block content
                 </filter>
                 </defs>
             </svg>
+
             .modal__content 
                 header
                     p Ты не выбрал аватар, поэтому мы сделали это за тебя. Можешь продолжить игру с ним или выбрать другой аватар. 

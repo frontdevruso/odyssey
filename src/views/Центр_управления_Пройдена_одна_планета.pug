@@ -9,32 +9,17 @@ block content
     .page.page-control-bg
         .hints.hints--control(fade-in-preloader)
             .hints__container
-                .hints__messages 
-                    .hints__message.hints__message--control.hints__message--1.is-active
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Добро пожаловать в <br>Центр управления! Здесь ты <br> можешь отслеживать, какие <br> планеты открыты и сколько <br> из них ты уже прошел.
+                .hints__messages
+                    .hints__message.hints__message--control.hints__message--unlock-planet.hints__message--1.is-active
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-20.svg)") 
+                            p Используй артефакт, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>чтобы собрать первую &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>часть ракеты.
                         .message__next(data-message="hints__message--2")
-                            span.btn.--link Разве не все планеты доступны?
-                    .hints__message.hints__message--control.hints__message--2
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p Планеты открываются <br>по очереди. Каждые две <br> недели игроки получают <br> доступ к новой планете. <br>Следи за Картой планет!
-                        a(href="#controlLaunching").message__next(data-message="hints__message--3")
-                            span.btn.--link Спасибо, что предупредил.
-                    .hints__message.hints__message--control.hints__message--3
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p В Центре управления <br> хранятся добытые тобой <br> артефакты. С их помощью <br> ты сможешь запустить <br> межгалактическую ракету. 
-                        a(href="#controlRaiting").message__next(data-message="hints__message--4")
-                            span.btn.--link Вот это я понимаю — пазл!
-                    .hints__message.hints__message--control.hints__message--4
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-13.svg)") 
-                            p А еще здесь находится <br> рейтинг всех участников <br> Одиссеи. Надеюсь, скоро в <br> нем появится и твое имя!
-                        .message__next(data-message="hints__message--5")
-                            span.btn.--link Можешь не сомневаться!
-                    .hints__message.hints__message--control.hints__message--fifth.hints__message--5
-                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-14.svg)") 
-                            p Тогда добро пожаловать <br>в открытый космос!
-                            a(href="./planets.html").btn.--texture.hints__message-cloud-toplanet 
-                                span Перейти к карте планет
+                            span.btn.--link Дааа, сейчас!
+                    .hints__message.hints__message--control.hints__message--unlock-planet.hints__message--2
+                        .hints__message-cloud(style="background-image: url(./assets/img/message/message-21.svg)") 
+                            p Смотри, ты появился в &nbsp;&nbsp;&nbsp;&nbsp; <br> рейтинге игроков! <br> Не зря старался.
+                        .hints__message-cloud.hints__message-cloud--second(style="background-image: url(./assets/img/message/message-22.svg)") 
+                            p Не останавливайся на <br> достигнутом! Продолжай <br> выполнять задания, чтобы <br> выиграть ценные призы и <br> стать победителем.
             .hints__circles 
                 main 
                     <svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,8 +71,7 @@ block content
                             </radialGradient>
                         </defs>
                     </svg>
-    .page__container.page__container--control-hd#pageContainerControl(fade-in-preloader)(data-simplebar="")
-        .page-focus.page-focus--center(fade-in-preloader)
+    .page__container#pageContainerControl(fade-in-preloader)
         section.control.page-profile-bg
             header.header(fade-in-preloader).header--profile
                 .container.--flex.--jcsb

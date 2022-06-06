@@ -5,7 +5,7 @@
     font-size: $font-size;
     letter-spacing: $letter-spacing;
     line-height: $line-height;
-    scroll-behavior: smooth;
+
     &.--frozen {
         overflow: hidden;
     }

@@ -503,5 +503,63 @@
             }
 
         }
+
+        &--small {
+            top: -8%;
+
+            .hints__message-cloud {
+                filter: drop-shadow(0px 22px 40px #E85078);
+            }
+
+            .message__next {
+                height: 36px !important;
+                bottom: 18% !important;
+                            
+                @media (max-height: 840px), (max-width: 1480px) {
+                    bottom: 22% !important;
+                    height: 34px !important;
+                }
+            }
+        }
+
+        &--unlock-planet {
+            &.hints__message--1 {
+                right: 5%;
+                @media (max-height: 840px), (max-width: 1480px) { right: 0 }
+                .message__next {
+                    @media (max-height: 840px), (max-width: 1480px) { bottom: 20% }
+                }
+            }
+
+            &.hints__message--2 {
+                .hints__message-cloud {
+                    width: 320px;
+                    height: 170px;
+    
+                    p { padding-bottom: 20px }
+    
+                    &:first-child {
+                        transform: translateX(-60px) translateY(-40px);
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            transform: translateX(-45px) translateY(-25px);
+                        }
+                    }
+                    
+                    &--second {
+                        width: 340px;
+                        height: 220px;
+    
+                        position: absolute;
+                        top: 25%;
+                        right: 4%;
+
+                        @media (max-height: 840px), (max-width: 1480px) {
+                            top: 25%;
+                            right: 0%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

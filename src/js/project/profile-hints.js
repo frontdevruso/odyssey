@@ -8,75 +8,17 @@ const profileHints = () => {
         const pageFocus = document.querySelector('.page-focus');
 
         const prizesAchivments = document.querySelectorAll('.prizes-achievement');
-
-        // const allLinks = document.querySelectorAll('a[data-message]');
-        // allLinks.forEach(function(link) {
-        //     link.addEventListener('click', function(event) {
-        //         navbarLinkClick(event);
-        //     });
-        // })
-        // function navbarLinkClick(event) {
-        //     smoothScroll(event);
-        // }
-          
-        // // APPROACH #3 - window.requestAnimationFrame()
-        // function smoothScroll(event) {
-        //     event.preventDefault();
-        //     const targetId = event.currentTarget.getAttribute("href")==="#" ? "header" : event.currentTarget.getAttribute("href");
-        //     const targetPosition = document.querySelector(targetId).offsetTop;
-        //     const startPosition = window.pageYOffset;
-        //     const distance = targetPosition - startPosition;
-        //     const duration = 1000;
-        //     let start = null;
-
-        //     console.log(distance);
-            
-        //     function step(timestamp) {
-        //         start = timestamp;
-        //         const progress = timestamp - start;
-        //         // window.scrollTo(0, distance*(progress/duration) + startPosition);
-        //         window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-        //         if (progress < duration) window.requestAnimationFrame(step);
-        //     }
-
-        //     window.requestAnimationFrame(step);
-        // }
-          
-        // // Easing Functions
-          
-        // function linear(t, b, c, d) {
-        //     return c*t/d + b;
-        // };
-        
-        // function easeInOutQuad(t, b, c, d) {
-        //     t /= d/2;
-        //     if (t < 1) return c/2*t*t + b;
-        //     t--;
-        //     return -c/2 * (t*(t-2) - 1) + b;
-        // };
-        
-        // function easeInOutCubic(t, b, c, d) {
-        //     t /= d/2;
-        //     if (t < 1) return c/2*t*t*t + b;
-        //     t -= 2;
-        //     return c/2*(t*t*t + 2) + b;
-        // };
         
         const smoothLinks = document.querySelectorAll('a[href^="#"]');
-        if (smoothLinks) {
-            for (let smoothLink of smoothLinks) {
-                smoothLink.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const id = smoothLink.getAttribute('href');
-            
-                    if (id === "#") return
-                    document.querySelector(id).scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        smoothLinks.forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                console.log(this.getAttribute("href"));
+                e.preventDefault();
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
                 });
-            };
-        }
+            });
+        });
 
         const modalOpen = (modal) => {
             const content = modal.querySelector('.modal__content');

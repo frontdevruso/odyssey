@@ -1,10 +1,9 @@
 .modal {
     position: absolute;
     top: 0;right: 0;bottom: 0;left: 0;
-    z-index: -10;
 
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
 
     display: flex;
     align-items: center;
@@ -12,6 +11,8 @@
 
     &.modal--open {
         z-index: 200;
+        width: 100%;
+        height: 100%;
 
         .modal__container {
             width: 778px;
@@ -212,7 +213,6 @@
                     button { 
                         border: 2px solid #d1beef;
                         &::after { display: none }
-
                         &:hover { border-color: #9062C3 }
                     }
                 }
@@ -228,6 +228,7 @@
         top: 0;bottom: 0;
         right: 0;left: 0;
 
+        transition: .4s ease;
         filter: drop-shadow(0px 12px 80px #E85078);
     }
 }
@@ -235,6 +236,8 @@
 .modal-return-avatar {
     &.modal--open {
         z-index: 200;
+        width: 100%;
+        height: 100%;
 
         .modal__container {
             display: flex;
@@ -266,6 +269,13 @@
                     }
                 }
             }
+        }
+    }
+
+    &.modal--close {
+        .modal__container {
+            width: 0;
+            height: 0;
         }
     }
 
