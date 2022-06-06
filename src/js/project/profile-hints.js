@@ -12,10 +12,10 @@ const profileHints = () => {
         const smoothLinks = document.querySelectorAll('a[href^="#"]');
         smoothLinks.forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                console.log(this.getAttribute("href"));
+                console.log(this.getAttribute('href'));
                 e.preventDefault();
-                document.querySelector(this.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth",
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
                 });
             });
         });
@@ -27,7 +27,7 @@ const profileHints = () => {
             setTimeout(function() {
                 content.classList.add('modal__content--open');
             }, 1000);
-        }
+        };
 
         const modalClose = (modal) => {
             const content = modal.querySelector('.modal__content');
@@ -38,7 +38,7 @@ const profileHints = () => {
             setTimeout(function() {
                 modal.classList.remove('modal--open');
             }, 1000);
-        }
+        };
     
         if (modalAvatar.querySelector('.modal-close')) {
             modalAvatar.querySelector('.modal-close').addEventListener('click', function() {
@@ -86,10 +86,10 @@ const profileHints = () => {
                     message.classList.remove('is-active');
                     message.classList.add('d-none');
                 }
-                if (index === 2) { message.classList.add('is-active') }
+                if (index === 2) { message.classList.add('is-active'); }
             });
     
-        }
+        };
 
         if (document.querySelector('.hints__message--3 .message__next')) {
             document.querySelector('.hints__message--3 .message__next').addEventListener('click', function() {
@@ -100,7 +100,7 @@ const profileHints = () => {
                 prizesAchivments.forEach(function(item) {
                     item.classList.add('focus-priority');
                 });
-            })
+            });
         }
 
         if (document.querySelector('.hints__message--4 .message__next')) {
@@ -137,7 +137,7 @@ const profileHints = () => {
                         nextMessage.classList.add('is-active');
                     }, 600);
                 });
-            })
+            });
         }
     
         if (createProfile) {
@@ -156,20 +156,20 @@ const profileHints = () => {
         }
 
         if(document.querySelector('.profile__prizes-slider')) {
-            console.log('FSDAF')
+            console.log('FSDAF');
 
-            let swiperPrizes = new Swiper(".profile__prizes-slider", {
-                slidesPerView: "auto",
+            let swiperPrizes = new Swiper('.profile__prizes-slider', {
+                slidesPerView: 'auto',
                 spaceBetween: 19,
                 freeMode: true,
 
                 navigation: {
-                    nextEl: ".profile__prizes-slider-arrow--next",
-                    prevEl: ".profile__prizes-slider-arrow--prev",
+                    nextEl: '.profile__prizes-slider-arrow--next',
+                    prevEl: '.profile__prizes-slider-arrow--prev',
                   },
             });
         }
     }
-}
+};
 
 export { profileHints };
