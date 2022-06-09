@@ -20,6 +20,35 @@ const profileHints = () => {
             });
         });
 
+        function addClassOnEyeContact(elements, timeout) {
+            if (elements) {        
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(function() {
+                                entry.target.classList.add('show');
+                            }, timeout);
+                        }
+                    });
+                });
+                
+                if (elements.length) {
+                    elements.forEach(element => {
+                        observer.observe(element);
+                    });
+                } else { observer.observe(elements) }
+            }
+        }
+
+        const profileTabs = document.querySelectorAll('.profile__tabs');
+        profileTabs.forEach(function(tab, index) {
+            if(index === 0) {
+                return
+            } else {
+                addClassOnEyeContact(tab, 0); 
+            }
+        });
+        
         const modalOpen = (modal) => {
             const content = modal.querySelector('.modal__content');
             modal.classList.remove('modal--close');
