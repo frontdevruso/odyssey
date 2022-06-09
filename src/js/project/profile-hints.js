@@ -8,17 +8,6 @@ const profileHints = () => {
         const pageFocus = document.querySelector('.page-focus');
 
         const prizesAchivments = document.querySelectorAll('.prizes-achievement');
-        
-        const smoothLinks = document.querySelectorAll('a[href^="#"]');
-        smoothLinks.forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                console.log(this.getAttribute('href'));
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                });
-            });
-        });
 
         function addClassOnEyeContact(elements, timeout) {
             if (elements) {        
